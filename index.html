@@ -14,7 +14,7 @@ title: I. Am. Carrico.
         <span class="date">{{post.date | date: "%Y-%m-%d"}}</span>
       </div>
       <div class="content">
-        {{ post.excerpt }}
+        {{ post.content | split:'<!--more-->' | first }}
       </div>
     </article>
   {% endfor %}

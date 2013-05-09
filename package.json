@@ -11,7 +11,8 @@
     "grunt-contrib-imagemin": "~0.1.4",
     "grunt-parallel": "~0.1.0",
     "grunt-svgmin": "~0.1.0",
-    "grunt-contrib-concat": "~0.1.2"
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-jekyll": "~0.3.0"
   },
   "engines": {
     "node": ">=0.8.0"

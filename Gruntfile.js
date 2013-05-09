@@ -121,7 +121,27 @@ module.exports = function (grunt) {
         grunt: true,
         tasks: ['imagemin', 'svgmin', 'uglify:dist']
       }
-    }
+    },
+
+    jekyll: {
+			server : {
+				src : './',
+				dest: './_site',
+				server : true,
+				server_port : 4000,
+				auto : true
+			},
+			dev: {
+				src: './',
+				dest: './_site'
+			},
+			prod: {
+				src: './',
+				dest: './_site'
+			}
+		},
+
+
   });
 
 
@@ -141,6 +161,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-jekyll');
 
   grunt.registerTask('build', [
     'parallel:assets',

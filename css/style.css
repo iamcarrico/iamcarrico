@@ -1,4 +1,182 @@
-header:after,main:after,footer:after{content:"";display:table;clear:both}*,*:after,*:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}img,video{max-width:100%;height:auto}header:after,main:after,footer:after{content:"";display:table;clear:both}/* normalize.css v2.1.0 | MIT License | git.io/normalize *//* normalize.css v2.1.0 | HTML5 Display Definitions | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}/* normalize.css v2.1.0 | Base | MIT License | git.io/normalize */html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}/* normalize.css v2.1.0 | Links | MIT License | git.io/normalize */a:focus{outline:thin dotted}a:active,a:hover{outline:0}/* normalize.css v2.1.0 | Typography | MIT License | git.io/normalize */h1{font-size:2em;margin:0.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}/* normalize.css v2.1.0 | Embedded Content | MIT License | git.io/normalize */img{border:0}svg:not(:root){overflow:hidden}/* normalize.css v2.1.0 | Figures | MIT License | git.io/normalize */figure{margin:0}header:before,main:before,footer:before,header:after,main:after,footer:after{display:table;content:""}header:after,main:after,footer:after{clear:both}h1,h2,h3,h4,h5,h6{font-family:"nimbus-sans-extended",Arial,Helvetica,"Nimbus Sans L",sans-serif}header,main,footer{max-width:60em;margin:0 auto 0}/*
+header:after, main:after, footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+header:after, main:after, footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * Global partials: Typography, forms, site-wide changes.
+ */
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* normalize.css v2.1.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* normalize.css v2.1.0 | Base | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* normalize.css v2.1.0 | Links | MIT License | git.io/normalize */
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* normalize.css v2.1.0 | Typography | MIT License | git.io/normalize */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* normalize.css v2.1.0 | Embedded Content | MIT License | git.io/normalize */
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* normalize.css v2.1.0 | Figures | MIT License | git.io/normalize */
+figure {
+  margin: 0;
+}
+
+header:before, main:before, footer:before, header:after, main:after, footer:after {
+  display: table;
+  content: "";
+}
+header:after, main:after, footer:after {
+  clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "nimbus-sans-extended", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+
+header, main, footer {
+  max-width: 60em;
+  margin: 0 auto 0;
+}
+
+/*
  *  Font Awesome 3.0.2
  *  the iconic font designed for use with Twitter Bootstrap
  *  -------------------------------------------------------
@@ -19,4 +197,550 @@ header:after,main:after,footer:after{content:"";display:table;clear:both}*,*:aft
  *  Email: dave@davegandy.com
  *  Twitter: http://twitter.com/fortaweso_me
  *  Work: Lead Product Designer @ http://kyruus.com
- */@font-face{font-family:'FontAwesome';src:url("/fonts/fontawesome-webfont.eot?v=3.0.1");src:url("/fonts/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"),url("/fonts/fontawesome-webfont.woff?v=3.0.1") format("woff"),url("/fonts/fontawesome-webfont.ttf?v=3.0.1") format("truetype");font-weight:normal;font-style:normal}footer .contact a.twitter i,footer .contact a.github i,footer .contact a.about-me i{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;display:inline;width:auto;height:auto;line-height:normal;vertical-align:baseline;background-image:none;background-position:0% 0%;background-repeat:repeat;margin-top:0;margin-right:.25em}footer .contact a.twitter i:before{content:"\f099"}footer .contact a.github i:before{content:"\f09b"}footer .contact a.about-me i:before{content:"\f0ac"}.highlight{background:#ffffff}.highlight .c{color:#999988;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#999988;font-style:italic}.highlight .cp{color:#999999;font-weight:bold}.highlight .c1{color:#999988;font-style:italic}.highlight .cs{color:#999999;font-weight:bold;font-style:italic}.highlight .gd{color:#000000;background-color:#fdd}.highlight .gd .x{color:#000000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000000;background-color:#dfd}.highlight .gi .x{color:#000000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#445588;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086b3}.highlight .nc{color:#445588;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#990000;font-weight:bold}.highlight .nf{color:#990000;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}body{font-family:"museo-sans",Verdana,Tahoma,"DejaVu Sans",sans-serif;font-size:16px;line-height:24px;color:#333}h1,h2,h3,h4,h5,h6{font-weight:normal}a{text-decoration:none}a:link{color:#2090b4}a:visited{color:#2090b4}ul ul,ul ol,ol ol,ol ul{margin-bottom:0}hr{height:1px;border:1px solid #666;padding-bottom:-1px;margin:1.5em 0}strong{font-weight:bold}em{font-style:italic}::-moz-selection{background:#66b360;color:#fff;text-shadow:none}::selection{background:#66b360;color:#fff;text-shadow:none}header .title{width:75.4717%;float:left;margin-right:-100%;margin-left:0%;clear:none;font-size:4em;line-height:1em;margin:0}header .title .word{display:block}header .title a,header .title a:link,header .title a:visited{color:#333}@media (min-width: 33.75em){header .title{width:54.05405%;float:left;margin-right:-100%;margin-left:0%;clear:none}}@media (min-width: 46.875em){header .title{width:68.21705%;float:left;margin-right:-100%;margin-left:0%;clear:none;margin-top:1em}header .title .word{display:inline}}header nav{width:22.64151%;float:right;margin-left:0;margin-right:0;clear:none}header nav ul,header nav li{list-style-type:none;margin-bottom:.5em;padding-right:.25em;padding-left:0;width:100%;text-align:right}@media (min-width: 33.75em){header nav{width:43.24324%;float:right;margin-left:0;margin-right:0;clear:none}header nav li{display:inline-block;width:auto;margin-left:.75em}header nav li:first-child{margin-left:0}}@media (min-width: 46.875em){header nav{width:31.00775%;float:right;margin-left:0;margin-right:0;clear:none}}main{padding:.5em}.blog-post .title{text-transform:uppercase}.blog-post .category{font-style:italic}.blog-post .category:after{content:', '}.blog-post .category:last-child:after{content:''}footer{padding:0 .5em 1em;font-size:1.05em;background-color:#e6e6e6}footer .contact a{float:left;clear:left;padding:.25em 0;width:auto}footer .copyright{padding:.25em 0;display:block;clear:both}
+ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/fonts/fontawesome-webfont.eot?v=3.0.1");
+  src: url("/fonts/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("/fonts/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("/fonts/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+footer .contact a.twitter i, footer .contact a.github i, footer .contact a.about-me i {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  /* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+  margin-right: .25em;
+}
+
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+ readers do not read off random characters that represent icons */
+footer .contact a.twitter i:before {
+  content: "\f099";
+}
+
+footer .contact a.github i:before {
+  content: "\f09b";
+}
+
+footer .contact a.about-me i:before {
+  content: "\f0ac";
+}
+
+.highlight {
+  background: #ffffff;
+}
+
+.highlight .c {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+/* Error */
+.highlight .k {
+  font-weight: bold;
+}
+
+/* Keyword */
+.highlight .o {
+  font-weight: bold;
+}
+
+/* Operator */
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+.highlight .cp {
+  color: #999999;
+  font-weight: bold;
+}
+
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment.Single */
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Comment.Special */
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+
+/* Generic.Deleted */
+.highlight .gd .x {
+  color: #000000;
+  background-color: #ffaaaa;
+}
+
+/* Generic.Deleted.Specific */
+.highlight .ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+.highlight .gr {
+  color: #aa0000;
+}
+
+/* Generic.Error */
+.highlight .gh {
+  color: #999999;
+}
+
+/* Generic.Heading */
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+
+/* Generic.Inserted */
+.highlight .gi .x {
+  color: #000000;
+  background-color: #aaffaa;
+}
+
+/* Generic.Inserted.Specific */
+.highlight .go {
+  color: #888888;
+}
+
+/* Generic.Output */
+.highlight .gp {
+  color: #555555;
+}
+
+/* Generic.Prompt */
+.highlight .gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+.highlight .gu {
+  color: #aaaaaa;
+}
+
+/* Generic.Subheading */
+.highlight .gt {
+  color: #aa0000;
+}
+
+/* Generic.Traceback */
+.highlight .kc {
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+.highlight .kd {
+  font-weight: bold;
+}
+
+/* Keyword.Declaration */
+.highlight .kp {
+  font-weight: bold;
+}
+
+/* Keyword.Pseudo */
+.highlight .kr {
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+
+/* Keyword.Type */
+.highlight .m {
+  color: #009999;
+}
+
+/* Literal.Number */
+.highlight .s {
+  color: #dd1144;
+}
+
+/* Literal.String */
+.highlight .na {
+  color: teal;
+}
+
+/* Name.Attribute */
+.highlight .nb {
+  color: #0086b3;
+}
+
+/* Name.Builtin */
+.highlight .nc {
+  color: #445588;
+  font-weight: bold;
+}
+
+/* Name.Class */
+.highlight .no {
+  color: teal;
+}
+
+/* Name.Constant */
+.highlight .ni {
+  color: purple;
+}
+
+/* Name.Entity */
+.highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+.highlight .nf {
+  color: #990000;
+  font-weight: bold;
+}
+
+/* Name.Function */
+.highlight .nn {
+  color: #555555;
+}
+
+/* Name.Namespace */
+.highlight .nt {
+  color: navy;
+}
+
+/* Name.Tag */
+.highlight .nv {
+  color: teal;
+}
+
+/* Name.Variable */
+.highlight .ow {
+  font-weight: bold;
+}
+
+/* Operator.Word */
+.highlight .w {
+  color: #bbbbbb;
+}
+
+/* Text.Whitespace */
+.highlight .mf {
+  color: #009999;
+}
+
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #009999;
+}
+
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #009999;
+}
+
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #009999;
+}
+
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #dd1144;
+}
+
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #dd1144;
+}
+
+/* Literal.String.Char */
+.highlight .sd {
+  color: #dd1144;
+}
+
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #dd1144;
+}
+
+/* Literal.String.Double */
+.highlight .se {
+  color: #dd1144;
+}
+
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #dd1144;
+}
+
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #dd1144;
+}
+
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #dd1144;
+}
+
+/* Literal.String.Other */
+.highlight .sr {
+  color: #009926;
+}
+
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #dd1144;
+}
+
+/* Literal.String.Single */
+.highlight .ss {
+  color: #990073;
+}
+
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #999999;
+}
+
+/* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: teal;
+}
+
+/* Name.Variable.Class */
+.highlight .vg {
+  color: teal;
+}
+
+/* Name.Variable.Global */
+.highlight .vi {
+  color: teal;
+}
+
+/* Name.Variable.Instance */
+.highlight .il {
+  color: #009999;
+}
+
+/* Literal.Number.Integer.Long */
+/**
+ * Defaults: For any general elements to apply to the whole page.
+ */
+/**
+* Typography: Headings, body text, lists, code, and more for a versatile and durable typography system.
+*/
+body {
+  font-family: "museo-sans", Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #2090b4;
+}
+a:visited {
+  color: #2090b4;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+hr {
+  height: 1px;
+  border: 1px solid #666;
+  padding-bottom: -1px;
+  margin: 1.5em 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+::-moz-selection {
+  background: #66b360;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: #66b360;
+  color: white;
+  text-shadow: none;
+}
+
+/**
+ * Design partials: A place to put your specific design partials.
+ */
+/**
+ * The header partial.
+ */
+header .title {
+  width: 75.4717%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+  font-size: 4em;
+  line-height: 1em;
+  margin: 0;
+}
+header .title .word {
+  display: block;
+}
+header .title a,
+header .title a:link,
+header .title a:visited {
+  color: #333333;
+}
+@media (min-width: 33.75em) {
+  header .title {
+    width: 54.05405%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+}
+@media (min-width: 46.875em) {
+  header .title {
+    width: 68.21705%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+    margin-top: 1em;
+  }
+  header .title .word {
+    display: inline;
+  }
+}
+header nav {
+  width: 22.64151%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+header nav ul, header nav li {
+  list-style-type: none;
+  margin-bottom: .5em;
+  padding-right: .25em;
+  padding-left: 0;
+  width: 100%;
+  text-align: right;
+}
+@media (min-width: 33.75em) {
+  header nav {
+    width: 43.24324%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  header nav li {
+    display: inline-block;
+    width: auto;
+    margin-left: .75em;
+  }
+  header nav li:first-child {
+    margin-left: 0;
+  }
+}
+@media (min-width: 46.875em) {
+  header nav {
+    width: 31.00775%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+/**
+ * The main partial.
+ */
+main {
+  padding: .5em;
+}
+
+/**
+ * The blog post partial.
+ */
+.blog-post .title {
+  text-transform: uppercase;
+}
+.blog-post .category {
+  font-style: italic;
+}
+.blog-post .category:after {
+  content: ', ';
+}
+.blog-post .category:last-child:after {
+  content: '';
+}
+
+/**
+ * The footer partial.
+ */
+footer {
+  padding: 0 .5em 1em;
+  font-size: 1.05em;
+  background-color: #e6e6e6;
+}
+footer .contact a {
+  float: left;
+  clear: left;
+  padding: .25em 0;
+  width: auto;
+}
+footer .copyright {
+  padding: .25em 0;
+  display: block;
+  clear: both;
+}
