@@ -1,0 +1,86 @@
+/**
+ * The header partial.
+ */
+
+header {
+  @extend %clearfix;
+  @extend %max-width;
+
+  $grids: 10 3;
+  $gutters: 1/4;
+  $output: 'isolation';
+
+  $grids: add-grid(5 4 at $menu-break);
+  $grids: add-grid(11 5 at $menu-break-lg);
+  $gutters: add-gutter(1/8 at $menu-break-lg);
+  //@include background-grid;
+
+  .title {
+    @include grid-span(1, 1);
+    font-size: 4em;
+    line-height: 1em;
+    margin: 0;
+
+    .word {
+      display: block;
+    }
+
+    a,
+    a:link,
+    a:visited {
+      color: $black;
+    }
+
+    @include breakpoint($menu-break) {
+      @include grid-span(1, 1);
+    }
+
+    @include breakpoint($menu-break-lg) {
+      @include grid-span(1, 1);
+      margin-top: 1em;
+
+      .word {
+        display: inline;
+      }
+    }
+  }
+
+  nav {
+
+    @include grid-span(1, 2);
+
+    ul, li {
+      list-style-type: none;
+      margin-bottom: .5em;
+      padding-right: .25em;
+      padding-left: 0;
+      width: 100%;
+      text-align: right;
+    }
+
+    li {
+
+    }
+
+    @include breakpoint($menu-break) {
+      @include grid-span(1, 2);
+
+      li {
+        display: inline-block;
+        width: auto;
+        margin-left: .75em;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+    }
+
+    @include breakpoint($menu-break-lg) {
+      @include grid-span(1, 2);
+    }
+  }
+}
+
+

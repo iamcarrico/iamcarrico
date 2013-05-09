@@ -1,0 +1,22 @@
+/**
+ * Global partials: Typography, forms, site-wide changes.
+ */
+
+
+// We import normalize.css here, so that it inherits the variables already set.
+@import 'normalize-version';
+@include normalize-version;
+
+@import 'normalize/html5';
+@import 'normalize/base';
+@import 'normalize/links';
+@import 'normalize/typography';
+@import 'normalize/embeds';
+@import 'normalize/figures';
+
+@import 'extendables';
+@import 'font_awesome';
+@import 'syntax';
+@import 'defaults';
+@import 'type';
+//@import 'forms';

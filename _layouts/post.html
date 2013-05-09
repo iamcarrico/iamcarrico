@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<article class="blog-post full">
+  <h2 class="title">{{ page.title }}</h2>
+  <div class="metadatas">
+    <span class="categories">
+      {% for category in page.categories %}<span class="category">{{ category }}</span> {% endfor %}
+    </span>&nbsp;-&nbsp;
+    <span class="date">{{page.date | date: "%Y-%m-%d"}}</span>
+  </div>
+  <div class="content">
+    {{ content }}
+  </div>
+</article>

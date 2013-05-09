@@ -1,0 +1,12 @@
+/**
+ * The main partial.
+ */
+
+main {
+  @extend %clearfix;
+  @extend %max-width;
+
+  padding: .5em;
+
+
+}

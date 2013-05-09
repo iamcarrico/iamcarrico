@@ -1,0 +1,12 @@
+# we use Macs
+.DS_Store
+
+# Ignore stuff that Jekyll pops out
+_site
+
+# Ignore Sass stuff
+.sass-cache
+
+# For Grunt npm modules
+node_modules
+_tmp

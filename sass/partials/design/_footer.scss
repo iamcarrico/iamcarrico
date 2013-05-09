@@ -1,0 +1,46 @@
+/**
+ * The footer partial.
+ */
+
+footer {
+  @extend %max-width;
+  @extend %clearfix;
+
+  padding: 0 .5em 1em;
+  font-size: 1.05em;
+  background-color: lighten(gray, 40%);
+
+  .contact {
+
+
+    a {
+      //display: block;
+      float: left;
+      clear: left;
+      padding: .25em 0;
+      width: auto;
+
+      &.github i {
+        @extend %icon-github;
+      }
+
+      &.twitter i {
+        @extend %icon-twitter;
+      }
+
+      &.about-me i {
+        @extend %icon-globe;
+      }
+
+    }
+
+  }
+
+  .copyright {
+    padding: .25em 0;
+    display: block;
+    clear: both;
+
+  }
+
+}
