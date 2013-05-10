@@ -49,23 +49,19 @@ header {
 
     @include grid-span(1, 2);
 
-    ul, li {
-      list-style-type: none;
+    .menubar,
+    .menuitem {
+      display: block;
       margin-bottom: .5em;
       padding-right: .25em;
-      padding-left: 0;
       width: 100%;
       text-align: right;
-    }
-
-    li {
-
     }
 
     @include breakpoint($menu-break) {
       @include grid-span(1, 2);
 
-      li {
+      .menuitem {
         display: inline-block;
         width: auto;
         margin-left: .75em;

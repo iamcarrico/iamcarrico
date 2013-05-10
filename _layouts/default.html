@@ -23,21 +23,26 @@
     } // Modernizr.fontface
     })();
   </script>
+
+  {% if site.development == true %}
+  <script>document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':9001/livereload.js?snipver=1\"></' + 'script>')
+  </script>
+  {% endif %}
+
 </head>
 
 <body>
 
   <header>
     <h1 class="title"><a href="/"><span class="word">I. </span><span class="word">Am. </span><span class="word">Carrico.</span></a></h1>
-    <nav id="nav">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Me</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
+    <nav id="nav" role="navigation">
+      <div class="menubar" role="menubar">
+        <a href="/" class="menuitem" role="menuitem">Home</a>
+        <a href="/about/" class="menuitem" role="menuitem">About</a>
+        <a href="/contact/" class="menuitem" role="menuitem">Contact</a>
+      </div>
     </nav>
   </header>
-
   <main role="main">
     {{ content }}
   </main>
