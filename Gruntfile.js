@@ -9,15 +9,19 @@ module.exports = function (grunt) {
       },
       css: {
         files: ['sass/{,**/}*.scss'],
-        tasks: ['compass:dev']
+        tasks: ['compass:dev', 'jekyll:dev']
       },
       js: {
         files: [
           'js/{,**/}*.js',
           '!js/{,**/}*.js'
         ],
-        tasks: ['jshint', 'uglify:dev']
-      }
+        tasks: ['jshint', 'uglify:dev', 'jekyll:dev']
+      },
+      jekyll: {
+				files: ['{,**/}*.html', '!_site/{,**/}*.html'],
+				tasks: ['jekyll:dev']
+			}
     },
 
     compass: {
@@ -120,37 +124,28 @@ module.exports = function (grunt) {
       assets: {
         grunt: true,
         tasks: ['imagemin', 'svgmin', 'uglify:dist']
+      },
+      server: {
+        grunt: true,
+        tasks: ['jekyll:server', 'watch'],
       }
     },
 
     jekyll: {
 			server : {
-				src : './',
-				dest: './_site',
 				server : true,
 				server_port : 4000,
-				auto : true
+				bundleExec: true,
+				config: '_config_dev.yml',
 			},
 			dev: {
-				src: './',
-				dest: './_site'
+				bundleExec: true,
+				config: '_config_dev.yml',
 			},
 			prod: {
-				src: './',
-				dest: './_site'
+  			bundleExec: true,
 			}
 		},
-
-
-  });
-
-
-  grunt.event.on('watch', function(action, filepath) {
-    grunt.config([
-      'compass:dev',
-      'jshint',
-      'concat'
-    ], filepath);
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -163,13 +158,15 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-jekyll');
 
-  grunt.registerTask('build', [
+  grunt.registerTask('server', ['parallel:server']);
+
+  grunt.registerTask('deploy', [
     'parallel:assets',
     'compass:dist',
     'concat',
     'jshint',
-    'uglify',
+    'jekyll:prod',
   ]);
 
-  grunt.registerTask('default', ['build']);
+  grunt.registerTask('default', ['server']);
 };

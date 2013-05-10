@@ -5,4 +5,4 @@ permalink: /:title
 paginate: 10
 category_dir: topics
 exclude: [CONTRIBUTING.md, README.md, sass, config.rb, package.json, Gruntfile.js, node_modules, Gemfile, Gemfile.lock]
-development: false
+development: true
