@@ -11,13 +11,13 @@ module.exports = function (grunt) {
         files: ['sass/{,**/}*.scss'],
         tasks: ['compass:dev', 'jekyll:dev']
       },
-      js: {
-        files: [
-          'js/{,**/}*.js',
-          '!js/{,**/}*.js'
-        ],
-        tasks: ['jshint', 'uglify:dev', 'jekyll:dev']
-      },
+//      js: {
+//        files: [
+//          'js/{,**/}*.js',
+//          '!js/{,**/}*.js'
+//        ],
+//        tasks: ['jshint', 'uglify:dev', 'jekyll:dev']
+//      },
       jekyll: {
 				files: ['{,**/}*.html', '!_site/{,**/}*.html'],
 				tasks: ['jekyll:dev']
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           environment: 'production',
-          imagesDir: 'img-min',
+          imagesDir: 'img',
           force: true
         }
       }
@@ -163,8 +163,8 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', [
     'parallel:assets',
     'compass:dist',
-    'concat',
-    'jshint',
+//    'concat',
+//    'jshint',
     'jekyll:prod',
   ]);
 

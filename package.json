@@ -12,8 +12,7 @@
     "grunt-parallel": "~0.1.0",
     "grunt-svgmin": "~0.1.0",
     "grunt-contrib-concat": "~0.1.2",
-    "grunt-jekyll": "git://github.com/ChinggizKhan/grunt-jekyll.git#add-in-config",
-    "grunt-concurrent": "~0.2.0"
+    "grunt-jekyll": "git://github.com/ChinggizKhan/grunt-jekyll.git#add-in-config"
   },
   "engines": {
     "node": ">=0.8.0"

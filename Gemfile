@@ -2,6 +2,7 @@
 source 'https://rubygems.org'
 
 # ~> Refers to all versions of the given gem on the current full version number, so it will be able to use any version of Compass Aurora until Compass Aurora 4.x.x. For a specific version of a gem, remove the ~>
+gem 'compass', '~>0.12.0'
 gem 'compass-aurora', '~>3.0.0'
 gem 'toolkit', '~>1.0.0'
 gem 'singularitygs', '~>1.0.7'
@@ -17,6 +18,3 @@ gem 'redcarpet',  '=2.2.2'
 gem 'maruku',     '=0.6.1'
 gem 'rdiscount',  '=1.6.8'
 gem 'RedCloth',   '=4.2.9'
-
-
-# Now that you're using Bundler, you need to run `bundle exec compass watch` instead of simply `compass watch`.

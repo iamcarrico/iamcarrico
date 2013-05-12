@@ -13,7 +13,7 @@ header {
   $grids: add-grid(5 4 at $menu-break);
   $grids: add-grid(11 5 at $menu-break-lg);
   $gutters: add-gutter(1/8 at $menu-break-lg);
-  //@include background-grid;
+//  @include background-grid;
 
   .title {
     @include grid-span(1, 1);

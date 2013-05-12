@@ -1,12 +1,15 @@
 # Require any additional compass plugins here.
-require 'aurora'
+require 'singularitygs'
+require 'toolkit'
+require 'compass-normalize'
+require 'sassy-buttons'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "css"
 sass_dir = "sass"
-images_dir = "img"
-javascripts_dir = "_js"
+images_dir = "images"
+javascripts_dir = "js"
 fonts_dir = "fonts"
 
 # To enable relative paths to assets via compass helper functions. Since Drupal themes can be installed in multiple locations, we shouldn't need to worry about the absolute path to the theme from the server root.
