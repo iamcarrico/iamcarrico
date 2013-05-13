@@ -70,9 +70,7 @@ header {
           margin-left: 0;
         }
       }
-
     }
-
     @include breakpoint($menu-break-lg) {
       @include grid-span(1, 2);
     }
