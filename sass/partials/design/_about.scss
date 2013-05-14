@@ -1,0 +1,19 @@
+/**
+ * About me partial.
+ */
+
+
+@include breakpoint($about-break) {
+
+  $grids: 3 2;
+
+  #about {
+    @include grid-span(1, 1);
+  }
+
+  #my-photo {
+    @include grid-span(1, 2);
+  }
+
+}
+
