@@ -82,6 +82,7 @@ a {
   &:hover {
     color: mix(#000, $color, 50%);
   }
+
 }
 
 
@@ -137,3 +138,26 @@ em {
 // These selection declarations have to be separate
 ::-moz-selection { background: $selection-bg; color: $selection; text-shadow: none; }
 ::selection { background: $selection-bg; color: $selection; text-shadow: none; }
+
+
+// Some icon font.
+.github i {
+  @extend %icon-github;
+}
+
+.twitter i {
+  @extend %icon-twitter;
+}
+
+.about-me i {
+  @extend %icon-globe;
+}
+
+.linkedin i {
+  @extend %icon-linkedin;
+}
+
+.drupal i {
+  @extend %icon-group;
+}
+

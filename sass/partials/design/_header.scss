@@ -72,6 +72,8 @@ header {
       }
     }
     @include breakpoint($menu-break-lg) {
+
+      margin: 1em 1em 0 0;
       @include grid-span(1, 2);
     }
   }
