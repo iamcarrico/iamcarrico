@@ -1,4 +1,4 @@
-header:after, main:after, footer:after {
+header:after, main:after, footer .inner:after {
   content: "";
   display: table;
   clear: both;
@@ -15,7 +15,7 @@ img, video {
   height: auto;
 }
 
-header:after, main:after, footer:after {
+header:after, main:after, footer .inner:after {
   content: "";
   display: table;
   clear: both;
@@ -159,11 +159,11 @@ figure {
   margin: 0;
 }
 
-header:before, main:before, footer:before, header:after, main:after, footer:after {
+header:before, main:before, footer .inner:before, header:after, main:after, footer .inner:after {
   display: table;
   content: "";
 }
-header:after, main:after, footer:after {
+header:after, main:after, footer .inner:after {
   clear: both;
 }
 
@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "nimbus-sans-extended", Arial, Helvetica, "Nimbus Sans L", sans-serif;
 }
 
-header, main, footer {
+header, main, footer .inner {
   max-width: 60em;
   margin: 0 auto 0;
 }
@@ -206,7 +206,7 @@ header, main, footer {
   font-style: normal;
 }
 
-footer .contact a.twitter i, footer .contact a.github i, footer .contact a.about-me i {
+.twitter i, .github i, .about-me i, .drupal i, .linkedin i {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
@@ -227,16 +227,24 @@ footer .contact a.twitter i, footer .contact a.github i, footer .contact a.about
 
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
  readers do not read off random characters that represent icons */
-footer .contact a.twitter i:before {
+.twitter i:before {
   content: "\f099";
 }
 
-footer .contact a.github i:before {
+.github i:before {
   content: "\f09b";
 }
 
-footer .contact a.about-me i:before {
+.about-me i:before {
   content: "\f0ac";
+}
+
+.drupal i:before {
+  content: "\f0c0";
+}
+
+.linkedin i:before {
+  content: "\f0e1";
 }
 
 .highlight {
@@ -712,6 +720,7 @@ header nav .menuitem {
 }
 @media (min-width: 46.875em) {
   header nav {
+    margin: 1em 1em 0 0;
     width: 31.00775%;
     float: right;
     margin-left: 0;
@@ -725,6 +734,37 @@ header nav .menuitem {
  */
 main {
   padding: .5em;
+}
+
+/**
+ * About me partial.
+ */
+@media (min-width: 43.75em) {
+  #about {
+    width: 57.14286%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+
+  #my-photo {
+    width: 38.09524%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+/**
+ * Contact design partial.
+ */
+#contact ul li {
+  list-style-type: none;
+}
+#contact li {
+  margin-bottom: .5em;
+  display: block;
 }
 
 /**
@@ -747,9 +787,12 @@ main {
  * The footer partial.
  */
 footer {
+  background-color: #e6e6e6;
+  width: 100%;
+}
+footer .inner {
   padding: 0 .5em 1em;
   font-size: 1.05em;
-  background-color: #e6e6e6;
 }
 footer .contact a {
   float: left;
