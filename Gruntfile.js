@@ -11,13 +11,6 @@ module.exports = function (grunt) {
         files: ['sass/{,**/}*.scss'],
         tasks: ['compass:dev', 'jekyll:dev']
       },
-//      js: {
-//        files: [
-//          'js/{,**/}*.js',
-//          '!js/{,**/}*.js'
-//        ],
-//        tasks: ['jshint', 'uglify:dev', 'jekyll:dev']
-//      },
       jekyll: {
 				files: ['{,**/}*.html', '_posts/*', '!_site/{,**/}*.html'],
 				tasks: ['jekyll:dev']
@@ -43,28 +36,6 @@ module.exports = function (grunt) {
       }
     },
 
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: [
-        'js/{,**/}*.js',
-        '!js/{,**/}*.min.js'
-      ]
-    },
-
-    concat: {
-      options: {
-        separator: ';'
-      },
-      modernizr: {
-        src: [
-          '_js/vendor/modernizr.min.js'
-        ],
-        dest: 'js/dist/modernizr.min.js'
-      },
-    },
-
     imagemin: {
       dist: {
         options: {
@@ -79,52 +50,9 @@ module.exports = function (grunt) {
       }
     },
 
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: 'img',
-          src: '**/*.svg',
-          dest: 'img-min'
-        }]
-      }
-    },
 
-    uglify: {
-      dev: {
-        options: {
-          mangle: false,
-          compress: false,
-          beautify: true
-        },
-        files: [{
-          expand: true,
-          cwd: 'js',
-          src: ['**/*.js', '!**/*.min.js'],
-          dest: 'js',
-          ext: '.min.js'
-        }]
-      },
-      dist: {
-        options: {
-          mangle: true,
-          compress: true
-        },
-        files: [{
-          expand: true,
-          cwd: 'js',
-          src: ['**/*.js', '!**/*.min.js'],
-          dest: 'js',
-          ext: '.min.js'
-        }]
-      }
-    },
 
     parallel: {
-      assets: {
-        grunt: true,
-        tasks: ['imagemin', 'svgmin', 'uglify:dist']
-      },
       server: {
         grunt: true,
         tasks: ['jekyll:server', 'watch'],
@@ -161,10 +89,7 @@ module.exports = function (grunt) {
   grunt.registerTask('server', ['parallel:server']);
 
   grunt.registerTask('deploy', [
-    'parallel:assets',
     'compass:dist',
-//    'concat',
-//    'jshint',
     'jekyll:prod',
   ]);
 
