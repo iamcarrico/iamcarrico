@@ -7,9 +7,14 @@
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="{{ page.url | canonical }}">
   <link rel="canonical" href="{{ page.url | canonical }}" />
   <link rel="icon" href="/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection">
+
 
   <script src="/js/dist/modernizr.min.js"></script>
   <script>
