@@ -15,9 +15,8 @@
   <link rel="icon" href="/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection">
 
-
-  <script src="/js/dist/modernizr.min.js"></script>
-  <script>
+  <script type='text/javascript'>{% include modernizr.min.js %}</script>
+  <script type='text/javascript'>
     (function() {
     if (Modernizr.fontface) {
       var config = {
