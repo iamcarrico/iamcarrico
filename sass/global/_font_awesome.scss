@@ -52,6 +52,13 @@ $fontAwesomePath:"/fonts" !default;
   background-repeat: repeat;
   margin-top: 0;
   margin-right: .25em;
+
+  &:before {
+    vertical-align: middle;
+    width: 1.3em;
+    display: inline-block;
+    font-size: 1.25em;
+  }
 }
 
 
