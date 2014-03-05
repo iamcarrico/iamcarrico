@@ -15,9 +15,8 @@
   <link rel="icon" href="/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection">
 
-
-  <script src="/js/dist/modernizr.min.js"></script>
-  <script>
+  <script type='text/javascript'>{% include modernizr.min.js %}</script>
+  <script type='text/javascript'>
     (function() {
     if (Modernizr.fontface) {
       var config = {
@@ -39,7 +38,7 @@
 <body>
 
   <header>
-    <h1 class="title"><a href="/"><span class="word">I. </span><span class="word">Am. </span><span class="word">Carrico.</span></a></h1>
+    <h1 class="site-name title"><a href="/"><span class="word">I. </span><span class="word">Am. </span><span class="word">Carrico.</span></a></h1>
     <nav id="nav" role="navigation">
       <div class="menubar" role="menubar">
         <a href="/" class="menuitem" role="menuitem">Home</a>
@@ -55,9 +54,9 @@
   <footer role="contentinfo">
     <div class="inner">
       <span class="contact">
-        <a href="http://github.com/ChinggizKhan/" class="github"><i></i>github.com/ChinggizKhan</a>
-        <a href="http://twitter.com/iamcarrico/" class="twitter"><i></i>twitter.com/iamcarrico</a>
-        <a href="http://about.me/iancarrico" class="about-me"><i></i>about.me/iancarrico</a>
+        <a href="http://github.com/ChinggizKhan/" target="_blank" class="github">github.com/ChinggizKhan</a>
+        <a href="http://twitter.com/iamcarrico/" target="_blank" class="twitter">twitter.com/iamcarrico</a>
+        <a href="http://about.me/iancarrico" target="_blank" class="about-me">about.me/iancarrico</a>
       </span>
 
       <span class="copyright">

@@ -6,6 +6,7 @@
 
   .title {
     text-transform: uppercase;
+    margin-bottom: 5px;
   }
 
   .category {
@@ -18,6 +19,10 @@
     &:last-child:after {
       content: '';
     }
+  }
+
+  &.teaser {
+    margin-bottom: 40px;
   }
 
 

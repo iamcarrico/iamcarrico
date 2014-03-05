@@ -141,23 +141,23 @@ em {
 
 
 // Some icon font.
-.github i {
+.github {
   @extend %icon-github;
 }
 
-.twitter i {
+.twitter {
   @extend %icon-twitter;
 }
 
-.about-me i {
+.about-me {
   @extend %icon-globe;
 }
 
-.linkedin i {
+.linkedin {
   @extend %icon-linkedin;
 }
 
-.drupal i {
+.drupal {
   @extend %icon-group;
 }
 

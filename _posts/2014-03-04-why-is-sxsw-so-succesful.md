@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Mobi Sites Are Over, Stop Trying"
-date:   2014-02-12 12:00:00
-categories: rwd mobile-first
+title:  "Why is SXSW so successful?"
+date:   2014-03-04 12:00:00
+categories: sxsw
 ---
 
 I have moments of irrational anger toward articles I find on the internet. Today, I found one such article that was a compare and contrast to the benifits of having a mobile site vs having a responsive site. I will be the first to admit that rebuilding a site's front end to be responsive is not an cheap task. It takes time, money, and a team willing to redesign not just the look at feel, but also document hierarchy. But that difficulty should not be feared, it should be surmounted.
+
+<!--more-->
 
 ### Why I dislike mobile sites
 
