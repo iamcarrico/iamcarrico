@@ -23,5 +23,8 @@ This content is not even a third of what SXSW has to offer. There is also film, 
 
 I have two rules for SXSW, do not pay for your drinks (but tip your bartender) and do not wait to get into an event. Luckily, there are so many event's across the city, there is always an event ready to meet and greet new people. Certainly, Austinites love the free events that come with SXSW, and I could not agree more. Just remember to RSVP to the events you want to go to, and do not be afraid to find the smaller events all over the city.
 
+## An adventure on every corner
+
+SXSW is one of the most exciting weeks of the year.
 
 *I will be attending SXSW this year. <a href="https://twitter.com/intent/user?user_id=940528772" class="twitter" target="_blank">Follow me on Twitter</a> at [@iamcarrico](https://twitter.com/iamcarrico) for updates on where I will be during the week.*
