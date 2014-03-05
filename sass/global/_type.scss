@@ -139,9 +139,9 @@ em {
 ::-moz-selection { background: $selection-bg; color: $selection; text-shadow: none; }
 ::selection { background: $selection-bg; color: $selection; text-shadow: none; }
 
-
 // Some icon font.
 .github {
+
   @extend %icon-github;
 }
 
