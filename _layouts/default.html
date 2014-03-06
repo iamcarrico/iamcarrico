@@ -31,8 +31,8 @@
   {% endfor %}
 {% endif %}
 {% if page.url %}
-  <meta content="{{ site.url }}{{ page.url | canonical }}" property="og:url">
-  <link rel="canonical" href="{{ page.url | canonical }}" />
+  <meta content="{{ site.url }}{{ page.url | canonical }}/" property="og:url">
+  <link rel="canonical" href="{{ page.url | canonical }}/" />
 {% endif %}
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
 
