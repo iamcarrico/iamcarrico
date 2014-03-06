@@ -5,7 +5,7 @@ date:   2014-03-06 12:00:00
 categories: sxsw
 ---
 
-Every year, thousands of people come to Austin, TX for the annual [SXSW festival](http://sxsw.com/). And each year it sets record numbers of participants and partygoers that attend. What drives droves of people from across the globe to the city for SXSW? The event is so large, that there is not a single reason behind its success, but many. Here are a few I find compelling.
+Every year, thousands of people come to Austin, Texas, for the annual [SXSW festival](http://sxsw.com/). And each year it sets record numbers for participants and partygoers that attend. What drives droves of people from across the globe to the city for SXSW? The event is so large that there is not a single reason behind its success, but many. Here are a few I find compelling.
 
 <!--more-->
 
@@ -19,13 +19,13 @@ Mid-March in Austin usually comes with temperate climate. Excluding a few years,
 
 ## Amazing content
 
-Every year [Hugh Forrest](https://twitter.com/Hugh_W_Forrest), [Shawn O'Keefe](https://twitter.com/shawnokeefe) and the rest of the SXSW Interactive team bring in some of the best speakers across the globe. With these speakers comes not just amazing content, but also sparks great conversation. SXSW stems new and interesting ideas at every turn. I spend most of the week thinking about what the year is going to bring and what new ideas I can apply to my current project.
+Every year [Hugh Forrest](https://twitter.com/Hugh_W_Forrest), [Shawn O'Keefe](https://twitter.com/shawnokeefe) and the rest of the SXSW Interactive team brings in some of the best speakers across the globe. With these speakers comes not just amazing content, but also sparks great conversation. SXSW inspires new and interesting ideas at every turn. I spend most of the week thinking about what the year is going to bring and what new ideas I can apply to my current project.
 
-The interactive content is not even a third of what SXSW has to offer. The festival also has film, featuring amazing content from talented filmmakers from across the globe. SXSWedu has already begun. They have been sharing innovations across the world of education. Of course, the foundation of SXSW is the music. This where huge artists, rising stars, and international groups come together and fill Austin's streets, parks and bars with music.
+Interactive content is not even a third of what SXSW has to offer. The festival also has film, featuring amazing content by talented filmmakers from across the globe. SXSWedu has already begun and they have been sharing innovations across the world of education. Of course, the foundation of SXSW is the music. The music where huge artists, rising stars, and international groups come together and fill Austin's streets, parks, and bars with new and inspiring sounds.
 
 ## Parties, parties everywhere
 
-I have two rules for SXSW. First, do not pay for your drinks, but always tip your bartender. Second, do not wait to get into an event. During the festival are many events across the city, and there is always an event ready to meet and greet new people. Austinites love the free events that come with SXSW, and I could not agree more. Just remember to RSVP to the events you want to go to and to explore the smaller events all over the city. Some of the bests nights I have had were at holes in the wall on the east side.
+I have two rules for the participants SXSW. First, do not pay for your drinks, but always tip your bartender. Second, do not wait to get into a party. During the festival are many events across the city, and there is always a place ready to meet and greet new people. Austinites love the free events that come with SXSW, and I could not agree more. Just remember to RSVP to the events you want to go to and to explore the smaller events all over the city. Some of the bests nights I have had were at holes in the wall on the east side.
 
 ## An adventure on every corner
 
