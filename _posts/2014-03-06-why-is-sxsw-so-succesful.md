@@ -21,14 +21,14 @@ Mid-March in Austin usually comes with temperate climate. Excluding a few years,
 
 Every year [Hugh Forrest](https://twitter.com/Hugh_W_Forrest), [Shawn O'Keefe](https://twitter.com/shawnokeefe) and the rest of the SXSW Interactive team bring in some of the best speakers across the globe. With these speakers comes not just amazing content, but also sparks great conversation. SXSW stems new and interesting ideas at every turn. I spend most of the week thinking about what the year is going to bring and what new ideas I can apply to my current project.
 
-The interactive content is not even a third of what SXSW has to offer. The festival also has film, featuring amazing content from talented film makers from across the globe. SXSWedu has already begun. They have been sharing innovations across the world of education. Of course, the foundation of SXSW is the music. This where huge artists, rising stars, and international groups come together and fill Austins streets, parks and bars with music.
+The interactive content is not even a third of what SXSW has to offer. The festival also has film, featuring amazing content from talented filmmakers from across the globe. SXSWedu has already begun. They have been sharing innovations across the world of education. Of course, the foundation of SXSW is the music. This where huge artists, rising stars, and international groups come together and fill Austin's streets, parks and bars with music.
 
 ## Parties, parties everywhere
 
-I have two rules for SXSW, do not pay for your drinks (but tip your bartender) and do not wait to get into an event. Luckily, there are so many event's across the city, there is always an event ready to meet and greet new people. Certainly, Austinites love the free events that come with SXSW, and I could not agree more. Just remember to RSVP to the events you want to go to, and do not be afraid to find the smaller events all over the city. Some of the bests nights I have had were at hole in the walls on the east side!
+I have two rules for SXSW. First, do not pay for your drinks, but always tip your bartender. Second, do not wait to get into an event. During the festival are many events across the city, and there is always an event ready to meet and greet new people. Austinites love the free events that come with SXSW, and I could not agree more. Just remember to RSVP to the events you want to go to and to explore the smaller events all over the city. Some of the bests nights I have had were at holes in the wall on the east side.
 
 ## An adventure on every corner
 
-So to all of you coming to Austin, welcome! Take in all that the city and SXSW have to offer this week. For those who are not able to join this year, see what you an online and be apart of the conversations. I look forward to seeing what SXSW has in store, and what new innovations (and bands) come out of it.
+So to all of you coming to Austin, welcome! Take in all that the city and SXSW has to offer this week. I look forward to seeing what the festival has in store, and what new innovations (and bands) come out of it.
 
 *I will be attending SXSW this year. <a href="https://twitter.com/intent/user?user_id=940528772" class="twitter" target="_blank">Follow me on Twitter</a> at [@iamcarrico](https://twitter.com/iamcarrico) for updates on where I will be during the week.*
