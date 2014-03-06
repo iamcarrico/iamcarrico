@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why is SXSW so successful?"
-date:   2014-03-06 12:00:00
+date:   2014-03-06 9:00:00
 categories: sxsw
 shortlink: http://iamc.co/1mYvSTu
 ---
