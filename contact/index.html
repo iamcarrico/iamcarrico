@@ -14,4 +14,19 @@ title: Contact Me!
     <li><a href="http://www.linkedin.com/in/iancarrico" target="_blank" class="linkedin">l<i></i>inkedin.com/in/iancarrico</a></li>
   </ul>
   <p>I can also be found on freenode.net with the nick ChinggizKhan.</p>
+
+  <h2>Message Me</h2>
+  <p>Need to send me a message? Fill out this form to get in contact with me.</p>
+{% if site.development == true %}
+  <form action="http://localhost:4000" method="post">
+{% else %}
+  <form action="http://getsimpleform.com/messages?form_api_token=743e158a31a61a39076e2cae9c1bbcc4" method="post">
+{% endif %}
+    <label for="name">Full name <span class="required">*</span></label><input type="text" placeholder="Inigo Montoya" name="name" required autofocus />
+    <label for="email">Email <span class="required">*</span></label><input type="email" placeholder="your@email.com" name="email" required />
+    <label for="phone">Phone &nbsp;</label><input type="tel" placeholder="+1 (555) 555-5555" name="phone" />
+    <label for="message">Message <span class="required">*</span></label><textarea name="message" required placeholder="message"></textarea>
+    <input class="submit" type="submit" value="Submit" />
+  </form>
+
 </div>
