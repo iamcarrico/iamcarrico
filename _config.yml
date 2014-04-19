@@ -7,4 +7,5 @@ paginate: 10
 timezone: America/Chicago
 category_dir: topics
 exclude: [CONTRIBUTING.md, README.md, sass, config.rb, package.json, Gruntfile.js, node_modules, Gemfile, Gemfile.lock, CNAME, images]
+markdown: kramdown
 development: false
