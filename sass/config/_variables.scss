@@ -54,19 +54,14 @@ $museo:           "museo-sans", Verdana, Tahoma, "DejaVu Sans", sans-serif;
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
-// Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $georgia; // The font family set on the html element.
-$font-body:        $verdana;
-$font-monospace:   $courier;
-$form-font-family: $arial;
-
-
 //
 // Colors, etc.
 //
 
 $white          : #FFFFFF;
 $black          : #333333;
+$grey           : lighten($black, 70%);
+$blue           : #2090B4;
 
 // Standard colors: for standard 4K and other brand colors.
 // Note: these are just for reference, and some brands have multiple colors.
@@ -86,7 +81,7 @@ $color-fk       : #66B360;
 
 
 // Base color variables.
-$link           : #2090B4;
+$link           : $blue;
 $visited        : $link;
 $selection-bg   : #66B360;
 $selection      : $white;
