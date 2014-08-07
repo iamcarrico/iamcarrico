@@ -1,18 +1,30 @@
 {
-  "name": "ianblog",
-  "version": "1.0.0",
+  "name": "iamcarrico",
+  "version": "2.0.0",
+  "homepage": "http://iamcarrico.com",
+  "repository": "https://github.com/iamcarrico/iamcarrico",
+  "description": "My own little personal blog",
+  "author": {
+    "name": "Ian Carrico",
+    "email": "github@iancarrico.com",
+    "url": "https://github.com/iamcarrico"
+  },
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.0",
-    "grunt-contrib-watch": "~0.4.0",
-    "grunt-contrib-compass": "~0.2.0",
-    "grunt-contrib-jshint": "~0.1.1",
-    "grunt-contrib-uglify": "~0.2.0",
-    "grunt-contrib-imagemin": "~0.1.4",
-    "grunt-parallel": "~0.1.0",
-    "grunt-svgmin": "~0.1.0",
-    "grunt-contrib-concat": "~0.1.2",
-    "grunt-jekyll": "git://github.com/ChinggizKhan/grunt-jekyll.git#add-in-config"
+    "browser-sync": "^0.8.2",
+    "compass-options": "^0.1.1",
+    "gulp": "^3.8.6",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-changed": "^0.3.0",
+    "gulp-compass": "^1.2.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-gh-pages": "^0.3.3",
+    "gulp-imagemin": "^0.6.1",
+    "gulp-jekyll": "0.0.0",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^0.3.1",
+    "run-sequence": "^0.3.6"
   },
   "engines": {
     "node": ">=0.8.0"

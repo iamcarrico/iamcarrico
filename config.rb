@@ -1,13 +1,11 @@
 # Require any additional compass plugins here.
 require 'singularitygs'
 require 'toolkit'
-require 'compass-normalize'
-require 'sassy-buttons'
 
 # Set this to the root of your project when deployed:
-http_path = "/"
+http_path = "./"
 css_dir = "css"
-sass_dir = "sass"
+sass_dir = "_sass"
 images_dir = "img"
 javascripts_dir = "js"
 fonts_dir = "fonts"

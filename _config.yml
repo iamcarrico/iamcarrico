@@ -1,11 +1,32 @@
 name: I. Am. Carrico.
 lsi: false
+debug: false
 pygments: true
+
 permalink: /:title
 url: http://iamcarrico.com
 paginate: 10
 timezone: America/Chicago
+
 category_dir: topics
-exclude: [CONTRIBUTING.md, README.md, sass, config.rb, package.json, Gruntfile.js, node_modules, Gemfile, Gemfile.lock, CNAME, images]
+exclude: [CONTRIBUTING.md, README.md, config.rb, package.json, Gruntfile.js, node_modules, Gemfile, Gemfile.lock]
+
 markdown: kramdown
+
 development: false
+
+assets:
+  dirname: assets
+  sources:
+    - js
+    - css
+    - img
+    - bower_components
+  js_compressor: 'uglifier'
+  css_compressor: 'yui'
+  cache: true
+
+collections:
+  talks:
+    output: true
+    permalink: /talks/:title.html

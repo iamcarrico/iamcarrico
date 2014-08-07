@@ -1,9 +1,0 @@
-name: I. Am. Carrico.
-lsi: false
-pygments: true
-permalink: /:title
-paginate: 10
-category_dir: topics
-exclude: [CONTRIBUTING.md, README.md, sass, config.rb, package.json, Gruntfile.js, node_modules, Gemfile, Gemfile.lock, CNAME]
-markdown: kramdown
-development: true

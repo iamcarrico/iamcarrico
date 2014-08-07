@@ -1,8 +1,13 @@
 # we use Macs
 .DS_Store
 
+# Ignore Compiled files
+img
+css
+
 # Ignore stuff that Jekyll pops out
 _site
+.jekyll-assets-cache
 
 # Ignore Sass stuff
 .sass-cache

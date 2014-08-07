@@ -138,26 +138,3 @@ em {
 // These selection declarations have to be separate
 ::-moz-selection { background: $selection-bg; color: $selection; text-shadow: none; }
 ::selection { background: $selection-bg; color: $selection; text-shadow: none; }
-
-// Some icon font.
-.github {
-
-  @extend %icon-github;
-}
-
-.twitter {
-  @extend %icon-twitter;
-}
-
-.about-me {
-  @extend %icon-globe;
-}
-
-.linkedin {
-  @extend %icon-linkedin;
-}
-
-.drupal {
-  @extend %icon-group;
-}
-

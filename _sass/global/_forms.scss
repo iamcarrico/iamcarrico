@@ -31,7 +31,7 @@ textarea {
   }
 
   @include breakpoint(720px) {
-    width: 80%;
+    width: 75%;
   }
 }
 
@@ -42,7 +42,7 @@ textarea {
 
 label {
   @include breakpoint(720px) {
-    width: 20%;
+    width: 25%;
     float: left;
     text-align: right;
     padding: .375em .5em;
