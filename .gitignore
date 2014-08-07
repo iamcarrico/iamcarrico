@@ -4,6 +4,7 @@
 # Ignore Compiled files
 img
 css
+.tmp
 
 # Ignore stuff that Jekyll pops out
 _site

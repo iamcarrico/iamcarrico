@@ -16,17 +16,6 @@ var deploy = require("gulp-gh-pages");
 paths.imagesSrc = '_images/**/*';
 paths.assets = '_site/assets';
 
-// var paths = {
-//  sass: ['_sass/**/*.scss'],
-//  css: 'css',
-//  imagesSrc: ['_images/**/*'],
-//  imagesDest: 'images',
-//  jekyll: ['**/*.html', '**/*.md', '!_site/**/*.html', '!node_modules/**/*'],
-//  assets: '_site/assets',
-//}
-//
-
-
 gulp.task('sass', function() {
   browserSync.notify('<span style="color: grey">Running:</span> Sass compiling');
   return gulp.src(paths.sass + '/**/*.scss')
@@ -125,5 +114,6 @@ gulp.task('deploy', function(cb) {
 gulp.task('gh-pages', function () {
   gulp.src("./_site/**/*")
     .pipe(deploy({
+      cacheDir: '.tmp'
     }));
 });
