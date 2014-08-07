@@ -1,7 +1,6 @@
 name: I. Am. Carrico.
 lsi: false
 debug: false
-pygments: true
 
 permalink: /:title
 url: http://iamcarrico.com
