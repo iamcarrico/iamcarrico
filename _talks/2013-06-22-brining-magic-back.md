@@ -12,6 +12,7 @@ links:
 categories:
   - Sass
   - Drupal
+permalink: /talks/2013/brining-magic-back/
 ---
 
 Frontend development is changing, and themers need the right tools to create performant, mobile-first sites. Starting to navigate the many modules, CSS preprocessors and libraries out there can be incredibly overwelming. But have no fear, we are here to bring some magic back into your project with some tools to improve your development workflow.

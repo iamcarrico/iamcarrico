@@ -2,7 +2,7 @@ name: I. Am. Carrico.
 lsi: false
 debug: false
 
-permalink: /:title
+permalink: /writings/:title
 url: http://iamcarrico.com
 paginate: 10
 timezone: America/Chicago
@@ -13,6 +13,10 @@ exclude: [CONTRIBUTING.md, README.md, config.rb, package.json, gulpfile.js, node
 markdown: kramdown
 
 development: false
+
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from
 
 assets:
   dirname: assets
@@ -28,4 +32,4 @@ assets:
 collections:
   talks:
     output: true
-    permalink: /talks/:title.html
+    permalink: /talks/:title/index.html

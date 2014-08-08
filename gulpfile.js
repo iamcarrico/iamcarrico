@@ -73,6 +73,8 @@ gulp.task('jekyll-build', function (done) {
     .on('close', done);
 });
 
+gulp.task('jekyll', ['jekyll-build']);
+
 // Our 'dev' tasks for jekyll server, note: it builds the files, but uses extra configuration.
 gulp.task('jekyll-dev', function (done) {
   browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');

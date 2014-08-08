@@ -4,7 +4,7 @@ title:  "Why is SXSW so successful?"
 date:   2014-03-06 9:00:00
 categories: sxsw
 shortlink: http://iamc.co/1mYvSTu
-description: Every year, thousands of people come to Austin, Texas, for the annual SXSW festival. And each year it sets record numbers for participants and partygoers that attend. What drives droves of people from across the globe to the city for SXSW?
+redirect_from: "/why-is-sxsw-so-succesful/"
 ---
 
 Every year, thousands of people come to Austin, Texas, for the annual [SXSW festival](http://sxsw.com/). And each year it sets record numbers for participants and partygoers that attend. What drives droves of people from across the globe to the city for SXSW? The event is so large that there is not a single reason behind its success, but many. Here are a few I find compelling.

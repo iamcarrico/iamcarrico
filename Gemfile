@@ -11,6 +11,8 @@ gem 'jekyll', '~>2.0.0'
 
 group :jekyll_plugins do
   gem 'jekyll-minify-html'
+  gem 'jekyll-sitemap'
+  gem 'jekyll-redirect-from'
 
   # Asset Pipline
   gem 'jekyll-assets'

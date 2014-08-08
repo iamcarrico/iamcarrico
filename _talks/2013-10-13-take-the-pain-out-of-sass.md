@@ -10,6 +10,7 @@ links:
     href: http://vimeo.com/86306777
 categories:
   - Sass
+permalink: /talks/2013/take-the-pain-out-of-sass/
 ---
 
 Managing multiple projects, multiple developers, or different development environments on a project makes Sass quickly go from an awesome tool to a painful test in debugging. But it does not have to be this way! There are tools, and methods to quickly and easily manage each individual project to use consistent versions of Ruby, the proper gems, and deploy code in an easy and consistent manner.

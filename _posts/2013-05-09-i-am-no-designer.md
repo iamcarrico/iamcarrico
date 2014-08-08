@@ -3,6 +3,7 @@ layout: post
 title:  "I Am No Designer"
 date:   2013-05-13 12:00:00
 categories: jekyll backend
+redirect_from: "/i-am-no-designer/"
 ---
 
 There are many who would count me amongst designers, I am not one of those people. I work with desiners, I can see a good design from a bad one... but I am no designer. This is probably why after years of trying to make a fancy blog, something noteworthy, something catchy to the eye--- I opted instead to bring something simple to the board. <!--more--> Something that would bring what a blog is most needed for, it's content.

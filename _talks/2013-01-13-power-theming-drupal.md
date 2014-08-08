@@ -10,6 +10,7 @@ links:
 categories:
   - Sass
   - Drupal
+permalink: /talks/2013/power-theming-drupal/
 ---
 
 You want a responsive site. You want a theme that will blow their minds. You want to do it all with the latest and greatest tools available to rapidly devel your site’s front-end theme. You want all of this, but you don't want to grow old ensuring your CSS is correct. You might even hate writing CSS and wish there was an easier way. If this applies to you in any way, then you are ready to use the next generation of tools at your fingertips for your front-end development.
