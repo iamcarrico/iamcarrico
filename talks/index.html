@@ -1,18 +1,19 @@
 ---
 layout: default
 title: Talks
-id: talks
+css_id: talks
 ---
 
 <h2>All my previous talks</h2>
 
 <ul>
-  {% for talk in site.talks %}
-    <li>{{ talk.title }} - {{ talk.location }} - {{ talk.date | date: "%Y-%m-%d" }}</li>
-    {% if talk.video or talk.slides %}
+  {% for talk in site.talks reversed %}
+    <li><a href="{{ talk.url }}">{{ talk.title }}</a> - {{ talk.location }} - {{ talk.date | date: "%Y-%m-%d" }}</li>
+    {% if talk.links  %}
       <ul>
-        {% if talk.video %}<li><a href={{ talk.video }} target="_blank">Video</a>{% endif %}
-        {% if talk.slides %}<li><a href={{ talk.slides }} target="_blank">Slides</a>{% endif %}
+        {% for link in talk.links %}
+          <li><a href="{{ link.href }}" target="_blank">{{ link.title }}</a></li>
+        {% endfor %}
       </ul>
     {% endif %}
   {% endfor %}

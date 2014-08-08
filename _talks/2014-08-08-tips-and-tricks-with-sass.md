@@ -2,10 +2,15 @@
 layout: talk
 date: 2014-08-08 11:00:00
 title: "Tips and Tricks with Sass"
-slides: http://iamcarrico.github.io/tips-tricks-with-sass/
+slides:
 location: Twin Cities Drupal Camp
+links:
+  - title: Slides
+    href: http://iamcarrico.github.io/tips-tricks-with-sass/
+  - title: Notes
+    href: https://docs.google.com/document/d/196j33g4UMA9w5WYCRKbvmL52jIiAnoQjSHZKO4iKPnc/edit
 categories:
-  - sass
+  - Sass
 ---
 
 Lets be honest, ruby is hard. It breaks, it has weird errors, it requires specific versions of its gems, and just makes me want to scream. And that makes using Sass even more difficult. How can we get our frontend developers using this amazing tool? Once we have it running, what are the best practices to ensure our code is DRY as possible?

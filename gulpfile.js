@@ -15,6 +15,7 @@ var deploy = require("gulp-gh-pages");
 
 paths.imagesSrc = '_images/**/*';
 paths.assets = '_site/assets';
+paths.jekyll = ['**/*.html', '**/*.md', '!_site/**/*.html', '!node_modules/**/*'];
 
 gulp.task('sass', function() {
   browserSync.notify('<span style="color: grey">Running:</span> Sass compiling');

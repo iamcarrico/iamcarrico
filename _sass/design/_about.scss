@@ -7,7 +7,7 @@
 
   $grids: 3 2;
 
-  #about {
+  #about-text {
     @include grid-span(1, 1);
   }
 
@@ -16,4 +16,3 @@
   }
 
 }
-
