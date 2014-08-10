@@ -9,7 +9,6 @@ categories: jekyll gulp
 
 
 ```js
-
 gulp.task('sass', function() {
   browserSync.notify('<span style="color: grey">Running:</span> Sass compiling');
   return gulp.src(paths.sass + '/**/*.scss')
