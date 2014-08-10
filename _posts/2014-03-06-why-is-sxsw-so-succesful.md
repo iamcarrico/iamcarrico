@@ -9,8 +9,6 @@ redirect_from: "/why-is-sxsw-so-succesful/"
 
 Every year, thousands of people come to Austin, Texas, for the annual [SXSW festival](http://sxsw.com/). And each year it sets record numbers for participants and partygoers that attend. What drives droves of people from across the globe to the city for SXSW? The event is so large that there is not a single reason behind its success, but many. Here are a few I find compelling.
 
-<!--more-->
-
 ## Anything can happen
 
 From [impromptu concerts by Jack White](http://www.youtube.com/watch?v=Mx7yky2C9Gk), to [Twitter's launch](http://laughingsquid.com/twitter-wins-sxsw-web-award/), and even [Bill Murray serving tequila](http://www.youtube.com/watch?v=fwwEGjGbxXM)--- anything can happen at SXSW. My favorite encouter was a few years back, where I was able to be [Jeffrey Zeldman's](http://www.zeldman.com/) impromptu "Sherpa" prior to his presentation. I have met many of my industry's movers and shakers, as well as some of the [more](http://ronenv.com/) [interesting](http://en.wikipedia.org/wiki/Vermin_Supreme) [people](https://twitter.com/timoreilly) in the world. In short, you never know what is going to happen any day of the festival. It is just important to keep your eyes and ears open in order to be ready for what the day might bring.

@@ -5,12 +5,13 @@ debug: false
 permalink: /writings/:title
 url: http://iamcarrico.com
 paginate: 10
+paginate_path: "writings/page/:num"
 timezone: America/Chicago
 
 category_dir: topics
 exclude: [CONTRIBUTING.md, README.md, config.rb, package.json, gulpfile.js, node_modules, Gemfile, Gemfile.lock, css]
 
-markdown: kramdown
+markdown: redcarpet
 
 development: false
 

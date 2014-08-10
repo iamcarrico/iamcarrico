@@ -1,5 +1,6 @@
 development: true
 minify_html: false
+paginate: 3
 
 assets:
   js_compressor:

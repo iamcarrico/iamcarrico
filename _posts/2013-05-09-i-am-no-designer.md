@@ -6,7 +6,7 @@ categories: jekyll backend
 redirect_from: "/i-am-no-designer/"
 ---
 
-There are many who would count me amongst designers, I am not one of those people. I work with desiners, I can see a good design from a bad one... but I am no designer. This is probably why after years of trying to make a fancy blog, something noteworthy, something catchy to the eye--- I opted instead to bring something simple to the board. <!--more--> Something that would bring what a blog is most needed for, it's content.
+There are many who would count me amongst designers, I am not one of those people. I work with desiners, I can see a good design from a bad one... but I am no designer. This is probably why after years of trying to make a fancy blog, something noteworthy, something catchy to the eye--- I opted instead to bring something simple to the board. Something that would bring what a blog is most needed for, it's content.
 
 Thus I present to the world, my personal blog I. Am. Carrico. A little blog of the musings of a web developer, aerialist, libertine and dubious philosopher. Build upon [jekyll](http://jekyllrb.com/) with some lovely [grunt](http://gruntjs.com/) and compass magic tossed in... it is a simple, easy place for you to find my thoughts.
 

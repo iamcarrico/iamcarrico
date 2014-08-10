@@ -4,18 +4,8 @@ title: I. Am. Carrico.
 css_id: home
 ---
 
-
-{% for post in site.posts %}
-  <article class="blog-post teaser">
-    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <div class="metadatas">
-      <span class="categories">
-        {% for category in post.categories %}<span class="category">{{ category }}</span> {% endfor %}
-      </span>&nbsp;-&nbsp;
-      <span class="date">{{post.date | date: "%Y-%m-%d"}}</span>
-    </div>
-    <div class="content">
-      {{ post.content | split:'<!--more-->' | first }}
-    </div>
-  </article>
+{% for post in paginator.posts %}
+  {% include teaser.html post=post %}
 {% endfor %}
+
+{% include pagination.html %}
