@@ -118,5 +118,5 @@ gulp.task('gh-pages', function () {
   gulp.src("./_site/**/*")
     .pipe(deploy({
       cacheDir: '.tmp'
-    }));
+    })).pipe(gulp.dest('/dev/null')); ;
 });
