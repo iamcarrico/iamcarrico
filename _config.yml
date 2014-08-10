@@ -10,7 +10,16 @@ timezone: America/Chicago
 future: false
 
 category_dir: topics
-exclude: [CONTRIBUTING.md, README.md, config.rb, package.json, gulpfile.js, node_modules, Gemfile, Gemfile.lock, css]
+exclude: 
+  - CONTRIBUTING.md
+  - README.md
+  - config.rb
+  - package.json
+  - gulpfile.js
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - css
 
 markdown: redcarpet
 
