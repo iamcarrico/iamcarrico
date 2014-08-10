@@ -6,77 +6,76 @@ header {
   @extend %clearfix;
   @extend %max-width;
 
-  $grids: 10 3;
-  $gutters: 1/4;
-  $output: 'isolation';
+  @include layout(10 3, 1/4, $output-style: 'isolation') {
+    @include add-grid(5 4 at $menu-break);
+    @include add-grid(11 5 at $menu-break-lg);
+    @include add-gutter(1/8 at $menu-break-lg);
 
-  $grids: add-grid(5 4 at $menu-break);
-  $grids: add-grid(11 5 at $menu-break-lg);
-  $gutters: add-gutter(1/8 at $menu-break-lg);
-//  @include background-grid;
 
-  .title {
-    @include grid-span(1, 1);
-    font-size: 4em;
-    line-height: 1em;
-    margin: 0;
-
-    .word {
-      display: block;
-    }
-
-    a,
-    a:link,
-    a:visited {
-      color: $black;
-    }
-
-    @include breakpoint($menu-break) {
+    .title {
       @include grid-span(1, 1);
-    }
-
-    @include breakpoint($menu-break-lg) {
-      @include grid-span(1, 1);
-      margin-top: 1em;
+      font-size: 4em;
+      line-height: 1em;
+      margin: 0;
 
       .word {
-        display: inline;
+        display: block;
       }
-    }
-  }
 
-  nav {
+      a,
+      a:link,
+      a:visited {
+        color: $black;
+      }
 
-    @include grid-span(1, 2);
+      @include breakpoint($menu-break) {
+        @include grid-span(1, 1);
+      }
 
-    .menubar,
-    .menuitem {
-      display: block;
-      margin-bottom: .5em;
-      padding-right: .25em;
-      width: 100%;
-      text-align: right;
-    }
+      @include breakpoint($menu-break-lg) {
+        @include grid-span(1, 1);
+        margin-top: 1em;
 
-    @include breakpoint($menu-break) {
-      @include grid-span(1, 2);
-
-      .menuitem {
-        display: inline-block;
-        width: auto;
-        margin-left: .75em;
-
-        &:first-child {
-          margin-left: 0;
+        .word {
+          display: inline;
         }
       }
     }
-    @include breakpoint($menu-break-lg) {
 
-      margin: 1em 1em 0 0;
+    nav {
+
       @include grid-span(1, 2);
+
+      .menubar,
+      .menuitem {
+        display: block;
+        margin-bottom: .5em;
+        padding-right: .25em;
+        width: 100%;
+        text-align: right;
+      }
+
+      @include breakpoint($menu-break) {
+        @include grid-span(1, 2);
+
+        .menuitem {
+          display: inline-block;
+          width: auto;
+          margin-left: .75em;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+      @include breakpoint($menu-break-lg) {
+
+        margin: 1em 1em 0 0;
+        @include grid-span(1, 2);
+      }
     }
+
   }
+
+
 }
-
-

@@ -7,7 +7,6 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: $black;
-  //background-color: red;
 }
 
 
@@ -55,7 +54,8 @@ h6 {
 // http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
 a {
   text-decoration: none;
-  @include single-transition(color, .3s);
+  transition: color .3s;
+  color: $link;
 
   &:link {
     color: $link;
@@ -72,17 +72,6 @@ a {
   &:active, &.active {
 
   }
-}
-
-$color: #2090b4;
-a {
-  color: $color;
-  @include single-transition(color, .3s);
-
-  &:hover {
-    color: mix(#000, $color, 50%);
-  }
-
 }
 
 

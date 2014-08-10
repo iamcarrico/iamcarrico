@@ -6,19 +6,7 @@
 ////////////////////////
 
 %clearfix {
-	@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    *zoom: 1;
-  }
-
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-  }
-
-  &:after {
-    clear: both;
-  }
+	@include clearfix;
 }
 
 %museo {
@@ -30,6 +18,6 @@
 }
 
 %max-width {
-  max-width: 60em;
+  max-width: $max-width;
   margin: 0 auto 0;
 }

@@ -5,14 +5,13 @@
 
 @include breakpoint($about-break) {
 
-  $grids: 3 2;
+  @include layout(3 2) {
+    #about-text {
+      @include grid-span(1, 1);
+    }
 
-  #about-text {
-    @include grid-span(1, 1);
+    #my-photo {
+      @include grid-span(1, 2);
+    }
   }
-
-  #my-photo {
-    @include grid-span(1, 2);
-  }
-
 }

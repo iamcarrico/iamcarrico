@@ -2,10 +2,10 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-gem 'compass', '~>0.12.0'
-gem 'toolkit', '~>1.0.0'
-gem 'singularitygs', '~>1.0.7'
-gem 'breakpoint', '~>2.0.2'
+gem 'compass', '~>1.0.0.rc.1'
+gem 'toolkit', '~>2.0'
+gem 'singularitygs', '~>1.2'
+gem 'breakpoint', '~>2.5'
 
 gem 'jekyll', '~>2.0.0'
 
