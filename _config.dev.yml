@@ -1,6 +1,5 @@
 development: true
 minify_html: false
-paginate: 3
 
 show_drafts: true
 future:      true

@@ -4,13 +4,13 @@ debug: false
 
 permalink: /writings/:title
 url: http://iamcarrico.com
-paginate: 10
+paginate: 4
 paginate_path: "writings/page/:num"
 timezone: America/Chicago
 future: false
 
 category_dir: topics
-exclude: 
+exclude:
   - CONTRIBUTING.md
   - README.md
   - config.rb
