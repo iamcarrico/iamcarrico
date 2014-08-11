@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Jekyll Workflow Part 1: Building a Site"
-date:   2014-09-10 12:00:00
+date:   2014-09-11 12:00:00
 categories:
   - jekyll
   - yeoman
+  - Mr. Poole
 ---
 
 [Jekyll](http://jekyllrb.com/) has become one of the best static site generators, rising to popularity in no small part because of its use on [GitHub Pages](https://pages.github.com/). It is incredibly simple, and easy to begin making awesome static sites or blogs, with very little effort. This month, I am doing a 4 part series of blog posts on how to create, deploy, and automate a site on Jekyll, all while ensuring it is as performant as possible. These tools are all used on my own site, and several smaller sites that I have worked on, and the code is all available on GitHub.
@@ -60,7 +61,7 @@ To ensure all of our images are optimized:
 $ gulp images
 ```
 
-To build our Jekyll site, and serve it using BrowserSync. This will watch our files and ensure the proper tasks are run for us on their change. It will also automatically update our site, without the need for a refresh, all through BrowserSync.
+To build our Jekyll site, and serve it using BrowserSync. This will watch our files and ensure the proper tasks are run for us on their change. It will also automatically update our site, without the need for a refresh, all through BrowserSync. This should be the command that is run the most, as it will also compile the Sass files and minify images.
 
 ```bash
 $ gulp server
@@ -80,9 +81,9 @@ $ gulp deploy
 
 ### Asset pipeline
 
-
+The last piece of the generator is the use of [Jekyll Assets](https://github.com/ixti/jekyll-assets) to handle cache busting and minification. It is built to allow for CSS to be developed locally, in an expanded state, then for production it will minify the CSS files. It will also allow for caches to be busted on CSS files and images if they ever change. The forth blog post in this series will go over best practices with the asset pipeline, and how to properly utilize it.
 
 
 ## More information
 
-This post is just the first in a four part series on how the generator was built, and the code that runs it. Although all of this power is given for free using [Mr. Poole](https://github.com/iamcarrico/generator-poole)
+This post is just the first in a four part series on how the generator was built, and the code that runs it. Although all of this power is given for free using [Mr. Poole](https://github.com/iamcarrico/generator-poole), each post will go into a piece of how the generator runs, and how to best take advantage of its power.
