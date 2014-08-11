@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jekyll Workflow Part 1: Building a Site"
-date:   2014-09-11 12:00:00
+date:   2014-09-12 12:00:00
 categories:
   - jekyll
   - yeoman
