@@ -7,6 +7,7 @@
   .title {
     text-transform: uppercase;
     margin-bottom: 5px;
+    line-height: 1.1;
   }
 
   .category {
@@ -19,6 +20,10 @@
     &:last-child:after {
       content: '';
     }
+  }
+
+  .hero-image {
+    margin-top: 1em;
   }
 
   &.teaser {

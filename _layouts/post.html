@@ -11,6 +11,9 @@ layout: default
     <span class="date">{{page.date | date: "%Y-%m-%d"}}</span>
   </div>
   <div class="content">
+    {% if page.image %}
+      <img src="/{{ page.image.url }}" alt="{{ page.image.alt }}" class="hero-image">
+    {% endif %}
     {{ content }}
   </div>
   {% include comments.html %}

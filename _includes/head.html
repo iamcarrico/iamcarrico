@@ -19,7 +19,7 @@
   <meta content="{{ site.url }}/about/" property="article:author">
 {% endif %}
 {% if page.image %}
-  <meta content="{{ site.url }}/assets/img/posts/{{ page.image }}" property="og:image">
+  <meta content="{{ site.url }}/{{ page.image.url }}" property="og:image">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories %}

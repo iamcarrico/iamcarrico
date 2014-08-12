@@ -2,6 +2,10 @@
 layout: post
 title:  "Jekyll Workflow Part 1: Building a Site"
 date:   2014-09-12 12:00:00
+shortlink:
+image:
+  url: img/2014/jekyll.png
+  alt: "Jekyllrb"
 categories:
   - jekyll
   - yeoman
