@@ -7,7 +7,7 @@ url: http://iamcarrico.com
 paginate: 4
 paginate_path: "writings/page/:num"
 timezone: America/Chicago
-future: false
+future: true
 
 category_dir: topics
 exclude:
