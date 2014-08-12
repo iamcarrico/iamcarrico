@@ -2,7 +2,7 @@
 layout: post
 title:  "Jekyll Workflow Part 1: Building a Site"
 date:   2014-09-12 9:00:00
-shortlink:
+shortlink: http://iamc.co/1sKHUPl
 image:
   url: img/2014/jekyll.png
   alt: "Jekyllrb"
