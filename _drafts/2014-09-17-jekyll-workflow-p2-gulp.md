@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jekyll Workflow Part 2: Automation with Gulp"
-date:   2014-09-17 12:00:00
+date:   2014-09-18 09:00:00
 image: img/2014/gulpjs.png
 categories:
   - jekyll
@@ -111,7 +111,7 @@ The task itself is just as simple as ensuring the server will be ran from Jekyll
 
 ## How can I use it?
 
-The [Mr. Poole](https://github.com/iamcarrico/generator-poole) is setup to automatically allow the use of these commands. To use it on an existing Jekyll site, copy these commands into your own Gulpfile. You can also install the commands locally with:
+The [Mr. Poole Yeoman Generator](https://github.com/iamcarrico/generator-poole) is setup to automatically allow the use of these commands. To use it on an existing Jekyll site, copy these commands into your own Gulpfile. You can also install the commands locally with:
 
 ```bash
 $ npm install -g gulp-poole
