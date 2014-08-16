@@ -1,35 +1,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% if page.title %}
   <title>{{ page.title }}</title>
+  {% else %}
+  <title>{{ site.name }}</title>
+  {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:site_name" content="{{ site.name }}">
-{% if page.title %}
-  <meta content="{{ page.title }}" property="og:title">
-  <meta content="article" property="og:type">
-{% else %}
-  <meta content="{{ site.title }}" property="og:title">
-  <meta content="website" property="og:type">
-{% endif %}
-{% if page.description %}
-  <meta content="{{ page.description }}" property="og:description">
-{% endif %}
-{% if page.date %}
-  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-  <meta content="{{ site.url }}/about/" property="article:author">
-{% endif %}
-{% if page.image %}
-  <meta content="{{ site.url }}/{{ page.image.url }}" property="og:image">
-{% endif %}
-{% if page.categories %}
-  {% for category in page.categories %}
-  <meta content="{{ category }}" property="article:tag">
-  {% endfor %}
-{% endif %}
-{% if page.url %}
-  <meta content="{{ site.url }}{{ page.url | canonical }}/" property="og:url">
-  <link rel="canonical" href="{{ page.url | canonical }}/" />
-{% endif %}
+  {% poole_tags %}
   {% stylesheet style %}
 
   <script type='text/javascript'>

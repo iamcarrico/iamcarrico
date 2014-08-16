@@ -3,15 +3,14 @@ layout: post
 title:  "Jekyll Workflow Part 1: Building a Site"
 date:   2014-09-12 9:00:00
 shortlink: http://iamc.co/1sKHUPl
-image:
-  url: img/2014/jekyll.png
-  alt: "Jekyllrb"
+image: img/2014/jekyll.png
 categories:
   - jekyll
   - yeoman
   - Mr. Poole
 ---
 
+![Jekyll.rb](/img/2014/jekyll.png)
 [Jekyll](http://jekyllrb.com/) has become one of the best static site generators, rising to popularity in no small part because of its use on [GitHub Pages](https://pages.github.com/). It is incredibly simple and easy to begin making awesome static sites or blogs, with very little effort. This month I am doing a 4 part series of blog posts on how to create, deploy and automate a site on Jekyll, all while ensuring it is as performant as possible. These tools are all used on my own site and several smaller sites that I have worked on. The code is all available on GitHub.
 
 ## Creating a site

@@ -1,4 +1,5 @@
-name: I. Am. Carrico.
+title: I. Am. Carrico.
+author: http://iamcarrico.com/about/
 lsi: false
 debug: false
 
@@ -45,4 +46,4 @@ assets:
 collections:
   talks:
     output: true
-    permalink: /talks/:title/index.html
+    permalink: /talks/:year/:path/

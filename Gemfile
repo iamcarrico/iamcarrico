@@ -18,4 +18,7 @@ group :jekyll_plugins do
   gem 'jekyll-assets'
   gem 'uglifier'
   gem 'yui-compressor'
+
+  # Poole
+  gem 'jekyll-poole'
 end
