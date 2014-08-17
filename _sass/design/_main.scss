@@ -4,7 +4,8 @@
 
 main {
   @extend %clearfix;
-  @extend %max-width;
+  max-width: 45em;
+  margin: 0 auto;
 
   padding: .5em;
 }

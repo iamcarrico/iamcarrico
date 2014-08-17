@@ -1,0 +1,15 @@
+@import "compass/css3";
+
+@font-face {
+  font-family: 'pt';
+  font-style: normal;
+  font-weight: normal;
+  src: inline-font-files("pt.svg", svg);
+}
+
+@font-face {
+  font-family: 'pt';
+  font-style: italic;
+  font-weight: normal;
+  src: inline-font-files("pt-italic.svg", svg);
+}
