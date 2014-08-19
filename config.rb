@@ -9,7 +9,7 @@ css_dir = "css"
 sass_dir = "_sass"
 images_dir = "img"
 javascripts_dir = "js"
-fonts_dir = "_fonts"
+fonts_dir = "fonts"
 
 # To enable relative paths to assets via compass helper functions. Since Drupal themes can be installed in multiple locations, we shouldn't need to worry about the absolute path to the theme from the server root.
 relative_assets = true
