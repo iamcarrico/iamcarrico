@@ -4,12 +4,20 @@
   font-family: 'pt';
   font-style: normal;
   font-weight: normal;
-  src: inline-font-files("pt.woff", woff);
+  src: url('/fonts/pt.eot?1407277128') format("embedded-opentype");
+  src: url('/fonts/pt.eot?1407277128#iefix') format("embedded-opentype"),
+      inline-font-files("pt.woff", woff),
+      url('/fonts/pt.ttf?1394301137') format("truetype"),
+      url('/fonts/pt.svg?1407277128') format("svg");
 }
 
 @font-face {
   font-family: 'pt';
   font-style: italic;
   font-weight: normal;
-  src: inline-font-files("pt-italic.woff", woff);
+  src: url('/fonts/pt-italic.eot?1407277128') format("embedded-opentype");
+  src: url('/fonts/pt-italic.eot?1407277128#iefix') format("embedded-opentype"),
+        inline-font-files("pt-italic.woff", woff), 
+        url('/fonts/pt-italic.ttf?1407277128') format("truetype"),
+        url('/fonts/pt-italic.svg?1407277128') format("svg");
 }
