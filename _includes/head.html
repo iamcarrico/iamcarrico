@@ -8,6 +8,9 @@
   {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% poole_tags %}
-  {% stylesheet style %}
-  <style>{% asset font %}</style>
+  {% if site.development %}
+    {% stylesheet style %}
+  {% else %}
+    <esi:include src="header.php" />
+  {% endif %}
 </head>
