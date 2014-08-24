@@ -1,36 +1,98 @@
----
-layout: nil
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% capture site_url %}{% if site.url %}{{ site.url }}{% else %}{{ site.github.url }}{% endif %}{% endcapture %}
-  {% for post in site.posts %}{% unless post.sitemap == false %}
+  
+  
   <url>
-    <loc>{{ site_url }}{{ post.url }}</loc>
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    <loc>http://iamcarrico.com/writings/jekyll-workflow-p1-building</loc>
+    <lastmod>2014-09-12T04:00:00-05:00</lastmod>
     <priority>0.8</priority>
   </url>
-  {% endunless %}{% endfor %}
-  {% for post in site.html_pages %}{% unless post.sitemap == false %}
+  
   <url>
-    <loc>{{ site_url }}{{ post.url | replace:'index.html','' }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>{% if post.url == "/" or post.url == "/index.html" %}1.0{% else %}0.7{% endif %}</priority>
+    <loc>http://iamcarrico.com/writings/why-is-sxsw-so-succesful</loc>
+    <lastmod>2014-03-06T03:00:00-06:00</lastmod>
+    <priority>0.8</priority>
   </url>
-  {% endunless %}{% endfor %}
-  {% for talk in site.talks %}
+  
   <url>
-    <loc>{{ site_url }}{{ talk.url }}</loc>
-    <lastmod>{{ talk.date | date_to_xmlschema }}</lastmod>
+    <loc>http://iamcarrico.com/writings/mobile-sites-are-over</loc>
+    <lastmod>2014-02-12T06:00:00-06:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/writings/i-am-no-designer</loc>
+    <lastmod>2013-05-13T07:00:00-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http://iamcarrico.com/404.html</loc>
+    <lastmod>2014-08-24T17:50:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  {% endfor %}
-  {% for file in site.html_files %}
+  
   <url>
-    <loc>{{ site_url }}{{ file.path }}</loc>
-    <lastmod>{{ file.modified_time | date:"%Y-%m-%dT%H:%M:%SZ" }}</lastmod>
-    <priority>0.6</priority>
+    <loc>http://iamcarrico.com/50x.html</loc>
+    <lastmod>2014-08-24T17:50:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
-  {% endfor %}
+  
+  <url>
+    <loc>http://iamcarrico.com/talks/</loc>
+    <lastmod>2014-08-24T17:50:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/about/</loc>
+    <lastmod>2014-08-24T17:50:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/contact/</loc>
+    <lastmod>2014-08-24T17:50:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/</loc>
+    <lastmod>2014-08-24T17:50:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http://iamcarrico.com/talks/2013/power-theming-drupal/</loc>
+    <lastmod>2013-01-14T05:00:00-06:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/talks/2013/brining-magic-back/</loc>
+    <lastmod>2013-06-22T10:00:00-05:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/talks/2013/take-the-pain-out-of-sass/</loc>
+    <lastmod>2013-10-13T06:00:00-05:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/talks/2014/tips-and-tricks-with-sass/</loc>
+    <lastmod>2014-08-08T06:00:00-05:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  
+  
 </urlset>

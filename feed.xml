@@ -1,19 +1,139 @@
----
-layout: rss-feed
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 	<channel>
-		<title>{{ site.name }}</title>
-		<description>{{ site.description }}</description>
-		<link>{{ site.url }}</link>
-		{% for post in site.posts limit:10 %}
+		<title></title>
+		<description></description>
+		<link>http://iamcarrico.com</link>
+		
 			<item>
-				<title>{{ post.title }}</title>
-				<description>{{ post.content | xml_escape }}</description>
-				<published>{{ post.date }}</published>
-				<link>{{ site.url }}{{ post.url }}</link>
+				<title>Jekyll Workflow Part 1: Building a Site</title>
+				<description>&lt;p&gt;&lt;img src=&quot;/img/2014/jekyll.png&quot; alt=&quot;Jekyll.rb&quot;&gt;
+&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; has become one of the best static site generators, rising to popularity in no small part because of its use on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;. It is incredibly simple and easy to begin making awesome static sites or blogs, with very little effort. This month I am doing a 4 part series of blog posts on how to create, deploy and automate a site on Jekyll, all while ensuring it is as performant as possible. These tools are all used on my own site and several smaller sites that I have worked on. The code is all available on GitHub.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-site&quot;&gt;Creating a site&lt;/h2&gt;
+
+&lt;p&gt;First off, make sure that all required dependencies are installed. For the Ruby pieces of Jekyll only &lt;a href=&quot;http://bundler.io/&quot;&gt;Bundler&lt;/a&gt; is needed. Everything else will run through &lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node.js&lt;/a&gt; and to install the required npm packages:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install -g yo bower gulp generator-poole
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now that everything is installed creating a Jekyll site is as easy as using &lt;a href=&quot;https://github.com/iamcarrico/generator-poole&quot;&gt;Mr. Poole, the Jekyll Site Generator&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yo poole
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Yeoman will ask you a few questions about your project and voilà: a fully-featured Jekyll site will be born. Just for you.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-it-is-ugly!&quot;&gt;But it is ugly!&lt;/h2&gt;
+
+&lt;p&gt;Well, yes. But the markup is pretty. And that is what really matters, isn&amp;#39;t it?&lt;/p&gt;
+
+&lt;p&gt;More importantly, all CSS and styling have been torn away so that you have full control of your Jekyll site from Day One. It is built to be ultra-flexible and simple to generate the perfect looking site. It makes no assumptions on the best way to do that, except giving the developer Sass and some base extensions to start with.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-do-i-use-it?&quot;&gt;How do I use it?&lt;/h2&gt;
+
+&lt;p&gt;Glad you asked. This is where Mr. Poole has worked hard to get the site exactly what it needs. Most of all, it has been finely tuned to make development as easy as possible, while including many best-practices.&lt;/p&gt;
+
+&lt;h3 id=&quot;navigation&quot;&gt;Navigation&lt;/h3&gt;
+
+&lt;p&gt;Navigation is controlled by the data within &lt;code&gt;_data/navigation.yml&lt;/code&gt;. By putting navigation inside a Yaml file we can add on &amp;#39;active&amp;#39; and &amp;#39;active-trail&amp;#39; classes when we are on the active link. A new link can be added easily by adding something like this to the navigation.yml file.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Contact&lt;/span&gt;
+  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;/contact/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;gulp-/-browser-sync&quot;&gt;Gulp / Browser Sync&lt;/h3&gt;
+
+&lt;p&gt;The true power of Mr. Poole&amp;#39;s power lies within the Gulp scripts that will automate many frontend tasks for you. It will compile your Sass, include vendor-prefixes, minify images, run a development server with &lt;a href=&quot;http://www.browsersync.io/&quot;&gt;BrowserSync&lt;/a&gt; and deploy to &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To compile all of our Sass files using compass, use:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp sass
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To ensure all of our images are optimized:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp images
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To build our Jekyll site and serve it using BrowserSync. This will watch our files and ensure the proper tasks are run for us on their change. It will also automatically update our site, without the need for a refresh, all through BrowserSync. This should be the command that is run the most, as it will also compile the Sass files and minify images.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To build our site for production and save the result in &amp;#39;_site&amp;#39;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To build the site for production and deploy that code to our gh-pages branch for us:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;asset-pipeline&quot;&gt;Asset pipeline&lt;/h3&gt;
+
+&lt;p&gt;The last piece of the generator is the use of &lt;a href=&quot;https://github.com/ixti/jekyll-assets&quot;&gt;Jekyll Assets&lt;/a&gt; to handle cache busting and minification. It is built to allow for CSS to be developed locally, in an expanded state, then for production it will minify the CSS files. It will also allow for caches to be busted on CSS files and images if they ever change. The forth blog post in this series will go over best practices with the asset pipeline and how to properly utilize it.&lt;/p&gt;
+
+&lt;h2 id=&quot;more-information&quot;&gt;More information&lt;/h2&gt;
+
+&lt;p&gt;This post is just the first in a four part series on how the generator was built and the code that runs it. Although all of this power is given for free using &lt;a href=&quot;https://github.com/iamcarrico/generator-poole&quot;&gt;Mr. Poole&lt;/a&gt;, each post will go into a piece of how the generator runs and how to best take advantage of its power.&lt;/p&gt;
+</description>
+				<published>2014-09-12 04:00:00 -0500</published>
+				<link>http://iamcarrico.com/writings/jekyll-workflow-p1-building</link>
 			</item>
-		{% endfor %}
+		
+			<item>
+				<title>Why is SXSW so successful?</title>
+				<description>&lt;p&gt;Every year, thousands of people come to Austin, Texas, for the annual &lt;a href=&quot;http://sxsw.com/&quot;&gt;SXSW festival&lt;/a&gt;. And each year it sets record numbers for participants and partygoers that attend. What drives droves of people from across the globe to the city for SXSW? The event is so large that there is not a single reason behind its success, but many. Here are a few I find compelling.&lt;/p&gt;
+
+&lt;h2 id=&quot;anything-can-happen&quot;&gt;Anything can happen&lt;/h2&gt;
+
+&lt;p&gt;From &lt;a href=&quot;http://www.youtube.com/watch?v=Mx7yky2C9Gk&quot;&gt;impromptu concerts by Jack White&lt;/a&gt;, to &lt;a href=&quot;http://laughingsquid.com/twitter-wins-sxsw-web-award/&quot;&gt;Twitter&amp;#39;s launch&lt;/a&gt;, and even &lt;a href=&quot;http://www.youtube.com/watch?v=fwwEGjGbxXM&quot;&gt;Bill Murray serving tequila&lt;/a&gt;--- anything can happen at SXSW. My favorite encouter was a few years back, where I was able to be &lt;a href=&quot;http://www.zeldman.com/&quot;&gt;Jeffrey Zeldman&amp;#39;s&lt;/a&gt; impromptu &amp;quot;Sherpa&amp;quot; prior to his presentation. I have met many of my industry&amp;#39;s movers and shakers, as well as some of the &lt;a href=&quot;http://ronenv.com/&quot;&gt;more&lt;/a&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/Vermin_Supreme&quot;&gt;interesting&lt;/a&gt; &lt;a href=&quot;https://twitter.com/timoreilly&quot;&gt;people&lt;/a&gt; in the world. In short, you never know what is going to happen any day of the festival. It is just important to keep your eyes and ears open in order to be ready for what the day might bring.&lt;/p&gt;
+
+&lt;h2 id=&quot;austin&amp;#39;s-weather&quot;&gt;Austin&amp;#39;s weather&lt;/h2&gt;
+
+&lt;p&gt;Mid-March in Austin usually comes with temperate climate. Excluding a few years, the weather has been bright and warm. It is a great time to get out of the seasonably cold weather of the north to enjoy some good southern sun. Even this year, with Austin&amp;#39;s varying weather in March, it is looking like the week will be quite beautiful overall.&lt;/p&gt;
+
+&lt;h2 id=&quot;amazing-content&quot;&gt;Amazing content&lt;/h2&gt;
+
+&lt;p&gt;Every year &lt;a href=&quot;https://twitter.com/Hugh_W_Forrest&quot;&gt;Hugh Forrest&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/shawnokeefe&quot;&gt;Shawn O&amp;#39;Keefe&lt;/a&gt; and the rest of the SXSW Interactive team brings in some of the best speakers across the globe. With these speakers comes not just amazing content, but also sparks great conversation. SXSW inspires new and interesting ideas at every turn. I spend most of the week thinking about what the year is going to bring and what new ideas I can apply to my current project.&lt;/p&gt;
+
+&lt;p&gt;Interactive content is not even a third of what SXSW has to offer. The festival also has film, featuring amazing content by talented filmmakers from across the globe. SXSWedu has already begun and they have been sharing innovations across the world of education. Of course, the foundation of SXSW is the music. The music where huge artists, rising stars, and international groups come together and fill Austin&amp;#39;s streets, parks, and bars with new and inspiring sounds.&lt;/p&gt;
+
+&lt;h2 id=&quot;parties,-parties-everywhere&quot;&gt;Parties, parties everywhere&lt;/h2&gt;
+
+&lt;p&gt;I have two rules for the participants SXSW. First, do not pay for your drinks, but always tip your bartender. Second, do not wait to get into a party. During the festival are many events across the city, and there is always a place ready to meet and greet new people. Austinites love the free events that come with SXSW, and I could not agree more. Just remember to RSVP to the events you want to go to and to explore the smaller events all over the city. Some of the bests nights I have had were at holes in the wall on the east side.&lt;/p&gt;
+
+&lt;h2 id=&quot;an-adventure-on-every-corner&quot;&gt;An adventure on every corner&lt;/h2&gt;
+
+&lt;p&gt;So to all of you coming to Austin, welcome! Take in all that the city and SXSW has to offer this week. I look forward to seeing what the festival has in store, and what new innovations (and bands) come out of it.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I will be attending SXSW this year. &lt;a href=&quot;https://twitter.com/intent/user?user_id=940528772&quot; class=&quot;twitter&quot; target=&quot;_blank&quot;&gt;Follow me on Twitter&lt;/a&gt; at &lt;a href=&quot;https://twitter.com/iamcarrico&quot;&gt;@iamcarrico&lt;/a&gt; for updates on where I will be during the week.&lt;/em&gt;&lt;/p&gt;
+</description>
+				<published>2014-03-06 03:00:00 -0600</published>
+				<link>http://iamcarrico.com/writings/why-is-sxsw-so-succesful</link>
+			</item>
+		
+			<item>
+				<title>Mobi Sites Are Over, Stop Trying</title>
+				<description>&lt;p&gt;I have moments of irrational anger toward articles I find on the internet. Today, I found one such article that was a compare and contrast to the benifits of having a mobile site vs having a responsive site. I will be the first to admit that rebuilding a site&amp;#39;s front end to be responsive is not an cheap task. It takes time, money, and a team willing to redesign not just the look at feel, but also document hierarchy. But that difficulty should not be feared, it should be surmounted.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-i-dislike-mobile-sites&quot;&gt;Why I dislike mobile sites&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Search Engine Optimization: Having a non-performant site, having two different domains (or sub-domains), and duplicate content are all elements on a site that can negatively affect SEO. Check out &lt;a href=&quot;https://developers.google.com/webmasters/googleforwebmasters/&quot;&gt;Google Webmaster&amp;#39;s guide&lt;/a&gt; for a lot more information on how SEO can be improved on a site, and what &lt;a href=&quot;https://developers.google.com/webmasters/smartphone-sites/details&quot;&gt;Google recomends for mobile&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;User Experience: Many sites have tried to have a mobile site and a desktop site, and generally linking between the two have always hurt a user&amp;#39;s experience. XKCD has a &lt;a href=&quot;http://xkcd.com/869/&quot;&gt;webcomic humourizing&lt;/a&gt; the poor linking that having a mobile redirect has. These problems are even greater if mobile navigation, content, etc are different on the two sites.&lt;/li&gt;
+&lt;li&gt;Mobile Redirects: Most redirects rely on user agent sniffing, which is unreliable at best. There have been a &lt;a href=&quot;http://www.sitepoint.com/why-browser-sniffing-stinks/&quot;&gt;multitude&lt;/a&gt; of &lt;a href=&quot;http://farukat.es/journal/2011/02/499-lest-we-forget-or-how-i-learned-whats-so-bad-about-browser-sniffing&quot;&gt;posts&lt;/a&gt; on this &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Browser_detection_using_the_user_agent&quot;&gt;subject&lt;/a&gt;, so I shall not beat a dead horse, but it goes against the princliples of feature detection, progressive enhancement, and graceful degradation.&lt;/li&gt;
+&lt;li&gt;Social sharing: Johhny is on their phone and shares a link from a site&amp;#39;s mobile site on Facebook. Lisa is his friend, sees the link on her desktop and looks at it. Whelp, it is the mobile site and she hates that she cannot see all the content she wants. Moreover, if  share counts are important, there are now have two different sites that are being shared, thus hurting the overall count.&lt;/li&gt;
+&lt;li&gt;Budget: The post I read had one excellent point, which is that creating a responsive site will cost more than a templated .mobi site. To create a true responsive site that is mobile-first, we must start the design process from scratch. From my experience, retrofitting a site to be responsive from a current site is far more work than it is worth. That being said, I will always be a proponent of doing the site right once, than poorly twice. If it is not in the budget this year to redesign the site, then put budget away for next year. Less money will be spent long term, and a better product will surface then if a mobile site is used.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;responsive-or-bust&quot;&gt;Responsive or bust&lt;/h2&gt;
+
+&lt;p&gt;A website is a company&amp;#39;s image to the world. It is important that a website puts the best foot forward. Mobile sites are dying, and their UX patterns are dying with them. The question between a mobile site or a responsive site is not the right question anymore, but instead is there the time and budget to create a responsive site.&lt;/p&gt;
+</description>
+				<published>2014-02-12 06:00:00 -0600</published>
+				<link>http://iamcarrico.com/writings/mobile-sites-are-over</link>
+			</item>
+		
+			<item>
+				<title>I Am No Designer</title>
+				<description>&lt;p&gt;There are many who would count me amongst designers, I am not one of those people. I work with desiners, I can see a good design from a bad one... but I am no designer. This is probably why after years of trying to make a fancy blog, something noteworthy, something catchy to the eye--- I opted instead to bring something simple to the board. Something that would bring what a blog is most needed for, it&amp;#39;s content.&lt;/p&gt;
+
+&lt;p&gt;Thus I present to the world, my personal blog I. Am. Carrico. A little blog of the musings of a web developer, aerialist, libertine and dubious philosopher. Build upon &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt; with some lovely &lt;a href=&quot;http://gruntjs.com/&quot;&gt;grunt&lt;/a&gt; and compass magic tossed in... it is a simple, easy place for you to find my thoughts.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in the tools I used to build such a place, check out the &lt;a href=&quot;https://github.com/ChinggizKhan/grunt-poole&quot;&gt;Github repo&lt;/a&gt; I built from the lessons I learned here. It has a grunt template that contains a jekyll site, compass plugins and some magic with compass. It is a good starting point for anybody wanting to learn more about these awesome tools. I will write more soon about deployment and how to use grunt to make you life immesensely easier.&lt;/p&gt;
+
+&lt;p&gt;The Github repo, Mr. Poole--- a jekyll, grunt and compasss template. https://github.com/ChinggizKhan/grunt-poole&lt;/p&gt;
+</description>
+				<published>2013-05-13 07:00:00 -0500</published>
+				<link>http://iamcarrico.com/writings/i-am-no-designer</link>
+			</item>
+		
 	</channel>
 </rss>
