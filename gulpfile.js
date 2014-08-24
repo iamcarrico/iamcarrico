@@ -3,6 +3,9 @@
 var gulp = require('gulp');
 require('gulp-poole')(gulp);
 
+var runSequence = require('run-sequence');
+var deploy = require("gulp-gh-pages");
+
 
 //////////////////////////////
 // Deploy Task
@@ -23,7 +26,5 @@ gulp.task('commit', function () {
     .pipe(deploy({
       cacheDir: '.tmp',
       branch: 'live'
-    })).pipe(gulp.dest('/tmp/gh-pages')); ;
+    })).pipe(gulp.dest('/tmp/iamcarrico.live'));
 });
-
-}
