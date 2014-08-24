@@ -16,3 +16,7 @@ _site
 # For Grunt npm modules
 node_modules
 _tmp
+
+# AWS
+.aws
+.awspublish-iamcarrico
