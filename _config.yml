@@ -3,7 +3,7 @@ author: http://iamcarrico.com/about/
 lsi: false
 debug: false
 
-permalink: /writings/:title
+permalink: /writings/:title/
 url: http://iamcarrico.com
 paginate: 4
 paginate_path: "writings/page/:num"
