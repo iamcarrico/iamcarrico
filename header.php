@@ -2,7 +2,6 @@
 
 $css = FALSE;
 $fonts = FALSE;
-$current_dir = dirname(__FILE__);
 
 if (isset($_COOKIE['iamCSS'])) {
   $csspath = htmlspecialchars($_COOKIE['iamCSS'], ENT_QUOTES, 'UTF-8');
@@ -17,20 +16,20 @@ if (isset($_COOKIE['iamFonts'])) {
 }
 
 if (!$css || !$fonts) {
-  echo file_get_contents($current_dir . '/inlines/loadcss.inc');
+  echo file_get_contents('inlines/loadcss.inc');
 }
 
 if ($css) {
   echo '<link rel="stylesheet" href="' . $csspath . '">';
 }
 else {
-  echo file_get_contents($current_dir . '/inlines/css.inc');
+  echo file_get_contents('inlines/css.inc');
 }
 
 if ($fonts) {
   echo '<link rel="stylesheet" href="' . $fontpath . '">';
 }
 else {
-  echo file_get_contents($current_dir . '/inlines/fonts.inc');
+  echo file_get_contents('inlines/fonts.inc');
 }
 ?>

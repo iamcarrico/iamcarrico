@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-us"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>{% asset style %}</style>
+    <link rel="stylesheet" href="https://iamcarrico.github.io/fonts/pt.css">
+  </head>
+<body>
+
+  <header>
+    <h1 class="site-name title"><a href="/"><span class="word">I. </span><span class="word">Am. </span><span class="word">Carrico.</span></a></h1>
+  </header>
+
+  <main role="main" {% if page.css_id %}id="{{ page.css_id }}"{% endif %}>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  {% include analytics.html %}
+</body>
+</html>
