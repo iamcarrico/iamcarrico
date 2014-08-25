@@ -64,7 +64,7 @@
 &lt;p&gt;This post is just the first in a four part series on how the generator was built and the code that runs it. Although all of this power is given for free using &lt;a href=&quot;https://github.com/iamcarrico/generator-poole&quot;&gt;Mr. Poole&lt;/a&gt;, each post will go into a piece of how the generator runs and how to best take advantage of its power.&lt;/p&gt;
 </description>
 				<published>2014-09-12 04:00:00 -0500</published>
-				<link>http://iamcarrico.com/writings/jekyll-workflow-p1-building</link>
+				<link>http://iamcarrico.com/writings/jekyll-workflow-p1-building/</link>
 			</item>
 		
 			<item>
@@ -96,7 +96,7 @@
 &lt;p&gt;&lt;em&gt;I will be attending SXSW this year. &lt;a href=&quot;https://twitter.com/intent/user?user_id=940528772&quot; class=&quot;twitter&quot; target=&quot;_blank&quot;&gt;Follow me on Twitter&lt;/a&gt; at &lt;a href=&quot;https://twitter.com/iamcarrico&quot;&gt;@iamcarrico&lt;/a&gt; for updates on where I will be during the week.&lt;/em&gt;&lt;/p&gt;
 </description>
 				<published>2014-03-06 03:00:00 -0600</published>
-				<link>http://iamcarrico.com/writings/why-is-sxsw-so-succesful</link>
+				<link>http://iamcarrico.com/writings/why-is-sxsw-so-succesful/</link>
 			</item>
 		
 			<item>
@@ -118,7 +118,7 @@
 &lt;p&gt;A website is a company&amp;#39;s image to the world. It is important that a website puts the best foot forward. Mobile sites are dying, and their UX patterns are dying with them. The question between a mobile site or a responsive site is not the right question anymore, but instead is there the time and budget to create a responsive site.&lt;/p&gt;
 </description>
 				<published>2014-02-12 06:00:00 -0600</published>
-				<link>http://iamcarrico.com/writings/mobile-sites-are-over</link>
+				<link>http://iamcarrico.com/writings/mobile-sites-are-over/</link>
 			</item>
 		
 			<item>
@@ -132,7 +132,7 @@
 &lt;p&gt;The Github repo, Mr. Poole--- a jekyll, grunt and compasss template. https://github.com/ChinggizKhan/grunt-poole&lt;/p&gt;
 </description>
 				<published>2013-05-13 07:00:00 -0500</published>
-				<link>http://iamcarrico.com/writings/i-am-no-designer</link>
+				<link>http://iamcarrico.com/writings/i-am-no-designer/</link>
 			</item>
 		
 	</channel>
