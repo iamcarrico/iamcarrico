@@ -1,7 +1,7 @@
 ---
 layout: talk
 date: 2013-06-22 15:00:00
-title: "Brining Magic Back"
+title: "Bringing Magic Back"
 slides:
 location: SandCamp
 links:
@@ -12,7 +12,8 @@ links:
 categories:
   - Sass
   - Drupal
-permalink: /talks/2013/brining-magic-back/
+permalink: /talks/2013/bringing-magic-back/
+redirect_from: /talks/2013/brining-magic-back/
 ---
 
 Frontend development is changing, and themers need the right tools to create performant, mobile-first sites. Starting to navigate the many modules, CSS preprocessors and libraries out there can be incredibly overwelming. But have no fear, we are here to bring some magic back into your project with some tools to improve your development workflow.
