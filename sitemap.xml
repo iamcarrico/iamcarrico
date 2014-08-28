@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://iamcarrico.com/writings/jekyll-workflow-p2-gulp/</loc>
+    <lastmod>2014-09-28T04:00:00-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://iamcarrico.com/writings/jekyll-workflow-p1-building/</loc>
     <lastmod>2014-09-12T04:00:00-05:00</lastmod>
     <priority>0.8</priority>
@@ -29,49 +35,56 @@
   
   <url>
     <loc>http://iamcarrico.com/404.html</loc>
-    <lastmod>2014-08-28T09:16:55-05:00</lastmod>
+    <lastmod>2014-08-28T09:56:27-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://iamcarrico.com/50x.html</loc>
-    <lastmod>2014-08-28T09:16:55-05:00</lastmod>
+    <lastmod>2014-08-28T09:56:27-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://iamcarrico.com/</loc>
-    <lastmod>2014-08-28T09:16:55-05:00</lastmod>
+    <lastmod>2014-08-28T09:56:27-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://iamcarrico.com/talks/</loc>
-    <lastmod>2014-08-28T09:16:55-05:00</lastmod>
+    <lastmod>2014-08-28T09:56:27-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://iamcarrico.com/about/</loc>
-    <lastmod>2014-08-28T09:16:55-05:00</lastmod>
+    <lastmod>2014-08-28T09:56:27-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://iamcarrico.com/contact/</loc>
-    <lastmod>2014-08-28T09:16:55-05:00</lastmod>
+    <lastmod>2014-08-28T09:56:27-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://iamcarrico.com/contact/thank_you/</loc>
-    <lastmod>2014-08-28T09:16:55-05:00</lastmod>
+    <lastmod>2014-08-28T09:56:27-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/writings/page/2/</loc>
+    <lastmod>2014-08-28T09:56:27-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
