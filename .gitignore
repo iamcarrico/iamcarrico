@@ -20,3 +20,6 @@ _tmp
 # AWS
 .aws
 .awspublish-iamcarrico
+
+# Composer
+vendor
