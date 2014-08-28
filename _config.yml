@@ -6,7 +6,7 @@ debug: false
 permalink: /writings/:title/
 url: http://iamcarrico.com
 paginate: 4
-paginate_path: "writings/page/:num"
+paginate_path: "writings/page/:num/"
 timezone: America/Chicago
 future: true
 
