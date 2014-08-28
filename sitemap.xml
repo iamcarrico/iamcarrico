@@ -29,44 +29,51 @@
   
   <url>
     <loc>http://iamcarrico.com/404.html</loc>
-    <lastmod>2014-08-25T13:41:43-05:00</lastmod>
+    <lastmod>2014-08-28T08:59:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://iamcarrico.com/50x.html</loc>
-    <lastmod>2014-08-25T13:41:43-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://iamcarrico.com/talks/</loc>
-    <lastmod>2014-08-25T13:41:43-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://iamcarrico.com/contact/</loc>
-    <lastmod>2014-08-25T13:41:43-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://iamcarrico.com/about/</loc>
-    <lastmod>2014-08-25T13:41:43-05:00</lastmod>
+    <lastmod>2014-08-28T08:59:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://iamcarrico.com/</loc>
-    <lastmod>2014-08-25T13:41:43-05:00</lastmod>
+    <lastmod>2014-08-28T08:59:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/talks/</loc>
+    <lastmod>2014-08-28T08:59:16-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/about/</loc>
+    <lastmod>2014-08-28T08:59:16-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/contact/</loc>
+    <lastmod>2014-08-28T08:59:16-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://iamcarrico.com/contact/thank_you/</loc>
+    <lastmod>2014-08-28T08:59:16-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   
   
