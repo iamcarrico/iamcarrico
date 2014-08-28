@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jekyll Workflow Part 2: Automation with Gulp"
-date:   2014-09-18 09:00:00
+date:   2014-09-28 09:00:00
 image: img/2014/gulpjs.png
 categories:
   - jekyll
