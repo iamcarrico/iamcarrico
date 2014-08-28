@@ -38,10 +38,15 @@ if (empty($email) || empty($name) || empty($phone)) {
   return_error();
 }
 
+$request_ip = $_SERVER['REMOTE_ADDR'];
+$x_forwarded = $_SERVER['HTTP_X_FORWARDED_FOR'];
+
 $body = <<<EOT
 *Name:* $name
 *Email:* $email
 *Phone:* $phone
+*Request IP:* $request_ip
+*X Forwarded IP:* $x_forwarded
 *Message:*
 $message
 EOT;
