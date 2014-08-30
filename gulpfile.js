@@ -24,7 +24,7 @@ gulp.task('deploy', function(cb) {
 gulp.task('commit', function () {
   gulp.src("./_site/**/*")
     .pipe(deploy({
-      cacheDir: false,
+      cacheDir: '.tmp',
       branch: 'live'
     })).pipe(gulp.dest('/tmp/iamcarrico.live'));
 });

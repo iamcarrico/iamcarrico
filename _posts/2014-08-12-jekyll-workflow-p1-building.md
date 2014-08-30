@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jekyll Workflow Part 1: Building a Site"
-date:   2014-09-12 9:00:00
+date:   2014-08-12 9:00:00
 shortlink: http://iamc.co/1sKHUPl
 image: img/2014/jekyll.png
 categories:
