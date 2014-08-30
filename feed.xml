@@ -6,68 +6,6 @@
 		<link>http://iamcarrico.com</link>
 		
 			<item>
-				<title>Jekyll Workflow Part 1: Building a Site</title>
-				<description>&lt;p&gt;&lt;img src=&quot;/img/2014/jekyll.png&quot; alt=&quot;Jekyll.rb&quot;&gt;
-&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; has become one of the best static site generators, rising to popularity in no small part because of its use on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;. It is incredibly simple and easy to begin making awesome static sites or blogs, with very little effort. This month I am doing a 4 part series of blog posts on how to create, deploy and automate a site on Jekyll, all while ensuring it is as performant as possible. These tools are all used on my own site and several smaller sites that I have worked on. The code is all available on GitHub.&lt;/p&gt;
-
-&lt;h2 id=&quot;creating-a-site&quot;&gt;Creating a site&lt;/h2&gt;
-
-&lt;p&gt;First off, make sure that all required dependencies are installed. For the Ruby pieces of Jekyll only &lt;a href=&quot;http://bundler.io/&quot;&gt;Bundler&lt;/a&gt; is needed. Everything else will run through &lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node.js&lt;/a&gt; and to install the required npm packages:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install -g yo bower gulp generator-poole
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now that everything is installed creating a Jekyll site is as easy as using &lt;a href=&quot;https://github.com/iamcarrico/generator-poole&quot;&gt;Mr. Poole, the Jekyll Site Generator&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yo poole
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Yeoman will ask you a few questions about your project and voilà: a fully-featured Jekyll site will be born. Just for you.&lt;/p&gt;
-
-&lt;h2 id=&quot;but-it-is-ugly!&quot;&gt;But it is ugly!&lt;/h2&gt;
-
-&lt;p&gt;Well, yes. But the markup is pretty. And that is what really matters, isn&amp;#39;t it?&lt;/p&gt;
-
-&lt;p&gt;More importantly, all CSS and styling have been torn away so that you have full control of your Jekyll site from Day One. It is built to be ultra-flexible and simple to generate the perfect looking site. It makes no assumptions on the best way to do that, except giving the developer Sass and some base extensions to start with.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-do-i-use-it?&quot;&gt;How do I use it?&lt;/h2&gt;
-
-&lt;p&gt;Glad you asked. This is where Mr. Poole has worked hard to get the site exactly what it needs. Most of all, it has been finely tuned to make development as easy as possible, while including many best-practices.&lt;/p&gt;
-
-&lt;h3 id=&quot;navigation&quot;&gt;Navigation&lt;/h3&gt;
-
-&lt;p&gt;Navigation is controlled by the data within &lt;code&gt;_data/navigation.yml&lt;/code&gt;. By putting navigation inside a Yaml file we can add on &amp;#39;active&amp;#39; and &amp;#39;active-trail&amp;#39; classes when we are on the active link. A new link can be added easily by adding something like this to the navigation.yml file.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Contact&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;/contact/&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;gulp-/-browser-sync&quot;&gt;Gulp / Browser Sync&lt;/h3&gt;
-
-&lt;p&gt;The true power of Mr. Poole&amp;#39;s power lies within the Gulp scripts that will automate many frontend tasks for you. It will compile your Sass, include vendor-prefixes, minify images, run a development server with &lt;a href=&quot;http://www.browsersync.io/&quot;&gt;BrowserSync&lt;/a&gt; and deploy to &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To compile all of our Sass files using compass, use:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp sass
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To ensure all of our images are optimized:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp images
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To build our Jekyll site and serve it using BrowserSync. This will watch our files and ensure the proper tasks are run for us on their change. It will also automatically update our site, without the need for a refresh, all through BrowserSync. This should be the command that is run the most, as it will also compile the Sass files and minify images.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp server
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To build our site for production and save the result in &amp;#39;_site&amp;#39;:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To build the site for production and deploy that code to our gh-pages branch for us:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp deploy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;asset-pipeline&quot;&gt;Asset pipeline&lt;/h3&gt;
-
-&lt;p&gt;The last piece of the generator is the use of &lt;a href=&quot;https://github.com/ixti/jekyll-assets&quot;&gt;Jekyll Assets&lt;/a&gt; to handle cache busting and minification. It is built to allow for CSS to be developed locally, in an expanded state, then for production it will minify the CSS files. It will also allow for caches to be busted on CSS files and images if they ever change. The forth blog post in this series will go over best practices with the asset pipeline and how to properly utilize it.&lt;/p&gt;
-
-&lt;h2 id=&quot;more-information&quot;&gt;More information&lt;/h2&gt;
-
-&lt;p&gt;This post is just the first in a four part series on how the generator was built and the code that runs it. Although all of this power is given for free using &lt;a href=&quot;https://github.com/iamcarrico/generator-poole&quot;&gt;Mr. Poole&lt;/a&gt;, each post will go into a piece of how the generator runs and how to best take advantage of its power.&lt;/p&gt;
-</description>
-				<published>2014-09-12 04:00:00 -0500</published>
-				<link>http://iamcarrico.com/writings/jekyll-workflow-p1-building/</link>
-			</item>
-		
-			<item>
 				<title>Jekyll Workflow Part 2: Automation with Gulp</title>
 				<description>&lt;p&gt;&lt;img src=&quot;/img/2014/gulpjs.png&quot; alt=&quot;Gulp.js&quot;&gt;
 The &lt;a href=&quot;/writings/jekyll-workflow-p1-building/&quot;&gt;first blog post&lt;/a&gt; in this series talked about how to use the &lt;a href=&quot;https://github.com/iamcarrico/generator-poole&quot;&gt;Mr. Poole Generator&lt;/a&gt; to create a custom Jekyll site. The generator packs in many features to create amazing blogs or static sites. Probably the most powerful portion of the generator is the &lt;a href=&quot;http://gulpjs.com&quot;&gt;Gulp.js&lt;/a&gt; tasks that come bundled in the &lt;a href=&quot;https://github.com/iamcarrico/gulp-poole&quot;&gt;Gulp tools for Poole&lt;/a&gt;.&lt;/p&gt;
@@ -165,6 +103,68 @@ The &lt;a href=&quot;/writings/jekyll-workflow-p1-building/&quot;&gt;first blog 
 </description>
 				<published>2014-08-28 04:00:00 -0500</published>
 				<link>http://iamcarrico.com/writings/jekyll-workflow-p2-gulp/</link>
+			</item>
+		
+			<item>
+				<title>Jekyll Workflow Part 1: Building a Site</title>
+				<description>&lt;p&gt;&lt;img src=&quot;/img/2014/jekyll.png&quot; alt=&quot;Jekyll.rb&quot;&gt;
+&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; has become one of the best static site generators, rising to popularity in no small part because of its use on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;. It is incredibly simple and easy to begin making awesome static sites or blogs, with very little effort. This month I am doing a 4 part series of blog posts on how to create, deploy and automate a site on Jekyll, all while ensuring it is as performant as possible. These tools are all used on my own site and several smaller sites that I have worked on. The code is all available on GitHub.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-site&quot;&gt;Creating a site&lt;/h2&gt;
+
+&lt;p&gt;First off, make sure that all required dependencies are installed. For the Ruby pieces of Jekyll only &lt;a href=&quot;http://bundler.io/&quot;&gt;Bundler&lt;/a&gt; is needed. Everything else will run through &lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node.js&lt;/a&gt; and to install the required npm packages:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install -g yo bower gulp generator-poole
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now that everything is installed creating a Jekyll site is as easy as using &lt;a href=&quot;https://github.com/iamcarrico/generator-poole&quot;&gt;Mr. Poole, the Jekyll Site Generator&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yo poole
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Yeoman will ask you a few questions about your project and voilà: a fully-featured Jekyll site will be born. Just for you.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-it-is-ugly!&quot;&gt;But it is ugly!&lt;/h2&gt;
+
+&lt;p&gt;Well, yes. But the markup is pretty. And that is what really matters, isn&amp;#39;t it?&lt;/p&gt;
+
+&lt;p&gt;More importantly, all CSS and styling have been torn away so that you have full control of your Jekyll site from Day One. It is built to be ultra-flexible and simple to generate the perfect looking site. It makes no assumptions on the best way to do that, except giving the developer Sass and some base extensions to start with.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-do-i-use-it?&quot;&gt;How do I use it?&lt;/h2&gt;
+
+&lt;p&gt;Glad you asked. This is where Mr. Poole has worked hard to get the site exactly what it needs. Most of all, it has been finely tuned to make development as easy as possible, while including many best-practices.&lt;/p&gt;
+
+&lt;h3 id=&quot;navigation&quot;&gt;Navigation&lt;/h3&gt;
+
+&lt;p&gt;Navigation is controlled by the data within &lt;code&gt;_data/navigation.yml&lt;/code&gt;. By putting navigation inside a Yaml file we can add on &amp;#39;active&amp;#39; and &amp;#39;active-trail&amp;#39; classes when we are on the active link. A new link can be added easily by adding something like this to the navigation.yml file.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Contact&lt;/span&gt;
+  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;/contact/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;gulp-/-browser-sync&quot;&gt;Gulp / Browser Sync&lt;/h3&gt;
+
+&lt;p&gt;The true power of Mr. Poole&amp;#39;s power lies within the Gulp scripts that will automate many frontend tasks for you. It will compile your Sass, include vendor-prefixes, minify images, run a development server with &lt;a href=&quot;http://www.browsersync.io/&quot;&gt;BrowserSync&lt;/a&gt; and deploy to &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To compile all of our Sass files using compass, use:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp sass
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To ensure all of our images are optimized:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp images
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To build our Jekyll site and serve it using BrowserSync. This will watch our files and ensure the proper tasks are run for us on their change. It will also automatically update our site, without the need for a refresh, all through BrowserSync. This should be the command that is run the most, as it will also compile the Sass files and minify images.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To build our site for production and save the result in &amp;#39;_site&amp;#39;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To build the site for production and deploy that code to our gh-pages branch for us:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gulp deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;asset-pipeline&quot;&gt;Asset pipeline&lt;/h3&gt;
+
+&lt;p&gt;The last piece of the generator is the use of &lt;a href=&quot;https://github.com/ixti/jekyll-assets&quot;&gt;Jekyll Assets&lt;/a&gt; to handle cache busting and minification. It is built to allow for CSS to be developed locally, in an expanded state, then for production it will minify the CSS files. It will also allow for caches to be busted on CSS files and images if they ever change. The forth blog post in this series will go over best practices with the asset pipeline and how to properly utilize it.&lt;/p&gt;
+
+&lt;h2 id=&quot;more-information&quot;&gt;More information&lt;/h2&gt;
+
+&lt;p&gt;This post is just the first in a four part series on how the generator was built and the code that runs it. Although all of this power is given for free using &lt;a href=&quot;https://github.com/iamcarrico/generator-poole&quot;&gt;Mr. Poole&lt;/a&gt;, each post will go into a piece of how the generator runs and how to best take advantage of its power.&lt;/p&gt;
+</description>
+				<published>2014-08-12 04:00:00 -0500</published>
+				<link>http://iamcarrico.com/writings/jekyll-workflow-p1-building/</link>
 			</item>
 		
 			<item>
