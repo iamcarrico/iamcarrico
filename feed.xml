@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 	<channel>
-		<title></title>
+		<title>I. Am. Carrico.</title>
 		<description></description>
 		<link>http://iamcarrico.com</link>
+		
+			<item>
+				<title>Loading My Site in the First Packet Response</title>
+				<description>&lt;p&gt;If you&amp;#39;ve been on my site before, you may have noticed a few changes in the past week. Fonts have been changed up, desgin moved around, and most importantly the site now only loads over https. What is underneath these changes though is much greater, and allows my site to always load in the first packet response in the server. Thus making the load time for my site only rely on latency between a user and my server, and a small piece of server process time. The outcome is that this page should load far below the 1000ms threshold.&lt;/p&gt;
+
+&lt;h1 id=&quot;performance-and-1000ms&quot;&gt;Performance and 1000ms&lt;/h1&gt;
+
+&lt;p&gt;Performance matters, this has been made clear. &lt;a href=&quot;https://twitter.com/igrigorik&quot;&gt;Ilya Grigorik&lt;/a&gt; made his famous talk &lt;a href=&quot;https://www.youtube.com/watch?v=Il4swGfTOSM&quot;&gt;&amp;quot;Breaking the 1000ms Time to Glass Mobile Barrier&amp;quot;&lt;/a&gt; which goes deep into why having a fast, performant site is vital. He also goes into some of the many challenges that are apart of getting content to a user that quickly. For many sites, it is more than just moving JavaScript to the footer, or using a CDN. It takes reevaluating how we deliver out content, and taking into effect the limits of HTTP 1.1.&lt;/p&gt;
+
+&lt;p&gt;I set off a few weeks ago, armed with knowledge of the TCP protocol, HTTP 1.1 standard, and a little bit of gumption (and a touch of &lt;a href=&quot;http://www.compassboxwhisky.com/&quot;&gt;scotch&lt;/a&gt;, for good measure), to deliver my site as fast as I could. And I have made immense progress, and decided to show the source code for this site and my server off to the public.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-code&quot;&gt;The Code&lt;/h1&gt;
+
+&lt;p&gt;I had already built my site using &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, and I knew I wanted to preserve a static site. Besides simplicity, it also removed the need for a complex server setup, and allowed for more simple hosting. I had already been using GitHub pages for my host, and while it was very fast, it was not enough for my gluttony of speed. I had already made sure my code was minimized and gzipped through the &lt;a href=&quot;https://github.com/iamcarrico/generator-poole&quot;&gt;Mr. Poole Jekyll Tools&lt;/a&gt;, but my PageSpeed score was still lacking. I needed to look beyond just traditional tools if I wanted to break the speed barrier.&lt;/p&gt;
+
+&lt;h2 id=&quot;first-load-and-beyond&quot;&gt;First Load and Beyond&lt;/h2&gt;
+
+&lt;p&gt;I wanted for my site to load in the first packet response, but also be just as fast for more subsequent page load. This presented an interesting challenge, to ensure every page loaded with the same speed as the first. In my testing, I had found that either I had to load my CSS assets inline, for the first page load, or include them as a link tag for subsequent pulls from the browser cache. If I did the former, the first page load would be fast, but subsequent might take longer. The latter would create blocking on the first load, but subsequent loads would be faster.&lt;/p&gt;
+
+&lt;p&gt;I needed to find some middle ground. I needed for two different headers to present depending if this was the first page load or if there was already the file in the cache. Using Varnish edge-side include (ESI) tags, I was able to create a dynamic header, depending on the presence of certain cookies in the browser. If the cookies did not exist, then the CSS would be inlined, and then loaded asnycronously through &lt;a href=&quot;https://github.com/filamentgroup/loadCSS&quot;&gt;LoadCSS&lt;/a&gt;. This would ensure the CSS was in the header for the second page load, where just the plain link tags would be added.&lt;/p&gt;
+
+&lt;p&gt;The result is always using the most efficient method of delivery, so that the page will always load quickly. In theory, Varnish will allow caching of each page in pieces, so that it has a copy of the main portion of the body and another for just the header scripts. This should ensure the most efficient delivery of assets from the server.&lt;/p&gt;
+
+&lt;h2 id=&quot;font-loading&quot;&gt;Font Loading&lt;/h2&gt;
+
+&lt;p&gt;Like most frontend developers, I was unhappy with the current methods of loading fonts for my website. It seemed that I was stuck between having to choose between fonts holding up rendering of the page, or a perpetual FOUC on every page load as an asynchronous load happens. I wasn&amp;#39;t very happy with either, so instead I used a similar method as the CSS file loading. On the first page load, the fonts are loaded with LoadCSS, which will cause a small FOUC on the first load. From the point forward, they are put in a link tag, ensuring the browser cache loads them from that point forward.&lt;/p&gt;
+
+&lt;p&gt;There is still much to be desired with this method though. The fonts currently load with the woff fonts being base64 encoded into the css file, then the rest of the font types optionally loading. Although this works for the majority of browsers, there is still bloat for browsers that do not support woff. In the future, I would like to create a JavaScript test to figure out which font type is used for each browser, and load only the required on. As of yet, I have not been able to figure out the best way to do that, outside of user agent sniffing.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-server&quot;&gt;The Server&lt;/h1&gt;
+
+&lt;p&gt;Clearly, once I needed to use custom ESI tags, I needed to setup my own server. For this, I employed the use of &lt;a href=&quot;http://www.ansible.com/home&quot;&gt;Ansible&lt;/a&gt;, to manage my server&amp;#39;s configuration. I also used &lt;a href=&quot;&quot;&gt;Vagrant&lt;/a&gt; to be able to create a local environment for me to utilize. The current playbooks I am using are located on my &lt;a href=&quot;https://github.com/iamcarrico/iamcarrico.server&quot;&gt;GitHub profile&lt;/a&gt;, and show the full configuration of my site.&lt;/p&gt;
+
+&lt;p&gt;My site had officially become &amp;quot;almost static&amp;quot;, remaining static for all but the delivery of CSS assets. After a little bit of research and testing, I setup an &lt;a href=&quot;http://nginx.com/&quot;&gt;nginx&lt;/a&gt; server to deliver a static site to Varnish, which would dynamically add in the header information. After some recomendations from other developers, I created the production server on &lt;a href=&quot;www.digitalocean.com/?refcode=ad7f8c567c36&quot;&gt;Digital Ocean&lt;/a&gt;. Since it was most familiar, I employed the use of PHP to check the existance of CSS files, and deliver them dynamically. Simple so far, right?&lt;/p&gt;
+
+&lt;h2 id=&quot;a-wrench:-https&quot;&gt;A Wrench: HTTPS&lt;/h2&gt;
+
+&lt;p&gt;The realization that I needed my own server also opened up the ability for me to serve the site via https. Jumping on the chance, I knew that Varnish was incapable of serving a site via https. Adding on another layer, I had nginx server the static site to varnish, that served the site to another nginx server. The largest benefit, I had the added benefit of being able to also serve the site with SPDY. Alas, nginx still does not allow for the server pushing assets, which will cause for another review of how the server delivers assets when it can.&lt;/p&gt;
+
+&lt;p&gt;As a note, having everything be delivered via https does require an extra handshake to be done by the server. Although this does hurt performance, I believe the round trip of latency is well worth it to ensure user&amp;#39;s privacy. As there is a single form on my site, I rather that always be submitted over a secure connection then to risk any of my users information at the sake of one round trip.&lt;/p&gt;
+
+&lt;h2 id=&quot;no-more-simpleform&quot;&gt;No More Simpleform&lt;/h2&gt;
+
+&lt;p&gt;Previously, I had used &lt;a href=&quot;http://getsimpleform.com/&quot;&gt;Simpleform&lt;/a&gt; to collect the one contact us form on the site. I realized (after I went live) that Simpleform does not allow submitting over https. Not wanting users to have to submit data without a little protection, I needed another quick solution for users to submit information to. I quickly wrote a short PHP script that will filter any input, and if there was all the required fields, will create a new issue on a private GitHub repository. It is currently lacking, since it does not provide interactive responses from the server, but it will work for my current needs. Most importantly, it ensures all communication between users and my site is done securely.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-about-a-cdn?&quot;&gt;What About a CDN?&lt;/h1&gt;
+
+&lt;p&gt;The one piece I am missing with this setup is to deliver assets via a CDN. I had checked and tested several options that are available. Every one either did not have the support I needed (read: wanted), or the support I wanted was too expensive for my little blog. Probably the most advanced CDN I was able to find was &lt;a href=&quot;http://www.maxcdn.com/&quot;&gt;MaxCDN&lt;/a&gt;, which if it was not for the cost to deliver different headers based on cookies, would have worked.&lt;/p&gt;
+
+&lt;h1 id=&quot;results&quot;&gt;Results&lt;/h1&gt;
+
+&lt;p&gt;So far, the results are promising. Both &lt;a href=&quot;https://developer.yahoo.com/yslow/&quot;&gt;yslow&lt;/a&gt; and &lt;a href=&quot;http://developers.google.com/speed/pagespeed/insights/&quot;&gt;Google&amp;#39;s PageSpeed&lt;/a&gt; give me a 98% on the home page. Some &lt;a href=&quot;http://www.webpagetest.org/&quot;&gt;webpagetest.org&lt;/a&gt; runs give me mostly As, and a B for the Google Analytics score. I know that some more tuning needs to be done to ensure the server is setup 100% correctly, but there is still a fast first byte. Some &amp;quot;in the field&amp;quot; tests I did, generally ensure a very fast load. I did notice early on that the DNS lookup was always very slow. I quickly moved over to &lt;a href=&quot;http://aws.amazon.com/route53/&quot;&gt;Amazon&amp;#39;s Route 53&lt;/a&gt; to try and ensure a better response from DNS servers.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-next?&quot;&gt;Whats Next?&lt;/h2&gt;
+
+&lt;p&gt;The web is always evolving, as is any good website. My work is far from complete when it comes to performance. I have to tune Varnish and nginx to ensure that I am getting the most out of caching and performance on the server. I am also keeping an eye on nginx support of SPDY for its adoption of server push. Any suggestions or ideas are always appreciated, as I know I will be toying with this for some time to come.&lt;/p&gt;
+
+&lt;h2 id=&quot;...-but-the-code!&quot;&gt;... but the CODE!&lt;/h2&gt;
+
+&lt;p&gt;As of today, I am putting the entirety of my codebase on GitHub for all to see. Certainly, it is not perfect yet, and I am still updating and changing constantly. The Ansible scripts and Vagrantfile to create your own server can be found at https://github.com/iamcarrico/iamcarrico.server. And the site itself, created by Jekyll, is at https://github.com/iamcarrico/iamcarrico.&lt;/p&gt;
+</description>
+				<published>2014-10-02 04:00:00 -0500</published>
+				<link>http://iamcarrico.com/writings/loading-my-site-in-first-packet-response/</link>
+			</item>
 		
 			<item>
 				<title>Jekyll Workflow Part 2: Automation with Gulp</title>
