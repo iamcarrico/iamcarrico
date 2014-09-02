@@ -2,6 +2,7 @@
 layout: post
 title:  "Loading My Site in the First Packet Response"
 date:   2014-10-02 09:00:00
+shortlink: http://iamc.co/1q58Iv1
 categories:
   - performance
   - nginx
