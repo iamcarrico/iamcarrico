@@ -44,7 +44,7 @@ My site had officially become "almost static", remaining static for all but the 
 
 ### A Wrench: HTTPS
 
-The realization that I needed my own server also opened up the ability for me to serve the site via https. Jumping on the chance, I knew that Varnish was incapable of serving a site via https. Adding on another layer, I had nginx server the static site to varnish, that served the site to another nginx server. The largest benefit, I had the added benefit of being able to also serve the site with SPDY. Alas, nginx still does not allow for the server pushing assets, which will cause for another review of how the server delivers assets when it can.
+The realization that I needed my own server also opened up the ability for me to serve the site via https. Jumping on the chance, I knew that Varnish was incapable of serving a site via https. Adding on another layer, I had nginx serve the static site to varnish, that served the site to another nginx server. The largest benefit, I had the added benefit of being able to also serve the site with SPDY. Alas, nginx still does not allow for the server pushing assets, which will cause for another review of how the server delivers assets when it can.
 
 As a note, having everything be delivered via https does require an extra handshake to be done by the server. Although this does hurt performance, I believe the round trip of latency is well worth it to ensure user's privacy. As there is a single form on my site, I rather that always be submitted over a secure connection then to risk any of my users information at the sake of one round trip.
 
@@ -66,4 +66,4 @@ The web is always evolving, as is any good website. My work is far from complete
 
 ### ... but the CODE!
 
-As of today, I am putting the entirety of my codebase on GitHub for all to see. Certainly, it is not perfect yet, and I am still updating and changing constantly. The Ansible scripts and Vagrantfile to create your own server can be found at https://github.com/iamcarrico/iamcarrico.server. And the site itself, created by Jekyll, is at https://github.com/iamcarrico/iamcarrico.
+As of today, I am putting the entirety of my codebase on GitHub for all to see. Certainly, it is not perfect yet, and I am still updating and changing constantly. The Ansible scripts and Vagrantfile to create your own server can be found at [https://github.com/iamcarrico/iamcarrico.server](https://github.com/iamcarrico/iamcarrico.server). And the site itself, created by Jekyll, is at [https://github.com/iamcarrico/iamcarrico](https://github.com/iamcarrico/iamcarrico).
