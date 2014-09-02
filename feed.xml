@@ -63,7 +63,7 @@
 
 &lt;h3 id=&quot;...-but-the-code!&quot;&gt;... but the CODE!&lt;/h3&gt;
 
-&lt;p&gt;As of today, I am putting the entirety of my codebase on GitHub for all to see. Certainly, it is not perfect yet, and I am still updating and changing constantly. The Ansible scripts and Vagrantfile to create your own server can be found at https://github.com/iamcarrico/iamcarrico.server. And the site itself, created by Jekyll, is at https://github.com/iamcarrico/iamcarrico.&lt;/p&gt;
+&lt;p&gt;As of today, I am putting the entirety of my codebase on GitHub for all to see. Certainly, it is not perfect yet, and I am still updating and changing constantly. The Ansible scripts and Vagrantfile to create your own server can be found at &lt;a href=&quot;https://github.com/iamcarrico/iamcarrico.server&quot;&gt;https://github.com/iamcarrico/iamcarrico.server&lt;/a&gt;. And the site itself, created by Jekyll, is at &lt;a href=&quot;https://github.com/iamcarrico/iamcarrico&quot;&gt;https://github.com/iamcarrico/iamcarrico&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<published>2014-09-02 04:00:00 -0500</published>
 				<link>http://iamcarrico.com/writings/loading-my-site-in-first-packet-response/</link>
