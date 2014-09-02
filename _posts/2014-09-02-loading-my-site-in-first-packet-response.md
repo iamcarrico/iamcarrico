@@ -10,7 +10,7 @@ categories:
   - 1000ms
 ---
 
-If you've been on my site before, you may have noticed a few changes in the past week. Fonts have been changed up, desgin moved around, and most importantly the site now only loads over https. What is underneath these changes though is much greater, and allows my site to always load in the first packet response in the server. Thus making the load time for my site only rely on latency between a user and my server, and a small piece of server process time. The outcome is that this page should load far below the 1000ms threshold.
+If you've been on my site before, you may have noticed a few changes in the past week. Fonts have been changed up, design moved around, and most importantly the site now only loads over https. What is underneath these changes though is much greater, and allows my site to always load in the first packet response in the server. Thus making the load time for my site only rely on latency between a user and my server, and a small piece of server process time. The outcome is that this page should load far below the 1000ms threshold.
 
 ## Performance and 1000ms
 
