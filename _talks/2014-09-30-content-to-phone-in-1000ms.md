@@ -7,6 +7,8 @@ permalink: talks/2014/content-to-phone-in-1000ms/
 links:
   - title: Slides
     href: http://iamcarrico.github.io/content-to-phone-in-1000ms/
+  - title: Video
+    href: https://www.youtube.com/watch?v=lXvshs_yPCM
   - title: DrupalCon Site
     href: https://amsterdam2014.drupal.org/node/1028
 categories:
