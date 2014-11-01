@@ -1,5 +1,6 @@
 ---
 layout: null
 ---
-<style>{% asset style %}</style><script>
-loadCSS('{% asset_path style %}');document.cookie = "iamCSS={% asset_path style %}";</script>
+{% capture cssPath %}{% asset_path style %}{% endcapture %}
+<style>{% asset style %}</style><script defer>
+loadCSS('{{ cssPath }}');document.cookie = "iC={{ cssPath | remove: "/assets/style-" }}";</script>
