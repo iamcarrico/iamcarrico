@@ -63,7 +63,7 @@ if (IAMPRODUCTION) {
   $created_issue = $client->api('issue')->create(REPO_OWNER, REPO_NAME, array(
     'title' => 'New message from ' . $name,
     'body' => $body,
-    'labels' => 'Form Entry'
+    'labels' => array('Form Entry'),
   ));
 
   if ($created_issue) {
