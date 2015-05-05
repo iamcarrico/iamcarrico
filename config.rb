@@ -1,7 +1,4 @@
 # Require any additional compass plugins here.
-require 'singularitygs'
-require 'breakpoint'
-require 'toolkit'
 
 # Set this to the root of your project when deployed:
 http_path = "./"

@@ -2,16 +2,14 @@
  * About me partial.
  */
 
+@media (min-width: 43.75em) {
+  #about-text {
+    width: (3 / 5) * 100%;
+    float: left;
+  }
 
-@include breakpoint($about-break) {
-
-  @include layout(3 2) {
-    #about-text {
-      @include grid-span(1, 1);
-    }
-
-    #my-photo {
-      @include grid-span(1, 2);
-    }
+  #my-photo {
+    width: (2 / 5) * 100%;
+    float: right;
   }
 }

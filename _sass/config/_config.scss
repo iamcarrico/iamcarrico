@@ -14,9 +14,6 @@
 // Note: normalize.css is imported in partials/global/_global.scss. We do this
 //  so that it pulls in the variables set within the variables partial.
 ////////////////////////
-@import 'singularitygs';
-@import 'breakpoint';
-@import 'toolkit';
 
 
 ////////////////////////
@@ -28,7 +25,5 @@
 
 @import 'variables/fonts';
 @import 'variables/colors';
-@import 'variables/breakpoint';
-@import 'variables/singularity';
 @import 'functions';
 @import 'mixins';

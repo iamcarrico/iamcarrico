@@ -30,7 +30,7 @@ textarea {
     box-shadow: 0 0 4px rgba($blue, 0.5);
   }
 
-  @include breakpoint(720px) {
+  @media (min-width: 720px) {
     width: 75%;
   }
 }
@@ -41,7 +41,7 @@ textarea {
 
 
 label {
-  @include breakpoint(720px) {
+  @media (min-width: 720px) {
     width: 25%;
     float: left;
     text-align: right;

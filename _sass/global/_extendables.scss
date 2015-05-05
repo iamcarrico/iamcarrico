@@ -6,15 +6,11 @@
 ////////////////////////
 
 %clearfix {
-	@include clearfix;
-}
-
-%museo {
-  font-family: $museo;
-}
-
-%nimbus {
-  font-family: $nimbus;
+	&:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 %max-width {
