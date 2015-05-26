@@ -6,6 +6,96 @@
 		<link>http://iamcarrico.com</link>
 		
 			<item>
+				<title>Do it for your users</title>
+				<description>&lt;p&gt;To answer questions about performance, design, or even testing, I find myself repeating the same question, “What do your users do?” as a response. It seems intuitive, but many times we as web professionals need reminding that we are not creating the web for ourselves, but that we are doing it for our users.&lt;/p&gt;
+
+&lt;p&gt;Little known fact: I used to write a Dear Abby-style advice column*  specific to the web community. I kept some of the letters that were sent to me, and my replies, featured below.&lt;/p&gt;
+
+&lt;h2 id=&quot;example-one:-testing&quot;&gt;Example One: Testing&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Dear Ian,&lt;/p&gt;
+
+&lt;p&gt;We want to be monitoring our site’s performance. We have started some Web Page Test automation so that we can get more accurate numbers from across the globe on the load times of our site. How many locations is enough for comprehensive testing?&lt;/p&gt;
+
+&lt;p&gt;From,&lt;/p&gt;
+
+&lt;p&gt;Thinking of Every Situation Tirelessly&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dear Test,&lt;/p&gt;
+
+&lt;p&gt;Where are your users? If your user base is centered purely around the greater Philadelphia area, your testing (and servers!) should remain there. If there are no users in Eastern Europe that frequent your site, then a test should not be run from there.&lt;/p&gt;
+
+&lt;p&gt;On that same note, if your users are spread out over all of Europe and North America, then your monitoring and testing should reflect that. In short, do it for your users.&lt;/p&gt;
+
+&lt;p&gt;Warmest,&lt;/p&gt;
+
+&lt;p&gt;Ian&lt;/p&gt;
+
+&lt;h2 id=&quot;example-two:-optimizing&quot;&gt;Example Two: Optimizing&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Dear Ian,&lt;/p&gt;
+
+&lt;p&gt;On our homepage, we have some images that do not show unless the user clicks on a button. We want the site to load fast, and not download extra content unless needed. But we also want the interaction to load quickly, thus requiring loading those images first? What should we do?&lt;/p&gt;
+
+&lt;p&gt;(Also: when are you going to start your very own quippy podcast?)&lt;/p&gt;
+
+&lt;p&gt;From,&lt;/p&gt;
+
+&lt;p&gt;Prefer Listening Off A Disc&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dear Pre-LOAD,&lt;/p&gt;
+
+&lt;p&gt;Before you make any decisions, set up some analytical monitoring. How often do your users click the button? 10% of the time? 20%? 50%? 90%? This should inform whichever road you decide to take.&lt;/p&gt;
+
+&lt;p&gt;But that is not all that you should consider: take a look at the size of the images you are loading, the size of the devices that are and are not clicking the button. At the end of the day, you should be able to create a solution that will be optimal for most of your users.&lt;/p&gt;
+
+&lt;p&gt;Warmest,&lt;/p&gt;
+
+&lt;p&gt;Ian&lt;/p&gt;
+
+&lt;p&gt;P.S. No podcast in the works. But I highly recommend http://pathtoperf.com/!!&lt;/p&gt;
+
+&lt;h2 id=&quot;example-three:-design&quot;&gt;Example Three: Design&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Dear Ian,&lt;/p&gt;
+
+&lt;p&gt;Looking at your blog, you are clearly an excellent designer. We are having a bit of a conundrum here, and I am afraid it is turning into all out war with our designers. Half want to use the hamburger icon, half want to use the word ‘menu.’ How so ever will we choose?&lt;/p&gt;
+
+&lt;p&gt;From,&lt;/p&gt;
+
+&lt;p&gt;DEsperately SIGNaling&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dear DESIGN,&lt;/p&gt;
+
+&lt;p&gt;I know better than to step between two packs of angry designers, especially about the dreaded hamburger decision. The only advice I will approach on such a delicate topic, is do some user testing. A little bit of A/B testing to see how often the menu is clicked which should provide some insight into how your users are interacting with your site. I would also recommend avoiding the cheeseburger, you don’t know if your users are lactose intolerant!&lt;/p&gt;
+
+&lt;p&gt;Warmest,&lt;/p&gt;
+
+&lt;p&gt;Ian&lt;/p&gt;
+
+&lt;h2 id=&quot;but-what-does-it-all-mean,-basil?&quot;&gt;But what does it all mean, Basil?&lt;/h2&gt;
+
+&lt;p&gt;Obviously, these examples are over-simplifications. Rarely is a decision as easy as knowing that 90% of your users demonstrate one behavior. Usually, it is a more grey-area decision, where 50-60% of users exhibit the expected or desired behaviors.&lt;/p&gt;
+
+&lt;p&gt;We cannot make the right choices without all the data. User testing is as important as it has ever been, if not more. Do Real User Monitoring (RUM) for performance metrics, AND perform synthetic testing in conditions as close to your real-world users as possible. Accurate decisions cannot be made unless the perspective of the user has been fully taken into account.&lt;/p&gt;
+
+&lt;p&gt;Make decisions based on your users’ behaviors and needs, not what we might think the user &lt;em&gt;might&lt;/em&gt; do, or what we want the user to do. At the end of the day, we are building websites for our users. So go ahead, do it for your users.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+ * I never wrote for Dear Abby.&lt;/p&gt;
+</description>
+				<published>2015-05-26 07:00:00 -0500</published>
+				<link>http://iamcarrico.com/writings/do-it-for-your-users/</link>
+			</item>
+		
+			<item>
 				<title>Loading My Site in the First Packet Response</title>
 				<description>&lt;p&gt;If you&amp;#39;ve been on my site before, you may have noticed a few changes in the past week. Fonts have been changed up, design moved around, and most importantly the site now only loads over https. What is underneath these changes though is much greater, and allows my site to always load in the first packet response in the server. Thus making the load time for my site only rely on latency between a user and my server, and a small piece of server process time. The outcome is that this page should load far below the 1000ms threshold.&lt;/p&gt;
 
