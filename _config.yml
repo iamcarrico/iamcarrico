@@ -21,6 +21,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - css
+  - LICENSE
 
 markdown: redcarpet
 redcarpet:
