@@ -3,6 +3,9 @@ author: http://iamcarrico.com/about/
 lsi: false
 debug: false
 
+# Temporarily in here while I debug stuff.
+minify_html: false
+
 permalink: /writings/:title/
 url: http://iamcarrico.com
 paginate: 4
