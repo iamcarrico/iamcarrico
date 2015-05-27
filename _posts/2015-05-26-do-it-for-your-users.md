@@ -2,7 +2,11 @@
 layout: post
 title:  "Do it for your users"
 date:   2015-05-26 12:00:00
-categories: testing performance
+categories:
+  - testing
+  - performance
+shortlink: http://iamc.co/1KxCLGu
+description: To answer questions about performance, design, or even testing, I find myself repeating the same question, “What do your users do?” as a response. It seems intuitive, but many times we as web professionals need reminding that we are not creating the web for ourselves, but that we are doing it for our users.
 ---
 
 To answer questions about performance, design, or even testing, I find myself repeating the same question, “What do your users do?” as a response. It seems intuitive, but many times we as web professionals need reminding that we are not creating the web for ourselves, but that we are doing it for our users.
