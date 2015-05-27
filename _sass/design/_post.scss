@@ -10,18 +10,6 @@
     line-height: 1.1;
   }
 
-  .category {
-    font-style: italic;
-
-    &:after {
-      content: ', ';
-    }
-
-    &:last-child:after {
-      content: '';
-    }
-  }
-
   .hero-image {
     margin-top: 1em;
   }

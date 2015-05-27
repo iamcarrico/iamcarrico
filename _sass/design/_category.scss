@@ -1,0 +1,16 @@
+/**
+ * The category partial.
+ */
+
+
+.category {
+  font-style: italic;
+
+  &:after {
+    content: ', ';
+  }
+
+  &:last-child:after {
+    content: '';
+  }
+}
