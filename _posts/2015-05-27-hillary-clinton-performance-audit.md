@@ -6,6 +6,7 @@ categories:
   - perf-audit
   - performance
 description: A performance review of the HillaryClinton.com site, and optimization suggestions to increase the performance of the site.
+shortlink: http://iamc.co/1HLiz33
 ---
 
 There are many ways that every site can improve it's performance. In an ever-growing internet, where the [average page size just surpassed 2MB](http://httparchive.org/trends.php#bytesTotal&reqTotal), performance is becoming more and more key to a successful site.
