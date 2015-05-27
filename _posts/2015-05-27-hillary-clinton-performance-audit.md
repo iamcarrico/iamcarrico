@@ -20,6 +20,6 @@ For the review, I mainly used Chrome Canary, but also utilized Web Page Test and
 4. Click "Experiments" in the left-hand navigation
 5. Press the shift key 6 times
 6. Enable "Filmstrip in Network and Timeline Panel"
-7. Restart the Developer Tools, and then click the camera icon on the top-left. 
+7. Restart the Developer Tools, and then click the camera icon on the top-left.
 
-Check out the whole review up on Google Docs at http://iamc.co/hc-perf, and let me know what you think.
+Check out the whole review up on Google Docs at [http://iamc.co/hc-perf](http://iamc.co/hc-perf), and let me know what you think.
