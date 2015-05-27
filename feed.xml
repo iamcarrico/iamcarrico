@@ -6,6 +6,30 @@
 		<link>http://iamcarrico.com</link>
 		
 			<item>
+				<title>HillaryClinton.com Performance Audit</title>
+				<description>&lt;p&gt;There are many ways that every site can improve it&amp;#39;s performance. In an ever-growing internet, where the &lt;a href=&quot;http://httparchive.org/trends.php#bytesTotal&amp;amp;reqTotal&quot;&gt;average page size just surpassed 2MB&lt;/a&gt;, performance is becoming more and more key to a successful site.&lt;/p&gt;
+
+&lt;p&gt;To that goal, I put together a &lt;a href=&quot;http://iamc.co/hc-perf&quot;&gt;performance audit of Hillary Clinton’s campaign site&lt;/a&gt;, and put together a list of suggestions. I chose this site as it is a high-traffic site that will be getting more traffic as the election gets closer— not for any political affiliation or goals.&lt;/p&gt;
+
+&lt;p&gt;For the review, I mainly used Chrome Canary, but also utilized Web Page Test and Page Speed Insights. One of the features I finally enabled in Chrome for a better visual view of the page load is the filmstrip view. To enable it yourself, follow these steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Go to &lt;code&gt;chrome://flags/&lt;/code&gt; in Google Chrome&lt;/li&gt;
+&lt;li&gt;Enable &amp;quot;Developer Tools experiments&amp;quot;, restart the browser&lt;/li&gt;
+&lt;li&gt;Go to the settings pane within the Developer Tools (the gear icon)&lt;/li&gt;
+&lt;li&gt;Click &amp;quot;Experiments&amp;quot; in the left-hand navigation&lt;/li&gt;
+&lt;li&gt;Press the shift key 6 times&lt;/li&gt;
+&lt;li&gt;Enable &amp;quot;Filmstrip in Network and Timeline Panel&amp;quot;&lt;/li&gt;
+&lt;li&gt;Restart the Developer Tools, and then click the camera icon on the top-left.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Check out the whole review up on Google Docs at &lt;a href=&quot;http://iamc.co/hc-perf&quot;&gt;http://iamc.co/hc-perf&lt;/a&gt;, and let me know what you think.&lt;/p&gt;
+</description>
+				<published>2015-05-27 07:00:00 -0500</published>
+				<link>http://iamcarrico.com/writings/hillary-clinton-performance-audit/</link>
+			</item>
+		
+			<item>
 				<title>Do it for your users</title>
 				<description>&lt;p&gt;To answer questions about performance, design, or even testing, I find myself repeating the same question, “What do your users do?” as a response. It seems intuitive, but many times we as web professionals need reminding that we are not creating the web for ourselves, but that we are doing it for our users.&lt;/p&gt;
 
