@@ -1,19 +1,16 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  {% if page.title %}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% if page.title %}
   <title>{{ page.title }}</title>
-  {% else %}
+{% else %}
   <title>{{ site.name }}</title>
-  {% endif %}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% poole_tags %}
-  {% include fontfaceobserver.html %}
-  {% include loadcss.html %}
-  {% if site.development %}
-    {% stylesheet style %}
-  {% else %}
-    <esi:include src="/header.php" />
-    <link rel="prefetch" href="{{ site.url }}{{ site.posts.first.url }}" />
-  {% endif %}
-</head>
+{% endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% poole_tags %}
+<script>{% asset header %}</script>
+{% if site.development %}
+  {% stylesheet style %}
+{% else %}
+  <esi:include src="/header.php" />
+  <link rel="prefetch" href="{{ site.url }}{{ site.posts.first.url }}" />
+{% endif %}

@@ -8,16 +8,16 @@ $timestamp: 1407277128;
   font-family: 'pt';
   font-style: normal;
   font-weight: normal;
-  src: url('/fonts/pt.woff2#{$timestamp}') format('woff2'),
-       url('/fonts/pt.woff#{$timestamp}') format('woff'),
-       url('/fonts/pt.ttf#{$timestamp}') format('truetype');
+  src: url('/fonts/pt.woff2?{$timestamp}') format('woff2'),
+       url('/fonts/pt.woff?{$timestamp}') format('woff'),
+       url('/fonts/pt.ttf?{$timestamp}') format('truetype');
 }
 
 @font-face {
   font-family: 'pt';
   font-style: italic;
   font-weight: normal;
-  src: url('/fonts/pt-italic.woff2#{$timestamp}') format('woff2'),
-       url('/fonts/pt-italic.woff#{$timestamp}') format('woff'),
-       url('/fonts/pt-italic.ttf#{$timestamp}') format('truetype');
+  src: url('/fonts/pt-italic.woff2?{$timestamp}') format('woff2'),
+       url('/fonts/pt-italic.woff?{$timestamp}') format('woff'),
+       url('/fonts/pt-italic.ttf?{$timestamp}') format('truetype');
 }
