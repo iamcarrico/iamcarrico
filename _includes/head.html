@@ -8,9 +8,10 @@
   {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% poole_tags %}
+  {% include fontfaceobserver.html %}
+  {% include loadcss.html %}
   {% if site.development %}
     {% stylesheet style %}
-    {% stylesheet fonts/pt_woff %}
   {% else %}
     <esi:include src="/header.php" />
     <link rel="prefetch" href="{{ site.url }}{{ site.posts.first.url }}" />
