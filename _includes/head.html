@@ -13,5 +13,6 @@
     {% stylesheet fonts/pt_woff %}
   {% else %}
     <esi:include src="/header.php" />
+    <link rel="prefetch" href="{{ site.url }}{{ site.posts.first.url }}" />
   {% endif %}
 </head>
