@@ -4,7 +4,7 @@ title:  "Is that the right tool?"
 date:   2015-06-02 12:00:00
 categories:
   - tools
-description: "The internet is littered with blog posts arguing for one technology over another. There are many posts about needing to use the next shiny tool, some arguing for more stable technologies, some even positing we should stop writing \"Stop Using\" posts. Generally, these posts all articulate the benefits of one technology— but rarely do they answer the question that is needed: Is this the right tool for the job?"
+description: "The internet is littered with blog posts arguing for one technology over another. There are many posts about needing to use the next shiny tool, some arguing for more stable technologies, some even positing we should stop writing &quot;Stop Using&quot; posts. Generally, these posts all articulate the benefits of one technology— but rarely do they answer the question that is needed: Is this the right tool for the job?"
 ---
 
 This weekend, I needed to fix a wobbly chair. There was a bolt that was a little loose and needed to be tightened. I asked Evan to grab me a wrench. He went off and handed me a screwdriver.
@@ -46,7 +46,7 @@ Step back, breathe, and learn your craft. Part of working on the web is knowing 
 There will always be posts that extol the virtues of the tool, but if you know the underlying technology then it will be easier to find the right tool for your work.
 
 <br />
-* * * 
+* * *
 <br />
 
 <sup>1</sup> Let it be known that this conversation never actually happened, and if something was broken it is more than likely that Evan would have fixed it, not me.
