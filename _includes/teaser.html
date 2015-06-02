@@ -7,6 +7,10 @@
     <span class="date">{{ include.post.date | date: "%Y-%m-%d" }}</span>
   </div>
   <div class="content">
-    {{ include.post.excerpt | strip_html }}
+    {% if include.post.description %}
+      {{ include.post.description | strip_html }}
+    {% else %}
+      {{ include.post.excerpt | strip_html }}
+    {% endif %}
   </div>
 </article>
