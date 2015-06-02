@@ -1,5 +1,5 @@
 name: I. Am. Carrico.
-author: http://iamcarrico.com/about/
+author: https://iamcarrico.com/about/
 lsi: false
 debug: false
 
@@ -7,7 +7,7 @@ debug: false
 minify_html: false
 
 permalink: /writings/:title/
-url: http://iamcarrico.com
+url: https://iamcarrico.com
 paginate: 4
 paginate_path: "writings/page/:num/"
 timezone: America/Chicago
