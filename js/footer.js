@@ -20,4 +20,4 @@
     document.documentElement.className += " fonts-unavailable";
     document.cookie = "iF=false";
   });
-});
+})();
