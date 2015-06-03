@@ -5,6 +5,7 @@ date:   2015-06-02 12:00:00
 categories:
   - tools
 description: "The internet is littered with blog posts arguing for one technology over another. There are many posts about needing to use the next shiny tool, some arguing for more stable technologies, some even positing we should stop writing &quot;Stop Using&quot; posts. Generally, these posts all articulate the benefits of one technology— but rarely do they answer the question that is needed: Is this the right tool for the job?"
+shortlink: http://iamc.co/1K70096
 ---
 
 This weekend, I needed to fix a wobbly chair. There was a bolt that was a little loose and needed to be tightened. I asked Evan to grab me a wrench. He went off and handed me a screwdriver.
