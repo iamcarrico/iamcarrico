@@ -10,7 +10,9 @@
 <script>{% asset header %}</script>
 {% if site.development %}
   {% stylesheet style %}
+  </head>
+  <body>
 {% else %}
-  <esi:include src="/header.php" />
   <link rel="prefetch" href="{{ site.url }}{{ site.posts.first.url }}" />
+  <esi:include src="/header.php" />
 {% endif %}

@@ -3,3 +3,11 @@
 //
 // All of your mixins should go in this file.
 ////////////////////////
+
+@mixin pt {
+  font-family: $helvetica;
+
+  .fonts-loaded & {
+    font-family: $pt;
+  }
+}

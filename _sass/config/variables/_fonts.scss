@@ -28,7 +28,8 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 // Project-specific fonts
 // Put any font families here that are specific to your project.
 $source: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$pt: "pt", Helvetica, Arial, sans-serif;
+
+$pt: "pt", $helvetica;
 
 
 // For an explanation of why "sans-serif" is at the end of this list, see

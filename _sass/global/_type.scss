@@ -1,9 +1,9 @@
 /**
 * Typography: Headings, body text, lists, code, and more for a versatile and durable typography system.
-*/
+*/z
 
 body {
-  font-family: $pt;
+  @include pt;
   font-size: 17px;
   line-height: 24px;
   color: $black;
@@ -12,7 +12,7 @@ body {
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
-  font-family: $pt;
+  @include pt;
   font-weight: normal;
 }
 
