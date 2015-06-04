@@ -7,7 +7,8 @@
 @mixin pt {
   font-family: $helvetica;
 
-  .fonts-loaded & {
+  .fonts-loaded &,
+  &.fonts-loaded {
     font-family: $pt;
   }
 }
