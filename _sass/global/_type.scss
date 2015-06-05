@@ -122,6 +122,52 @@ blockquote {
   font-style: italic;
 }
 
+/**
+ * Taken lovingly from https://css-tricks.com/slide-in-image-captions/
+ */
+figure {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+%shared_figure_styles {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: .9em;
+  color: white;
+  bottom: 0;
+  transition: all 0.4s ease;
+}
+
+figcaption {
+  @extend %shared_figure_styles;
+  padding: 0.1em .25em;
+  opacity: 0;
+  left: -30%;
+  font-style: italic;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  left: 0;
+}
+
+figure:before {
+  @extend %shared_figure_styles;
+  content: "?";
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 24px;
+  opacity: 0.75;
+}
+
+figure:hover:before {
+  opacity: 0;
+}
+
 
 // Remove text-shadow in selection highlight: h5bp.com/i
 // These selection declarations have to be separate
