@@ -7,6 +7,7 @@ categories:
   - CDN
 image: img/2015/global_network_md.jpg
 description: "My site loads two different pages depending on whether or not there are cookies set that mark the CSS and fonts have been loaded already. There was no CDN that would allow me to do this without immense cost. I did what any sane developer would do, I created my own CDN."
+shortlink: http://iamc.co/1RXKa2T
 ---
 
 <figure>
