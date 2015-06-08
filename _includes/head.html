@@ -13,6 +13,6 @@
   </head>
   <body>
 {% else %}
-  <link rel="prefetch" href="{{ site.url }}{{ site.posts.first.url }}" />
+  <link rel="prefetch" href="{{ site.url }}{% if page.url != site.posts.first.url %}{{ site.posts.first.url }}{% endif %}" />
   <esi:include src="/header.php" />
 {% endif %}
