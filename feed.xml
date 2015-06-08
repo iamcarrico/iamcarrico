@@ -6,6 +6,63 @@
 		<link>https://iamcarrico.com</link>
 		
 			<item>
+				<title>How (and why) I created my own CDN</title>
+				<description>&lt;figure&gt;
+  &lt;img src=&quot;/img/2015/global_network_md.jpg&quot; srcset=&quot;/img/2015/global_network_sm.jpg 350w, /img/2015/global_network_md.jpg 748w, /img/2015/global_network_lg.jpg 1496w&quot; alt=&quot;Global CDNs are a requirement&quot;&gt;
+  &lt;figcaption&gt;&lt;a href=&quot;https://www.flickr.com/photos/marcela-palma/12239000755/in/photolist-b3AtCt-jDw5wp-taB9TL-tEj534-tnJ2bb-tBYHHY-tnJ2qQ-o562bA-o6mxio-tE11s1-u5ZcnJ-tbt3xP-kKgCL8-tQSSec-tbiTTd-tQRKkK-u8hKni-u7XgXd-tfvquG-hxk7mm-i5UZkT-twPaLA-fboVJR-joqc54&quot; target=&quot;\_blank&quot;&gt;Internet computer business&lt;/a&gt; by &lt;a href=&quot;https://www.flickr.com/photos/marcela-palma/&quot; target=&quot;\_blank&quot;&gt;Marcela Palma&lt;/a&gt; / &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/2.0/&quot; target=&quot;\_blank&quot;&gt;CC BY-NC-SA 2.0&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Before we begin I am just going to say it: You probably don’t need to do this. There are many great CDN options out there that are great. But, I had specific requirements that made it a necessity that I build my own. I would highly recommend MaxCDN for your own use; I have had great interactions with their team.&lt;/p&gt;
+
+&lt;h2 id=&quot;then-why-did-you?&quot;&gt;Then why did you?&lt;/h2&gt;
+
+&lt;p&gt;My site loads two different pages depending on whether or not there are cookies set that mark the CSS and fonts have been loaded already. If they are, the server assumes they are in the cache and can be loaded with a normal &lt;link&gt; tag, pulling from the browser cache. If not, then the CSS is set inline, and the Font Face Observer is used to asynchronously ensure the fonts are loaded before showing them (preventing FOIT). This pulls from techniques I talked about in my &lt;a href=&quot;https://iamcarrico.com/writings/loading-my-site-in-first-packet-response/&quot;&gt;first blog post on this site’s performance&lt;/a&gt;, and more recently the &lt;a href=&quot;http://www.filamentgroup.com/lab/font-events.html&quot;&gt;Filament Group&amp;#39;s work on prevent FOIT&lt;/a&gt; on their site.&lt;/p&gt;
+
+&lt;p&gt;What these techniques come down to however, is that I needed a CDN that would allow different content to be cached depending on the value of two cookies. I searched far and wide for a CDN that would allow this, and although many would— it required I have an enterprise plan to use them. Certainly, this humble website does not have the $5,000 / month budget required for such an endeavour. Thus: I had to figure out my own way of creating a CDN.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-servers&quot;&gt;The servers&lt;/h2&gt;
+
+&lt;p&gt;I have four servers, spread out across the globe in New York, Amsterdam, San Francisco and Singapore. Each are one of &lt;a href=&quot;https://www.digitalocean.com/&quot;&gt;Digital Ocean’s&lt;/a&gt; smallest servers, with full IPv6 support. I selected Digital Ocean primarily because of the cost and the locations of the datacenters. They are much cheaper than AWS or Rackspace and just as powerful as I need them to be. There are also spread out well to where my traffic comes from. I only wish that there was a datacenter in South America as well, as I have found a good amount of traffic comes from there.&lt;/p&gt;
+
+&lt;p&gt;The servers are managed with &lt;a href=&quot;http://www.ansible.com/home&quot;&gt;Ansible&lt;/a&gt;. The source code for my playbooks are &lt;a href=&quot;https://github.com/iamcarrico/iamcarrico.server&quot;&gt;up on GitHub&lt;/a&gt;, and although there are some changes I would like to make, it does the job very well. Configuration is all stored inside the repository, and the few variables I have between servers (e.g. hostname) are filled into template automatically.&lt;/p&gt;
+
+&lt;p&gt;I can deploy any changes I need just by running &amp;#39;&lt;code&gt;ansible-playbook -i hosts playbook.yml --limit production&lt;/code&gt;&amp;#39;, which will go to every production server and update them accordingly. Alternatively, I can setup a new server by adding it to the &amp;#39;&lt;code&gt;hosts&lt;/code&gt;&amp;#39; file, then running &amp;#39;&lt;code&gt;ansible-playbook -i hosts playbook.yml --limit the.new.hostname&lt;/code&gt;&amp;#39;. Just last week, I setup a new server with about 20 min of work, and that is only because I have some &lt;a href=&quot;https://github.com/iamcarrico/iamcarrico.server/issues/9&quot;&gt;user and permissions work&lt;/a&gt; that I would like to add to the playbooks. The results are that I have four servers, all in different parts of the world, all setup exactly the same, and all with the exact same files on them.&lt;/p&gt;
+
+&lt;h2 id=&quot;dns&quot;&gt;DNS&lt;/h2&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/img/2015/aws_dns_info_md.png&quot; srcset=&quot;/img/2015/aws_dns_info_md.png 748w, /img/2015/aws_dns_info_lg.png 1496w&quot; alt=&quot;AWS Route 53 interface&quot;&gt;
+  &lt;figcaption&gt;The servers I have setup within AWS&#39;s system.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Having four servers is only part of the problem though, how do I get users to get to the server closest to them? I looked at several DNS providers from Dyn to Zerigo, but only one provided the features I needed for a reasonable cost. Amazon’s &lt;a href=&quot;https://aws.amazon.com/route53/&quot;&gt;Route 53&lt;/a&gt; costs me $6 / year to have each DNS lookup direct users to whatever the closest server is based on latency.&lt;/p&gt;
+
+&lt;p&gt;This works well mostly because Amazon’s data centers are relatively close to Digital Ocean’s. Meaning that the data Amazon keeps on latency from its data centers to locations across the globe is very similar to the latency from the Digital Ocean servers I have set up. The results are that for most places across the globe that I receive traffic from, the round trip time is below 50ms. The slowest is 220ms for Melbourne, Australia. Route 53 has the added benefit that I can also use it to host IPv6 data, as all of my servers can be accessed by both IPv4 and IPv6.&lt;/p&gt;
+
+&lt;h2 id=&quot;deployment&quot;&gt;Deployment&lt;/h2&gt;
+
+&lt;p&gt;The final piece to the puzzle is how to deploy to each server without requiring a bunch of extra or repeated work. Already, I have a gulp task that compiles my Jekyll site and run some optimizations just by running &amp;#39;&lt;code&gt;gulp deploy&lt;/code&gt;&amp;#39;. This also commits to the &lt;a href=&quot;https://github.com/iamcarrico/iamcarrico/tree/live&quot;&gt;live branch&lt;/a&gt; of my repository with the files ready for the server. The missing piece was how to push those changes to four servers at the same time, without causing any downtime. I first thought about using Ansible, but did not want to be stuck unable to deploy to servers if I had issues with my local machine in whatever way.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/img/2015/dploy_md.png&quot; srcset=&quot;/img/2015/dploy_md.png 748w, /img/2015/dploy_lg.png 1496w&quot; alt=&quot;My dploy.io dashboard&quot;&gt;
+  &lt;figcaption&gt;Dploy.io makes deployment incredibly easy, with helpful status messages&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The solution, was &lt;a href=&quot;http://dploy.io/&quot;&gt;dploy.io&lt;/a&gt;. A simple deployment tool, free for my single repository and user, that could deploy to each of my servers at one. All it took was to create a &lt;code&gt;dploy&lt;/code&gt; user on each server, and assign it the proper sudo permissions to only restart Varnish.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# Allow members of deployment to execute deployment commands.
+%deployment ALL=NOPASSWD:/etc/init.d/varnish restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+
+&lt;p&gt;I have four servers across the globe. Each server has the same configuration and the same files. I can relatively easily spin up new servers, and add them to Route 53’s latency-based routing tables. Round Trip Times are decreased for most users, and most users get a faster experience than if I only had one. Most importantly, I can do all of this while still having the cookie-based cache system to load sites as fast as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.giphy.com/9w9Bpoiddg72U.gif&quot; alt=&quot;That was kind of awesome, right?&quot;&gt;&lt;/p&gt;
+</description>
+				<published>2015-06-08 07:00:00 -0500</published>
+				<link>https://iamcarrico.com/writings/how-and-why-i-made-my-own-cdn/</link>
+			</item>
+		
+			<item>
 				<title>Is that the right tool?</title>
 				<description>&lt;p&gt;This weekend, I needed to fix a wobbly chair. There was a bolt that was a little loose and needed to be tightened. I asked Evan to grab me a wrench. He went off and handed me a screwdriver.&lt;/p&gt;
 
