@@ -56,7 +56,7 @@
 
 &lt;p&gt;I have four servers across the globe. Each server has the same configuration and the same files. I can relatively easily spin up new servers, and add them to Route 53’s latency-based routing tables. Round Trip Times are decreased for most users, and most users get a faster experience than if I only had one. Most importantly, I can do all of this while still having the cookie-based cache system to load sites as fast as possible.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://i.giphy.com/9w9Bpoiddg72U.gif&quot; alt=&quot;That was kind of awesome, right?&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.giphy.com/9w9Bpoiddg72U.gif&quot; alt=&quot;That was kind of awesome, right?&quot;&gt;&lt;/p&gt;
 </description>
 				<published>2015-06-08 07:00:00 -0500</published>
 				<link>https://iamcarrico.com/writings/how-and-why-i-made-my-own-cdn/</link>
