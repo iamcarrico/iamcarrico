@@ -62,4 +62,4 @@ The solution, was [dploy.io](http://dploy.io/). A simple deployment tool, free f
 
 I have four servers across the globe. Each server has the same configuration and the same files. I can relatively easily spin up new servers, and add them to Route 53’s latency-based routing tables. Round Trip Times are decreased for most users, and most users get a faster experience than if I only had one. Most importantly, I can do all of this while still having the cookie-based cache system to load sites as fast as possible.
 
-<img src="http://i.giphy.com/9w9Bpoiddg72U.gif" alt="That was kind of awesome, right?">
+<img src="https://i.giphy.com/9w9Bpoiddg72U.gif" alt="That was kind of awesome, right?">
