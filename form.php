@@ -1,12 +1,12 @@
 <?php
 
 function return_error() {
-  header("Location: https://iamcarrico.com/50x.html");
+  header("Location: https://" . $_SERVER['SERVER_NAME'] . "/50x.html");
   exit;
 }
 
 function return_good() {
-  header("Location: https://iamcarrico.com/contact/thank_you/");
+  header("Location: https://" . $_SERVER['SERVER_NAME'] . "/contact/thank_you/");
   exit;
 }
 
