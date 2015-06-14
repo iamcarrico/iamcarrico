@@ -34,7 +34,7 @@ foreach ($inputs as $var_name) {
 // Handle email differently.
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
-if (empty($email) || empty($name) || empty($phone)) {
+if (empty($email) || empty($name) || empty($message)) {
   return_error();
 }
 
