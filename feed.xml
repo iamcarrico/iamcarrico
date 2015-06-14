@@ -12,7 +12,7 @@
   &lt;figcaption&gt;&lt;a href=&quot;https://www.flickr.com/photos/marcela-palma/12239000755/in/photolist-b3AtCt-jDw5wp-taB9TL-tEj534-tnJ2bb-tBYHHY-tnJ2qQ-o562bA-o6mxio-tE11s1-u5ZcnJ-tbt3xP-kKgCL8-tQSSec-tbiTTd-tQRKkK-u8hKni-u7XgXd-tfvquG-hxk7mm-i5UZkT-twPaLA-fboVJR-joqc54&quot; target=&quot;\_blank&quot;&gt;Internet computer business&lt;/a&gt; by &lt;a href=&quot;https://www.flickr.com/photos/marcela-palma/&quot; target=&quot;\_blank&quot;&gt;Marcela Palma&lt;/a&gt; / &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/2.0/&quot; target=&quot;\_blank&quot;&gt;CC BY-NC-SA 2.0&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Before we begin I am just going to say it: You probably don’t need to do this. There are many great CDN options out there that are great. But, I had specific requirements that made it a necessity that I build my own. I would highly recommend MaxCDN for your own use; I have had great interactions with their team.&lt;/p&gt;
+&lt;p&gt;Before we begin I am just going to say it: You probably don’t need to do this. There are many great CDN options out there that are great. But, I had specific requirements that made it a necessity that I build my own. I would highly recommend &lt;a href=&quot;https://www.maxcdn.com/&quot;&gt;MaxCDN&lt;/a&gt; for your own use; I have had great interactions with their team.&lt;/p&gt;
 
 &lt;h2 id=&quot;then-why-did-you?&quot;&gt;Then why did you?&lt;/h2&gt;
 
