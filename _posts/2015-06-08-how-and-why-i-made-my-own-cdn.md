@@ -15,7 +15,7 @@ shortlink: http://iamc.co/1RXKa2T
   <figcaption><a href="https://www.flickr.com/photos/marcela-palma/12239000755/in/photolist-b3AtCt-jDw5wp-taB9TL-tEj534-tnJ2bb-tBYHHY-tnJ2qQ-o562bA-o6mxio-tE11s1-u5ZcnJ-tbt3xP-kKgCL8-tQSSec-tbiTTd-tQRKkK-u8hKni-u7XgXd-tfvquG-hxk7mm-i5UZkT-twPaLA-fboVJR-joqc54" target="\_blank">Internet computer business</a> by <a href="https://www.flickr.com/photos/marcela-palma/" target="\_blank">Marcela Palma</a> / <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="\_blank">CC BY-NC-SA 2.0</a></figcaption>
 </figure>
 
-Before we begin I am just going to say it: You probably don’t need to do this. There are many great CDN options out there that are great. But, I had specific requirements that made it a necessity that I build my own. I would highly recommend MaxCDN for your own use; I have had great interactions with their team.
+Before we begin I am just going to say it: You probably don’t need to do this. There are many great CDN options out there that are great. But, I had specific requirements that made it a necessity that I build my own. I would highly recommend [MaxCDN](https://www.maxcdn.com/) for your own use; I have had great interactions with their team.
 
 ## Then why did you?
 
