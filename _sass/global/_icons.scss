@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('/fonts/icomoon.eot?ifts57');
+	src:url('/fonts/icomoon.eot?#iefixifts57') format('embedded-opentype'),
+		url('/fonts/icomoon.ttf?ifts57') format('truetype'),
+		url('/fonts/icomoon.woff?ifts57') format('woff'),
+		url('/fonts/icomoon.svg?ifts57#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon {
+  // From the icomoon.
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  letter-spacing: 0;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // My styles.
+  font-size: 1.5em;
+  position: relative;
+  left: 0em;
+  display: inline-block;
+  top: 0.3em;
+}
