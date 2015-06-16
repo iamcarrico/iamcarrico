@@ -12,7 +12,7 @@
         {% endif %}
         <a class="menuitem {{current}}" role="menuitem" href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
       {% endfor %}
-      <a class="menuitem icon" role="menuitem" href="https://iamcarrico.com/feed.xml">rss&nbsp;feed</a>
+      <a class="menuitem icon" role="menuitem" href="{{ 'feed.xml' | prepend: site.baseurl }}">rss&nbsp;feed</a>
     </div>
   </nav>
 </header>
