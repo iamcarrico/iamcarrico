@@ -6,6 +6,106 @@
 		<link>https://iamcarrico.com</link>
 		
 			<item>
+				<title>Jeb! 2016 Performance Audit</title>
+				<description>&lt;figure&gt;
+  &lt;img src=&quot;/img/2015/jeb.png&quot; alt=&quot;¡Jeb!&quot;&gt;
+  &lt;figcaption&gt;A recreation of the Jeb! Campaign logo. This post is in no way affiliated with the official campaign.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Wanting to always be fair with my work— I have completed a performance review of the Jeb! Campaign site. This is similar to the work I did for the &lt;a href=&quot;https://iamcarrico.com/writings/hillary-clinton-performance-audit/&quot;&gt;Hillary Clinton performance audit&lt;/a&gt; I did last month, and follows the same general workflow.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#tests&quot;&gt;Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#overview&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#server-configuration&quot;&gt;Server configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#dns-lookups&quot;&gt;DNS lookups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#cdn-use&quot;&gt;CDN use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#asset-loading&quot;&gt;Asset loading&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#pre-rendering&quot;&gt;Pre-rendering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tests&quot;&gt;Tests&lt;/h2&gt;
+
+&lt;p&gt;Tested via Web Page Test from various locations and speeds. Any screenshots will be tested from Chrome, throttled to 2g speeds, unless otherwise noted.&lt;/p&gt;
+
+&lt;p&gt;For a complete list of Web Page Test results that were used in the making of this audit, please see below.&lt;/p&gt;
+
+&lt;p&gt;Various Locations, Chrome, 3G&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_KZ_P3W/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;KZ&lt;/em&gt;P3W/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_R0_P44/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;R0&lt;/em&gt;P44/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_D6_P54/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;D6&lt;/em&gt;P54/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_N1_P5E/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;N1&lt;/em&gt;P5E/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/video/compare.php?tests=150618_N1_P5E,150618_D6_P54,150618_R0_P44,150618_KZ_P3W&quot;&gt;http://www.webpagetest.org/video/compare.php?tests=150618&lt;em&gt;N1&lt;/em&gt;P5E,150618&lt;em&gt;D6&lt;/em&gt;P54,150618&lt;em&gt;R0&lt;/em&gt;P44,150618&lt;em&gt;KZ&lt;/em&gt;P3W&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dulles, Chrome, 3G v Cable&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_PD_P7A/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;PD&lt;/em&gt;P7A/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_CE_P7G/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;CE&lt;/em&gt;P7G/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/video/compare.php?tests=150618_CE_P7G,150618_PD_P7A&quot;&gt;http://www.webpagetest.org/video/compare.php?tests=150618&lt;em&gt;CE&lt;/em&gt;P7G,150618&lt;em&gt;PD&lt;/em&gt;P7A&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dulles, IE8 v IE9 v Chrome, Cable&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_Q3_PA5/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;Q3&lt;/em&gt;PA5/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_6Z_PA8/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;6Z&lt;/em&gt;PA8/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_CE_P7G/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;CE&lt;/em&gt;P7G/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/video/compare.php?tests=150618_6Z_PA8,150618_Q3_PA5,150618_CE_P7G&quot;&gt;http://www.webpagetest.org/video/compare.php?tests=150618&lt;em&gt;6Z&lt;/em&gt;PA8,150618&lt;em&gt;Q3&lt;/em&gt;PA5,150618&lt;em&gt;CE&lt;/em&gt;P7G&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dulles, Chrome Cable v Motorola E 3G&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_CE_P7G/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;CE&lt;/em&gt;P7G/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/result/150618_TP_PCN/&quot;&gt;http://www.webpagetest.org/result/150618&lt;em&gt;TP&lt;/em&gt;PCN/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/video/compare.php?tests=150618_TP_PCN,150618_CE_P7G&quot;&gt;http://www.webpagetest.org/video/compare.php?tests=150618&lt;em&gt;TP&lt;/em&gt;PCN,150618&lt;em&gt;CE&lt;/em&gt;P7G&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Currently, on a 2g connection (450kbps / 150ms RTT), it takes just below 10s for the header to be visible. However, since there are JavaScript frameworks that are used to display content (without server-side pre-rendering) it takes over 16 seconds for any meaningful content to be visible.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/2015/jeb-overview-load.png&quot; alt=&quot;Network view of Jeb!&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;The site has a few performance-enhancing methods employed, but not efficiently enough to have the content get to the user quickly. Overall— it is a good start with some fixes that can be made to make the site much faster with minimal code changes. Many of the problems are similar to the Hillary Clinton site, and thus will be similar to what was written for &lt;a href=&quot;https://docs.google.com/document/d/11-nW6Z_MjPboO1u9n7PTgQBwgnO3v-5hs3mhO0YWszE/edit?usp=sharing&quot;&gt;my review of her campaign site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;server-configuration&quot;&gt;Server configuration&lt;/h2&gt;
+
+&lt;p&gt;All JavaScript and CSS assets loaded from the primary domain do not have the proper expires headers. These need to be set for proper caching on all browsers, to ensure the same file is not downloaded more than once. The same is true for API calls to api.jeb2016.com and cms.jeb2016.com. Finally, the cloudfront instance in front of the static assets (mainly images) are not using any expires headers either. These domains are using etags, which will cause the asset not to be re-downloaded— but there will still be extra requests that are not needed.&lt;/p&gt;
+
+&lt;h2 id=&quot;dns-lookups&quot;&gt;DNS lookups&lt;/h2&gt;
+
+&lt;p&gt;To display meaningful content on the page, over 6 domains are used to obtain assets. This should be reduced to one domain for the critical path to load, then using third-party or extra domains to load extra resources. This will reduce the overall overhead to start the first full render of the site.&lt;/p&gt;
+
+&lt;h2 id=&quot;cdn-use&quot;&gt;CDN use&lt;/h2&gt;
+
+&lt;p&gt;Currently, jeb2016.com is accessible on only one server in Virginia. This means that anybody on the west coast will have a far slower experience on the site. This is most apparent in looking at the filmstrip view of the site loading from various corners of the United States.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/2015/jeb-filmstrip.png&quot; alt=&quot;Filmstrip of Jeb! loading from different parts of the USA&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;The second row is loading from NYC, and is loaded 5x faster than other locations (NYC loads in 3s compared to Denver’s 15s). Using a CDN in front of the primary site will greatly improve this experience, ensuring that users are not penalized for being a further distance from the server.&lt;/p&gt;
+
+&lt;h2 id=&quot;asset-loading&quot;&gt;Asset loading&lt;/h2&gt;
+
+&lt;p&gt;Outside of the using a CDN, more efficient loading of assets will create the largest impact on overall performance of the site. Currently, the JavaScript on the site is separated into 8 different files that should be concatenated into one, or at the very least use the async attribute to ensure they do not block the rendering of the page. If each is using the async attribute (with a defer attribute to fallback for older IE browsers) then the scripts can be put back into the head.&lt;/p&gt;
+
+&lt;p&gt;This is no more apparent than in the downloading of the typekit fonts. Currently, the typekit fonts are holding back the first real render of any content. It is better to get content to the users quickly, then to wait on 3rd party libraries to load their fonts.&lt;/p&gt;
+
+&lt;p&gt;A few minor notes to ensure the site is up to best practices, but by no means will make the site directly faster. First off, using the protocol-less url for asset loading has been an anti-pattern for some time. All assets that can be downloaded via https, should be downloaded via https. Also, the use of UA sniffers has also become an anti-pattern, and it is far more useful (and accurate) to use feature detection. Modernizr is a great tool to do this, with many tests built directly into it.&lt;/p&gt;
+
+&lt;h2 id=&quot;pre-rendering&quot;&gt;Pre-rendering&lt;/h2&gt;
+
+&lt;p&gt;Due to the use of client side frameworks, the content is reliant on not just the html and styles being delivered, but also several javascript files before an api call can be made to get the full content that should be delivered. This delay can be mitigated by having content be pre-rendered on the server to display the first page load, then have any additional content be loaded within an API call. The recent &lt;a href=&quot;https://www.youtube.com/watch?v=d5_6yHixpsQ&quot;&gt;100 Days of Google Dev video&lt;/a&gt; with &lt;a href=&quot;https://twitter.com/jaffathecake&quot;&gt;@jaffathecake&lt;/a&gt; goes into details on how to do that, as well as several other techniques (e.g. service workers) that can be used to even further optimize the site.&lt;/p&gt;
+</description>
+				<published>2015-06-18 07:00:00 -0500</published>
+				<link>https://iamcarrico.com/writings/jeb-2016-performance-audit/</link>
+			</item>
+		
+			<item>
 				<title>How (and why) I created my own CDN</title>
 				<description>&lt;figure&gt;
   &lt;img src=&quot;/img/2015/global_network_md.jpg&quot; srcset=&quot;/img/2015/global_network_sm.jpg 350w, /img/2015/global_network_md.jpg 748w, /img/2015/global_network_lg.jpg 1496w&quot; alt=&quot;Global CDNs are a requirement&quot;&gt;
@@ -508,20 +608,6 @@ The &lt;a href=&quot;/writings/jekyll-workflow-p1-building/&quot;&gt;first blog 
 </description>
 				<published>2014-02-12 06:00:00 -0600</published>
 				<link>https://iamcarrico.com/writings/mobile-sites-are-over/</link>
-			</item>
-		
-			<item>
-				<title>I Am No Designer</title>
-				<description>&lt;p&gt;There are many who would count me amongst designers, I am not one of those people. I work with desiners, I can see a good design from a bad one... but I am no designer. This is probably why after years of trying to make a fancy blog, something noteworthy, something catchy to the eye--- I opted instead to bring something simple to the board. Something that would bring what a blog is most needed for, it&amp;#39;s content.&lt;/p&gt;
-
-&lt;p&gt;Thus I present to the world, my personal blog I. Am. Carrico. A little blog of the musings of a web developer, aerialist, libertine and dubious philosopher. Build upon &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt; with some lovely &lt;a href=&quot;http://gruntjs.com/&quot;&gt;grunt&lt;/a&gt; and compass magic tossed in... it is a simple, easy place for you to find my thoughts.&lt;/p&gt;
-
-&lt;p&gt;If you are interested in the tools I used to build such a place, check out the &lt;a href=&quot;https://github.com/ChinggizKhan/grunt-poole&quot;&gt;Github repo&lt;/a&gt; I built from the lessons I learned here. It has a grunt template that contains a jekyll site, compass plugins and some magic with compass. It is a good starting point for anybody wanting to learn more about these awesome tools. I will write more soon about deployment and how to use grunt to make you life immesensely easier.&lt;/p&gt;
-
-&lt;p&gt;The Github repo, Mr. Poole--- a jekyll, grunt and compasss template. https://github.com/ChinggizKhan/grunt-poole&lt;/p&gt;
-</description>
-				<published>2013-05-13 07:00:00 -0500</published>
-				<link>https://iamcarrico.com/writings/i-am-no-designer/</link>
 			</item>
 		
 	</channel>
