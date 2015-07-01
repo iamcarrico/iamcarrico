@@ -6,6 +6,7 @@ categories:
   - diner
 image: "img/2015/jelly_scale_md.jpg"
 description: "If you have ever traveled with me, you will know there are few things I enjoy more than a good greasy spoon diner for breakfast. I have come up with my own scale for labeling the types of diners I go to."
+shortlink: "http://iamc.co/1NwPM0Z"
 ---
 
 <figure>
