@@ -7,7 +7,7 @@ categories:
   - perf-audit
 image: "img/2015/jeb.png"
 description: "A performance review of jeb2016.com, and how the performance of the campaign site can be improved."
-shortlink: ""
+shortlink: http://iamc.co/1eqwyyX
 ---
 
 <figure>
