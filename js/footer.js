@@ -1,7 +1,11 @@
 //= require vendor/fontfaceobserver
+//= require vendor/fastclick
 
 (function() {
   'use strict';
+
+  // Enable fastclick.
+  FastClick.attach(document.body);
 
   var fontPromises = [];
   var pt = new FontFaceObserver('pt');
