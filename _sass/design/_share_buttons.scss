@@ -1,0 +1,22 @@
+.share-buttons {
+  display: inline-block;
+  top: -1px;
+  position: relative;
+  padding-left: .5em;
+
+  input {
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    display: inline;
+    width: auto;
+    font-size: .9em;
+    margin-bottom: 0;
+    margin-left: .5em;
+    transition: .3s;
+  }
+
+  &.show input {
+    opacity: 1;
+  }
+}
