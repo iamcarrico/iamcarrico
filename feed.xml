@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>I. Am. Carrico.</title>
 		<description></description>
 		<link>https://iamcarrico.com</link>
+		<atom:link href="https://iamcarrico.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>The Jelly Scale: A Diner Rating System</title>
-				<description></description>
+				<description>If you have ever traveled with me, you will know there are few things I enjoy more than a good greasy spoon diner for breakfast. I have come up with my own scale for labeling the types of diners I go to.</description>
 				<pubDate>2015-07-01 07:00:00 -0500</pubDate>
 				<link>https://iamcarrico.com/writings/the-jelly-scale/</link>
 				<guid>https://iamcarrico.com/writings/the-jelly-scale/</guid>
@@ -15,7 +16,7 @@
 		
 			<item>
 				<title>Jeb! 2016 Performance Audit</title>
-				<description></description>
+				<description>A performance review of jeb2016.com, and how the performance of the campaign site can be improved.</description>
 				<pubDate>2015-06-18 07:00:00 -0500</pubDate>
 				<link>https://iamcarrico.com/writings/jeb-2016-performance-audit/</link>
 				<guid>https://iamcarrico.com/writings/jeb-2016-performance-audit/</guid>
@@ -23,7 +24,7 @@
 		
 			<item>
 				<title>How (and why) I created my own CDN</title>
-				<description></description>
+				<description>My site loads two different pages depending on whether or not there are cookies set that mark the CSS and fonts have been loaded already. There was no CDN that would allow me to do this without immense cost. I did what any sane developer would do, I created my own CDN.</description>
 				<pubDate>2015-06-08 07:00:00 -0500</pubDate>
 				<link>https://iamcarrico.com/writings/how-and-why-i-made-my-own-cdn/</link>
 				<guid>https://iamcarrico.com/writings/how-and-why-i-made-my-own-cdn/</guid>
@@ -31,7 +32,7 @@
 		
 			<item>
 				<title>Is that the right tool?</title>
-				<description></description>
+				<description>The internet is littered with blog posts arguing for one technology over another. There are many posts about needing to use the next shiny tool, some arguing for more stable technologies, some even positing we should stop writing &quot;Stop Using&quot; posts. Generally, these posts all articulate the benefits of one technology— but rarely do they answer the question that is needed: Is this the right tool for the job?</description>
 				<pubDate>2015-06-02 07:00:00 -0500</pubDate>
 				<link>https://iamcarrico.com/writings/is-that-the-right-tool/</link>
 				<guid>https://iamcarrico.com/writings/is-that-the-right-tool/</guid>
@@ -39,7 +40,7 @@
 		
 			<item>
 				<title>HillaryClinton.com Performance Audit</title>
-				<description></description>
+				<description>A performance review of the HillaryClinton.com site, and optimization suggestions to increase the performance of the site.</description>
 				<pubDate>2015-05-27 07:00:00 -0500</pubDate>
 				<link>https://iamcarrico.com/writings/hillary-clinton-performance-audit/</link>
 				<guid>https://iamcarrico.com/writings/hillary-clinton-performance-audit/</guid>
@@ -47,7 +48,7 @@
 		
 			<item>
 				<title>Do it for your users</title>
-				<description></description>
+				<description>To answer questions about performance, design, or even testing, I find myself repeating the same question, “What do your users do?” as a response. It seems intuitive, but many times we as web professionals need reminding that we are not creating the web for ourselves, but that we are doing it for our users.</description>
 				<pubDate>2015-05-26 07:00:00 -0500</pubDate>
 				<link>https://iamcarrico.com/writings/do-it-for-your-users/</link>
 				<guid>https://iamcarrico.com/writings/do-it-for-your-users/</guid>
@@ -55,7 +56,7 @@
 		
 			<item>
 				<title>Loading My Site in the First Packet Response</title>
-				<description></description>
+				<description>Performance matters, knowing this I rebuilt my website to always load on the first packet response. Check out how I did it, from the code to server configuration and beyond.</description>
 				<pubDate>2014-09-02 04:00:00 -0500</pubDate>
 				<link>https://iamcarrico.com/writings/loading-my-site-in-first-packet-response/</link>
 				<guid>https://iamcarrico.com/writings/loading-my-site-in-first-packet-response/</guid>
