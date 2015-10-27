@@ -7,6 +7,14 @@
 		<atom:link href="https://iamcarrico.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Never read the comments</title>
+				<description>I have not been on social media much as of late, this is why.</description>
+				<pubDate>Tue, 27 Oct 2015 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/never-read-the-comments/</link>
+				<guid>https://iamcarrico.com/writings/never-read-the-comments/</guid>
+			</item>
+		
+			<item>
 				<title>The Jelly Scale: A Diner Rating System</title>
 				<description>If you have ever traveled with me, you will know there are few things I enjoy more than a good greasy spoon diner for breakfast. I have come up with my own scale for labeling the types of diners I go to.</description>
 				<pubDate>Wed, 01 Jul 2015 07:00:00 CDT</pubDate>
@@ -76,14 +84,6 @@
 				<pubDate>Tue, 12 Aug 2014 04:00:00 CDT</pubDate>
 				<link>https://iamcarrico.com/writings/jekyll-workflow-p1-building/</link>
 				<guid>https://iamcarrico.com/writings/jekyll-workflow-p1-building/</guid>
-			</item>
-		
-			<item>
-				<title>Why is SXSW so successful?</title>
-				<description></description>
-				<pubDate>Thu, 06 Mar 2014 03:00:00 CST</pubDate>
-				<link>https://iamcarrico.com/writings/why-is-sxsw-so-succesful/</link>
-				<guid>https://iamcarrico.com/writings/why-is-sxsw-so-succesful/</guid>
 			</item>
 		
 	</channel>
