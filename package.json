@@ -12,7 +12,7 @@
   "dependencies": {},
   "devDependencies": {
     "gulp-gh-pages": "^0.3.3",
-    "gulp-poole": "git://github.com/iamcarrico/gulp-poole.git#master",
+    "gulp-poole": "^1.0.0",
     "run-sequence": "^0.3.6"
   },
   "engines": {

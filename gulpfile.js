@@ -13,7 +13,6 @@ var deploy = require("gulp-gh-pages");
 gulp.task('deploy', function(cb) {
   return runSequence(
     'build',
-    'commit',
     cb
   );
 });
