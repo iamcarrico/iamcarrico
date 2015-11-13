@@ -3,27 +3,8 @@
 var gulp = require('gulp');
 require('gulp-poole')(gulp);
 
-var runSequence = require('run-sequence');
-var deploy = require("gulp-gh-pages");
-
-
 //////////////////////////////
 // Deploy Task
+// Because we dont want to deploy to gh-pages.
 //////////////////////////////
-gulp.task('deploy', function(cb) {
-  return runSequence(
-    'build',
-    cb
-  );
-});
-
-//////////////////////////////
-// Publishing Task
-//////////////////////////////
-gulp.task('commit', function () {
-  gulp.src("./_site/**/*")
-    .pipe(deploy({
-      cacheDir: '.tmp',
-      branch: 'live'
-    })).pipe(gulp.dest('/tmp/iamcarrico.live'));
-});
+gulp.task('deploy', ['build'])
