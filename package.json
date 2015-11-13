@@ -9,6 +9,11 @@
     "email": "github@iancarrico.com",
     "url": "https://github.com/iamcarrico"
   },
+  "scripts": {
+    "install": "bundle install && cp  _git_hooks/* .git/hooks/",
+    "start": "gulp server",
+    "build": "gulp build"
+  },
   "dependencies": {},
   "devDependencies": {
     "gulp-gh-pages": "^0.3.3",

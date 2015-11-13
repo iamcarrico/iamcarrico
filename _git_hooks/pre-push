@@ -1,0 +1,29 @@
+#!/bin/sh
+
+protected_branch='master'
+
+policy='Building of site failed! (Prevented with pre-push hook.)'
+
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+
+do_exit(){
+  echo $policy
+  exit 1
+}
+
+if [ $current_branch = $protected_branch ]; then
+
+  # And execute the testsuite, while ignoring any output
+  gulp build > /dev/null
+
+  # $? is a shell variable which stores the return code from what we just ran
+  rc=$?
+  if [[ $rc != 0 ]] ; then
+    # Build script failed— do not allow for a push to happen.
+    do_exit
+  fi
+fi
+
+unset do_exit
+
+exit 0
