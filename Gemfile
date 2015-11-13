@@ -2,11 +2,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-gem 'compass', '~>1.0.0'
-gem 'toolkit', '~>2.0'
-gem 'singularitygs', '~>1.2'
-gem 'breakpoint', '~>2.5'
-
 gem 'jekyll', '~>2.0.0'
 
 group :jekyll_plugins do
