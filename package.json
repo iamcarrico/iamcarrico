@@ -17,5 +17,6 @@
   },
   "engines": {
     "node": ">=0.8.0"
-  }
+  },
+  "license": "(MIT OR CC-BY-SA-4.0)",
 }
