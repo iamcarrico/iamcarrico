@@ -10,7 +10,7 @@
     "url": "https://github.com/iamcarrico"
   },
   "scripts": {
-    "install": "bundle install && cp _git_hooks/* .git/hooks/",
+    "install": "bundle install",
     "start": "gulp server",
     "build": "gulp build"
   },
