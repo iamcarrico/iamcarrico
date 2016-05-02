@@ -38,8 +38,8 @@ For the configuration of the site, make sure to remove all references to `spdy`,
 
 ```
 server {
-	listen [::]:443 ssl http2;
-	listen 443 ssl http2;
+  listen [::]:443 ssl http2;
+  listen 443 ssl http2;
   server_name iamcarico.com;
 
   # Make sure to also have your SSL certificates!
