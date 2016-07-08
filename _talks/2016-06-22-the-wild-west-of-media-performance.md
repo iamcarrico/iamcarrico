@@ -9,17 +9,14 @@ links:
     href: https://iamcarrico.github.io/the-wild-west-of-media-performance/
   - title: Video (DrupalCon)
     href: https://www.youtube.com/watch?v=bmmjiMJIYIY
+  - title: Video (VelocityConf)
+    href: https://www.youtube.com/watch?v=UsFdxNhAAjE
 categories:
   - Performance
   - Images
   - Fonts
   - Ads
 ---
-
-## LiveStream
-
-<iframe id="ls_embed_1464045165" src="https://livestream.com/accounts/10405787/events/5455124/player?width=560&height=315&autoPlay=true&mute=false" width="560" height="315" frameborder="0" scrolling="no"></iframe>
-
 
 
 A little over a year ago, Vox Media created a dedicated performance team, which immediately set out to make all Vox Media sites as fast as possible—and has since made significant progress. The first day the performance team convened, team members knew they had a few mountains to climb. From that day, the team has worked to measure how to best collect and interpret the performance information it had for all of the Vox Media sites. One year later, the team has made big strides but has still found areas that it needs to improve upon.
