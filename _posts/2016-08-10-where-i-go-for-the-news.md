@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Where I get my news"
+title:  "Where I go for the news"
 date:   2016-08-10 12:00:00
 categories:
   - politics
   - news
   - media
 image: "/img/2016/reading-the-newspaper_md.jpg"
-description: "Where do I go to find news about our world?"
+description: "Where do I go to find news about our world? Number 5 will astound you."
 ---
 
 <figure>
