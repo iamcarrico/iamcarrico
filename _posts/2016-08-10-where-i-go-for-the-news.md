@@ -92,6 +92,16 @@ _(Liberal)_
 [Mother Jones](http://www.motherjones.com/)
 _(Liberal)_
 
+[Texas Monthly](http://www.texasmonthly.com/)
+_(Added 8/16)_
+
+[The Atlantic](http://www.theatlantic.com/)
+_(Added 8/16 - Liberal)_
+
+[FiveThirtyEight](http://fivethirtyeight.com/)
+_(Added 8/16) - Centrist_
+
+
 ## Wary About
 
 All of these are places where while I might read something from them— I am wary about the content that they have. In the case of the first two, it is because their content is largely community-submitted, and does not go through much (if any at all) of an editorial review. Largely, the posts on both The Huffington Post and Medium are opinion pieces.
@@ -124,6 +134,9 @@ _(Liberal)_
 [Raw Story](http://www.rawstory.com/)
 _(Liberal)_
 
+[US Uncut](http://usuncut.com/)
+_(Liberal)_
+
 
 ## BONUS: Other Podcasts
 
@@ -138,6 +151,20 @@ What would a list of news sources be without an associated list of podcasts that
 [Snap Judgement](http://snapjudgment.org/) †
 
 [Radiolab](http://www.radiolab.org/) †
+
+
+## New sources
+
+On 8/16, after some comments from friends I added a few more sources I am trying to add into my repertoire. For those that do not fit easily into the sections above, I am going to just add them here.
+
+[Financial Times](http://www.ft.com/home/us)
+
+[Foreign Policy](http://foreignpolicy.com/)
+
+[City Lab](http://www.citylab.com/) (Part of The Atlantic)
+
+[Foreign Affairs](https://www.foreignaffairs.com/) (I used to read this cover to cover, but haven't been able to keep it up as of late.)
+
 
 <br/>
 <br/>
