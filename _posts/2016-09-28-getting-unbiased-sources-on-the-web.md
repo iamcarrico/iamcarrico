@@ -6,7 +6,7 @@ categories:
   - news
   - media
 image: "/img/2016/google-search-result_md.jpg"
-description: ""
+description: "Every day, we are hit with a drudge of information. How do we differentiate the facts from the bias? Some tips that I use to try and wade through the information on the internet."
 ---
 
 <figure>
