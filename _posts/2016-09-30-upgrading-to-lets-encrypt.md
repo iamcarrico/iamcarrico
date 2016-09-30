@@ -79,11 +79,11 @@ Once all of the servers have the right certificates, updating nginx was just a m
 
 ```
 ssl on;
-ssl_certificate /etc/letsencrypt/live/{{ server_name_template }}/fullchain.pem;
-ssl_certificate_key /etc/letsencrypt/live/{{ server_name_template }}/privkey.pem;
+ssl_certificate /etc/letsencrypt/live/{ server_name_template }/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/{ server_name_template }/privkey.pem;
 ```
 
-Where the `{{ server_name_template }}` is replaced by the domain name that we are building for. Either `iamcarrico.com`, or the individual server that is being used (e.g `amsterdam.iamcarrico.com`). A quick restart to the nginx server, and my sites are up and running with Let's Encrypt.
+Where the `{ server_name_template }` is replaced by the domain name that we are building for. Either `iamcarrico.com`, or the individual server that is being used (e.g `amsterdam.iamcarrico.com`). A quick restart to the nginx server, and my sites are up and running with Let's Encrypt.
 
 
 ### Multiple servers, redux
