@@ -2,14 +2,12 @@
  * About me partial.
  */
 
-@media (min-width: 43.75em) {
-  #about-text {
-    width: (3 / 5) * 100%;
-    float: left;
-  }
-
-  #my-photo {
-    width: (2 / 5) * 100%;
-    float: right;
+#about {
+  @media (min-width: 400px) {
+    img {
+      width: 50%;
+      float: right;
+      margin: 0 0 1em 1em;
+    }
   }
 }
