@@ -53,7 +53,6 @@ if ($resp->isSuccess()) {
 }
 
 
-
 $body = <<<EOT
 *Name:* $name
 *Email:* $email

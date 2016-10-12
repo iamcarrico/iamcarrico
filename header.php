@@ -1,11 +1,14 @@
+---
+layout: nil
+---
 <?php
 
 $css = FALSE;
+$current_file = "{% asset_path style.css %}";
 
 if (isset($_COOKIE['iC'])) {
   $csspath = "/assets/style-" . htmlspecialchars($_COOKIE['iC'], ENT_QUOTES, 'UTF-8');
-  $path_to_check = ltrim($csspath, '/');
-  $css = file_exists($path_to_check);
+  $css = ($csspath == $current_file);
 }
 
 $fonts = (isset($_COOKIE['iF']) && $_COOKIE['iF'] == "true");
