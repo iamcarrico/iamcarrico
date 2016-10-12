@@ -34,12 +34,23 @@ foreach ($inputs as $var_name) {
 // Handle email differently.
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
-if (empty($email) || empty($name) || empty($message)) {
+if (empty($email) || empty($name) || empty($message) || empty($_POST['g-recaptcha-response'])) {
   return_error();
 }
 
 $request_ip = $_SERVER['REMOTE_ADDR'];
 $x_forwarded = $_SERVER['HTTP_X_FORWARDED_FOR'];
+
+// ReCaptcha, because SPAM bots are killing me.
+$recaptcha = new \ReCaptcha\ReCaptcha(RECAPTCHA_SECRET);
+$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $request_ip);
+if ($resp->isSuccess()) {
+    // verified!
+} else {
+    return_error();
+}
+
+
 
 $body = <<<EOT
 *Name:* $name

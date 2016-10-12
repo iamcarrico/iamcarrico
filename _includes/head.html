@@ -16,6 +16,9 @@
   <meta name="twitter:image" content="{{ site.url }}/{{ page.image }}">
 {% endif %}
 <script>{% asset header %}</script>
+{% if page.permalink == "/contact/" %}
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endif %}
 {% if site.development %}
   {% stylesheet style %}
   </head>

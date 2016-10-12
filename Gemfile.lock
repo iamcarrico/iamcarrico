@@ -113,3 +113,9 @@ DEPENDENCIES
   jekyll-sitemap
   uglifier
   yui-compressor
+
+RUBY VERSION
+   ruby 2.0.0p598
+
+BUNDLED WITH
+   1.13.3
