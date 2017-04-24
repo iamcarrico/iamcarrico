@@ -1,0 +1,16 @@
+/**
+ * For all the recipes that we will put on here.
+ */
+
+.recipie-card {
+  @extend %clearfix;
+  padding: 1em;
+  border: 1px solid black;
+  margin: 2em;
+
+  &--image {
+    float: right;
+    max-width: 45%;
+    margin-left: .5em;
+  }
+}

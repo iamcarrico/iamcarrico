@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<article class="blog-post full">
+  <h1 class="title">{{ page.title }}</h1>
+  <div class="metadatas">
+    <span class="categories">
+      {% for category in page.categories %}<span class="category">{{ category }}</span> {% endfor %}
+    </span>&nbsp;-&nbsp;
+    <span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
+  </div>
+  <div class="content">
+
+    {{ content }}
+
+    <div class="recipie-card">
+      <h2 class="recipie-card--title">{{ page.cocktail_title }}</h2>
+      {% if page.cocktail_image %}<img class="recipie-card--image" alt="{{ page.cocktail_title }}" src="{{ page.cocktail_image }}">{% endif %}
+      {% if page.yield %}
+        <div class="recipie-card--yield">
+          <strong>Yield:</strong> {{ page.yield }}
+        </div>
+      {% endif %}
+      {% if page.glassware %}
+        <div class="recipie-card--glasswear">
+          <strong>Glasswear:</strong> {{ page.glassware }}
+        </div>
+      {% endif %}
+      {% if page.tools %}
+        <div class="recipie-card--tools">
+          <strong>Tools:</strong> {{ page.tools | join: ', ' }}
+        </div>
+      {% endif %}
+      <div class="recipie-card--ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          {% for ingredient in page.ingredients %}
+            <li>{{ ingredient.amount }} {{ ingredient.unit }} &mdash; {{ ingredient.ingredient }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="recipie-card--directions">
+        <h3>Directions</h3>
+        <ol>
+          {% for direction in page.directions %}
+            <li>{{ direction }}</li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  {% include comments.html %}
+</article>

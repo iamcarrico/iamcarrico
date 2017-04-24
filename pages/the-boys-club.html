@@ -1,0 +1,18 @@
+---
+layout: default
+title: The Boys Club
+css_id: the-boys-club-page
+permalink: /the-boys-club/
+---
+
+<h2>The Boys Club</h2>
+
+Back in 2013, I wrote for a liquor and cocktail blog called "The Boys Club". That site has since ended, but I wanted to make sure some of that content lives on. Below are my posts from The Boys Club, kept as similar to their original form as I can on this site.
+
+<br>
+
+{% for post in site.posts %}
+  {% if post.categories contains "the boys club" %}
+    {% include teaser.html post=post %}
+  {% endif %}
+{% endfor %}
