@@ -20,6 +20,22 @@
   }
 
   &.teaser {
+    @extend %clearfix;
     margin-bottom: 40px;
+
+    @media (min-width: 400px) {
+      .teaser-image {
+        float: left;
+        max-width: 30%;
+        max-height: 200px;
+        margin-right: 1em;
+      }
+
+      &:nth-child(even) {
+        .teaser-image {
+          float:right;
+        }
+      }
+    }
   }
 }

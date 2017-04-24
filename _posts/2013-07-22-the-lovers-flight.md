@@ -8,6 +8,7 @@ categories:
   - Liqueur
   - The Boys Club
 image: "/img/2013/lovers-flight-header.jpg"
+teaser_image: "/img/2013/lovers-flight-header.jpg"
 description: "Just south of the Texas border, a unique plant called the Turnera Diffusa is grown. It is usually called by its more colloquial name, Damiana, and is the base for an herbal liqueur of the..."
 cocktail_title: "The Lover’s Flight"
 yield: "1 cocktail"

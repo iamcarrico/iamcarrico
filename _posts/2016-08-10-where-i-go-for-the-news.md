@@ -7,6 +7,7 @@ categories:
   - news
   - media
 image: "/img/2016/reading-the-newspaper_md.jpg"
+teaser_image: "/img/2016/reading-the-newspaper_sm.jpg"
 description: "Where do I go to find news about our world? Number 5 will astound you."
 ---
 

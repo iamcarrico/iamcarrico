@@ -7,7 +7,8 @@ categories:
   - http2
   - server
   - nginx
-image: "img/2016/sloth_md.jpg"
+image: "/img/2016/sloth_md.jpg"
+teaser_image: "/img/2016/sloth_sm.jpg"
 description: "HTTP/2 has been around, it is time I upgraded my servers to use it."
 ---
 

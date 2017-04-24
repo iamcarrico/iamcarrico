@@ -1,4 +1,7 @@
 <article class="blog-post teaser">
+  {% if include.post.teaser_image %}
+    <a href="{{ include.post.url }}"><img class="teaser-image" src="{{ include.post.teaser_image }}" alt="{{ include.post.title }}"></a>
+  {% endif %}
   <h2 class="title"><a href="{{ include.post.url }}">{{ include.post.title }}</a></h2>
   <div class="metadatas">
     <span class="categories">

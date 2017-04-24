@@ -7,6 +7,7 @@ categories:
   - server
   - nginx
 image: "/img/2016/gold-lock_md.jpg"
+teaser_image: "/img/2016/gold-lock_sm.jpg"
 description: "How I used Let's Encrypt for my own SSL/TLS certificates on all of my web servers."
 ---
 

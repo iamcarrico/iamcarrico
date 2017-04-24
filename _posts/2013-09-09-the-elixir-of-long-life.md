@@ -8,6 +8,7 @@ categories:
   - Liqueur
   - The Boys Club
 image: "/img/2013/elixir-of-long-life-header.jpg"
+teaser_image: "/img/2013/elixir-of-long-life-header.jpg"
 description: "In 1605, an old manuscript was given to the monks of the Carthusian Order. After careful study, the apothecarian wisdom held within this tome was distilled, quite literally, until the monks were able to create..."
 cocktail_title: "Gin and Monks"
 yield: "1 cocktail"

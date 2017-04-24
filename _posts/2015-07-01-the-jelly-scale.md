@@ -4,7 +4,8 @@ title:  "The Jelly Scale: A Diner Rating System"
 date:   2015-07-01 12:00:00
 categories:
   - diner
-image: "img/2015/jelly_scale_md.jpg"
+image: "/img/2015/jelly_scale_md.jpg"
+teaser_image: "/img/2015/jelly_scale_sm.jpg"
 description: "If you have ever traveled with me, you will know there are few things I enjoy more than a good greasy spoon diner for breakfast. I have come up with my own scale for labeling the types of diners I go to."
 shortlink: "http://iamc.co/1NwPM0Z"
 ---

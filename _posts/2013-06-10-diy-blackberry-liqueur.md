@@ -7,6 +7,7 @@ categories:
   - Liqueur
   - The Boys Club
 image: "/img/2013/blackberry-header.jpg"
+teaser_image: "/img/2013/blackberry-header.jpg"
 description: "Summertime cooking down south means some good brisket in a smoker, slaw in the kitchen, and a cobbler in the oven. Nothing finishes out a good barbeque better than a blackberry cobbler, so in honor..."
 cocktail_title: "DIY Blackberry Liqueur"
 yield: "1 bottle liquer"

@@ -7,6 +7,7 @@ categories:
   - Liqueur
   - The Boys Club
 image: "/img/2013/menta-julep-header.jpg"
+teaser_image: "/img/2013/menta-julep-header.jpg"
 description: "Some of the best liqueurs, in my opinion, stem from old recipes that have been perfected over the years, and Branca Menta is no exception. This old family recipe is the result of the Branca..."
 cocktail_title: "The Last Word"
 yield: "1 cocktail"

@@ -6,7 +6,8 @@ categories:
   - performance
   - web development
   - UX
-image: "img/2016/a-very-angry-man_md.jpg"
+image: "/img/2016/a-very-angry-man_md.jpg"
+teaser_image: "/img/2016/a-very-angry-man_sm.jpg"
 description: "Performance is an extension of user experience— our work is to make the user feel better using our site. Why don't we use our user's happiness as a metric for performance tests?"
 ---
 

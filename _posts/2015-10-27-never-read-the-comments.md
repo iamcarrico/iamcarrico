@@ -6,7 +6,8 @@ categories:
   - harassment
   - community
   - social media
-image: "img/2015/kittens_md.jpg"
+image: "/img/2015/kittens_md.jpg"
+teaser_image: "/img/2015/kittens_sm.jpg"
 description: "I have not been on social media much as of late, this is why."
 ---
 
