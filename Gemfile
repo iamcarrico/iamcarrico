@@ -1,12 +1,12 @@
 # Pull gems from RubyGems
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.3.3'
 
-gem 'jekyll', '~>2.0.0'
+gem 'jekyll', '~>3.5.0'
 
 group :jekyll_plugins do
-  gem 'jekyll-minify-html'
-  gem 'jekyll-sitemap'
+#  gem 'jekyll-minify-html'
+#  gem 'jekyll-sitemap'
   gem 'jekyll-redirect-from'
 
   # Asset Pipline
@@ -15,5 +15,5 @@ group :jekyll_plugins do
   gem 'yui-compressor'
 
   # Poole
-  gem 'jekyll-poole'
+#  gem 'jekyll-poole'
 end
