@@ -30,6 +30,7 @@ GEM
       pathutil (>= 0.8)
       rack (~> 1.6)
       sprockets (~> 3.3, < 3.8)
+    jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.12.1)
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
@@ -69,6 +70,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.5.0)
   jekyll-assets
+  jekyll-paginate
   jekyll-redirect-from
   uglifier
   yui-compressor

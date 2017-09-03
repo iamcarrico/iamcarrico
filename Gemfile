@@ -6,8 +6,8 @@ gem 'jekyll', '~>3.5.0'
 
 group :jekyll_plugins do
 #  gem 'jekyll-minify-html'
-#  gem 'jekyll-sitemap'
   gem 'jekyll-redirect-from'
+  gem 'jekyll-paginate'
 
   # Asset Pipline
   gem 'jekyll-assets'
