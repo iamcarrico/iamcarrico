@@ -31,6 +31,8 @@ GEM
       rack (~> 1.6)
       sprockets (~> 3.3, < 3.8)
     jekyll-paginate (1.1.0)
+    jekyll-poole (0.2.0)
+      jekyll (>= 3.0.0, < 4.0.0)
     jekyll-redirect-from (0.12.1)
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
@@ -71,6 +73,7 @@ DEPENDENCIES
   jekyll (~> 3.5.0)
   jekyll-assets
   jekyll-paginate
+  jekyll-poole
   jekyll-redirect-from
   uglifier
   yui-compressor

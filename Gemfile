@@ -5,7 +5,6 @@ ruby '2.3.3'
 gem 'jekyll', '~>3.5.0'
 
 group :jekyll_plugins do
-#  gem 'jekyll-minify-html'
   gem 'jekyll-redirect-from'
   gem 'jekyll-paginate'
 
@@ -15,5 +14,5 @@ group :jekyll_plugins do
   gem 'yui-compressor'
 
   # Poole
-#  gem 'jekyll-poole'
+  gem 'jekyll-poole'
 end
