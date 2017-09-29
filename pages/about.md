@@ -10,7 +10,9 @@ permalink: /about/
 
 # Ian Carrico
 
-A graduate of The University of Texas at Austin, Ian now works at creating faster, better experiences for users on the web. He works for Vox Media as their Performance Engineer&mdash; working daily to increase the performance on all their verticals.
+Ian Carrico is an engineer with a penchant for solving difficult problems with more elegant solutions. He is currently a senior performance engineer at Vox Media, the fastest-growing modern media company, where he leads efforts to increase speed, transparency, and security for all of the company's brands and businesses.
+
+Ian has spoken at O'Reilly Velocity, South by Southwest, and DrupalCon on creating higher performing websites. He has worked on some of the highest trafficked media sites, including NBC.com, The Economist, and Vox.com.
 
 He has given [talks](/talks/) across the globe on everything from front end performance to setting up the perfect Sass environment. Any inquiries for speaking engagements can be made on his [contact](/contact/) page, or though the appropriate social media platform.
 
