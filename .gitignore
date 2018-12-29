@@ -3,6 +3,7 @@
 
 # Ignore Compiled files
 img
+!docs/img
 css
 .tmp
 
