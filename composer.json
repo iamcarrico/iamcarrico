@@ -1,6 +1,0 @@
-{
-    "require": {
-        "knplabs/github-api": "~1.4",
-        "google/recaptcha": "~1.1"
-    }
-}
