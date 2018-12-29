@@ -15,15 +15,6 @@
   <meta name="twitter:description" content="{{ page.description }}">
   <meta name="twitter:image" content="{{ site.url }}/{{ page.image }}">
 {% endif %}
-<script>{% asset header %}</script>
-{% if page.permalink == "/contact/" %}
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-{% endif %}
-{% if site.development %}
-  {% stylesheet style %}
-  </head>
-  <body>
-{% else %}
-  <link rel="prefetch" href="{{ site.url }}{% if page.url != site.posts.first.url %}{{ site.posts.first.url }}{% endif %}" />
-  <esi:include src="/header.php" />
-{% endif %}
+<style>{% asset style %}</style>
+</head>
+<body>

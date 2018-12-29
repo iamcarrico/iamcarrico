@@ -3,8 +3,12 @@
 var gulp = require('gulp');
 require('gulp-poole')(gulp);
 
-//////////////////////////////
-// Deploy Task
-// Because we dont want to deploy to gh-pages.
-//////////////////////////////
-gulp.task('deploy', ['build'])
+var htmlmin = require('gulp-htmlmin')
+
+gulp.task('htmlmin', function() {
+  return gulp.src('./docs/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./docs/'))
+});
+
+gulp.task('deploy', ['build']);

@@ -47,6 +47,8 @@ assets:
   css_compressor: 'yui'
   cache: true
 
+destination: ./docs
+
 collections:
   talks:
     output: true
