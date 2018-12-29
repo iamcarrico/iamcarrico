@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>I. Am. Carrico.</title>
+		<description></description>
+		<link>https://iamcarrico.com</link>
+		<atom:link href="https://iamcarrico.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Upgrading to Let's Encrypt</title>
+				<description>How I used Let's Encrypt for my own SSL/TLS certificates on all of my web servers.</description>
+				<pubDate>Fri, 30 Sep 2016 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/upgrading-to-lets-encrypt/</link>
+				<guid>https://iamcarrico.com/writings/upgrading-to-lets-encrypt/</guid>
+			</item>
+		
+			<item>
+				<title>How to get unbiased news on the web</title>
+				<description>Every day, we are hit with a drudge of information. How do we differentiate the facts from the bias? Some tips that I use to try and wade through the information on the internet.</description>
+				<pubDate>Thu, 29 Sep 2016 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/getting-unbiased-sources-on-the-web/</link>
+				<guid>https://iamcarrico.com/writings/getting-unbiased-sources-on-the-web/</guid>
+			</item>
+		
+			<item>
+				<title>Where I go for the news</title>
+				<description>Where do I go to find news about our world? Number 5 will astound you.</description>
+				<pubDate>Wed, 10 Aug 2016 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/where-i-go-for-the-news/</link>
+				<guid>https://iamcarrico.com/writings/where-i-go-for-the-news/</guid>
+			</item>
+		
+			<item>
+				<title>Ignore your analytics</title>
+				<description>Performance is an extension of user experience— our work is to make the user feel better using our site. Why don't we use our user's happiness as a metric for performance tests?</description>
+				<pubDate>Thu, 23 Jun 2016 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/ignore-your-analytics/</link>
+				<guid>https://iamcarrico.com/writings/ignore-your-analytics/</guid>
+			</item>
+		
+			<item>
+				<title>Upgrading to HTTP/2</title>
+				<description>HTTP/2 has been around, it is time I upgraded my servers to use it.</description>
+				<pubDate>Mon, 02 May 2016 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/upgrade-to-http2/</link>
+				<guid>https://iamcarrico.com/writings/upgrade-to-http2/</guid>
+			</item>
+		
+			<item>
+				<title>Never read the comments</title>
+				<description>I have not been on social media much as of late, this is why.</description>
+				<pubDate>Tue, 27 Oct 2015 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/never-read-the-comments/</link>
+				<guid>https://iamcarrico.com/writings/never-read-the-comments/</guid>
+			</item>
+		
+			<item>
+				<title>The Jelly Scale: A Diner Rating System</title>
+				<description>If you have ever traveled with me, you will know there are few things I enjoy more than a good greasy spoon diner for breakfast. I have come up with my own scale for labeling the types of diners I go to.</description>
+				<pubDate>Wed, 01 Jul 2015 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/the-jelly-scale/</link>
+				<guid>https://iamcarrico.com/writings/the-jelly-scale/</guid>
+			</item>
+		
+			<item>
+				<title>Jeb! 2016 Performance Audit</title>
+				<description>A performance review of jeb2016.com, and how the performance of the campaign site can be improved.</description>
+				<pubDate>Thu, 18 Jun 2015 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/jeb-2016-performance-audit/</link>
+				<guid>https://iamcarrico.com/writings/jeb-2016-performance-audit/</guid>
+			</item>
+		
+			<item>
+				<title>How (and why) I created my own CDN</title>
+				<description>My site loads two different pages depending on whether or not there are cookies set that mark the CSS and fonts have been loaded already. There was no CDN that would allow me to do this without immense cost. I did what any sane developer would do, I created my own CDN.</description>
+				<pubDate>Mon, 08 Jun 2015 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/how-and-why-i-made-my-own-cdn/</link>
+				<guid>https://iamcarrico.com/writings/how-and-why-i-made-my-own-cdn/</guid>
+			</item>
+		
+			<item>
+				<title>Is that the right tool?</title>
+				<description>The internet is littered with blog posts arguing for one technology over another. There are many posts about needing to use the next shiny tool, some arguing for more stable technologies, some even positing we should stop writing &quot;Stop Using&quot; posts. Generally, these posts all articulate the benefits of one technology— but rarely do they answer the question that is needed: Is this the right tool for the job?</description>
+				<pubDate>Tue, 02 Jun 2015 07:00:00 CDT</pubDate>
+				<link>https://iamcarrico.com/writings/is-that-the-right-tool/</link>
+				<guid>https://iamcarrico.com/writings/is-that-the-right-tool/</guid>
+			</item>
+		
+	</channel>
+</rss>
