@@ -1,28 +1,19 @@
-# we use Macs
+# macOS
 .DS_Store
 
-# Ignore Compiled files
-img
-!docs/img
-css
-.tmp
-
-# Ignore stuff that Jekyll pops out
-_site
-.jekyll-assets-cache
-
-# Ignore Sass stuff
-.sass-cache
-.eyeglass_cache
-
-# For Grunt npm modules
+# Dependencies
 node_modules
+
+# Sass cache
+.sass-cache
+
+# Temp files
+.tmp
 _tmp
 
 # AWS
 .aws
 .awspublish-iamcarrico
 
-# Composer
-vendor
-!js/vendor
+# Claude
+.claude

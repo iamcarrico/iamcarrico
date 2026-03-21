@@ -1,0 +1,25 @@
+// Entry point for Eleventy Sass compilation.
+// All partials live in _sass/ and are imported here.
+
+@import '../_sass/config/config';
+
+@import '../_sass/global/normalize';
+@import '../_sass/global/extendables';
+@import '../_sass/global/syntax';
+@import '../_sass/global/syntax_overrides';
+@import '../_sass/global/type';
+@import '../_sass/global/fonts';
+@import '../_sass/global/icons';
+@import '../_sass/global/forms';
+
+@import '../_sass/design/header';
+@import '../_sass/design/main';
+@import '../_sass/design/about';
+@import '../_sass/design/contact';
+@import '../_sass/design/post';
+@import '../_sass/design/talk';
+@import '../_sass/design/category';
+@import '../_sass/design/recipie-card';
+@import '../_sass/design/footer';
+
+@import '../_sass/print';

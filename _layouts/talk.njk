@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<article class="talk">
+  <h1 class="title">{{ title }}</h1>
+  <div class="metadatas">
+    <span class="categories">
+      {% for category in categories %}<span class="category">{{ category }}</span> {% endfor %}
+    </span>&nbsp;-&nbsp;
+    <span class="date">{{ page.date | dateFormat("yyyy-MM-dd") }}</span>&nbsp;-&nbsp;
+    <span class="location">{{ location }}</span>
+  </div>
+  {% if links %}
+    <ul class="links">
+      {% for link in links %}
+        <li><a href="{{ link.href }}" target="_blank">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <div class="content">
+    {{ content | safe }}
+  </div>
+  {% include "comments.njk" %}
+</article>

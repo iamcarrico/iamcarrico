@@ -1,25 +1,10 @@
-//= require vendor/fontfaceobserver
-//= require vendor/fastclick
+'use strict';
 
-(function() {
-  'use strict';
-
-  // Enable fastclick.
-  FastClick.attach(document.body);
-
-  var fontPromises = [];
-  var pt = new FontFaceObserver('pt');
-  var italic = new FontFaceObserver('pt', {style: 'italic'});
-
-  fontPromises.push(pt.check(null, 5000));
-  fontPromises.push(italic.check(null, 5000));
-
-  Promise.all(fontPromises).then(function() {
-    // If all promises are fulfilled, then add the proper class to signify.
-    document.documentElement.className += " fonts-loaded";
-  }, function() {
-    // A font did not load, create a class so that we know that we have
-    // failed as loaders of fonts.
-    document.documentElement.className += " fonts-unavailable";
-  });
-})();
+// Use the native CSS Font Loading API to signal when custom fonts are ready.
+// The .fonts-loaded class can be used in CSS to swap to the custom typeface
+// while .fonts-unavailable provides a fallback style if loading fails.
+document.fonts.ready.then(function() {
+  document.documentElement.classList.add('fonts-loaded');
+}).catch(function() {
+  document.documentElement.classList.add('fonts-unavailable');
+});

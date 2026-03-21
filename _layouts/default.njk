@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+  {% include "header.njk" %}
+
+  <main role="main"{% if css_id %} id="{{ css_id }}"{% endif %}>
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+  {% include "analytics.njk" %}
+
+  <script src="/js/footer.js"></script>
+</body>
+</html>

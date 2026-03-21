@@ -1,10 +1,15 @@
 ---
 layout: default
 css_id: home
+pagination:
+  data: collections.posts
+  size: 4
+  alias: post
+permalink: "{% if pagination.pageNumber == 0 %}/{% else %}/writings/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 
-{% for post in paginator.posts %}
-  {% include teaser.html post=post %}
+{% for post in pagination.items %}
+  {% include "teaser.njk" %}
 {% endfor %}
 
-{% include pagination.html %}
+{% include "pagination.njk" %}

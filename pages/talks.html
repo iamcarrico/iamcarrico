@@ -8,11 +8,11 @@ permalink: /talks/
 <h2>All my previous talks</h2>
 
 <ul>
-  {% for talk in site.talks reversed %}
-    <li><a href="{{ talk.url }}">{{ talk.title }}</a> - {{ talk.location }} - {{ talk.date | date: "%Y-%m-%d" }}</li>
-    {% if talk.links  %}
+  {% for talk in collections.talks %}
+    <li><a href="{{ talk.url }}">{{ talk.data.title }}</a> - {{ talk.data.location }} - {{ talk.date | dateFormat("yyyy-MM-dd") }}</li>
+    {% if talk.data.links %}
       <ul>
-        {% for link in talk.links %}
+        {% for link in talk.data.links %}
           <li><a href="{{ link.href }}" target="_blank">{{ link.title }}</a></li>
         {% endfor %}
       </ul>

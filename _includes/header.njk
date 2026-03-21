@@ -1,0 +1,19 @@
+<header>
+  <h1 class="site-name title"><a href="/"><span class="word">I. </span><span class="word">Am. </span><span class="word">Carrico.</span></a></h1>
+  <nav id="nav" role="navigation">
+    <div class="menubar" role="menubar">
+      {% for nav in navigation %}
+        {% set url = page.url | replace("index.html", "") %}
+        {% if url == nav.url %}
+          {% set current = 'active' %}
+        {% elif url.startsWith(nav.url) and nav.url != '/' %}
+          {% set current = 'active-trail' %}
+        {% else %}
+          {% set current = '' %}
+        {% endif %}
+        <a class="menuitem {{ current }}" role="menuitem" href="{{ nav.url }}">{{ nav.name }}</a>
+      {% endfor %}
+      <a class="menuitem icon" role="menuitem" href="/feed.xml">rss&nbsp;feed</a>
+    </div>
+  </nav>
+</header>

@@ -6,7 +6,7 @@ permalink: /about/
 ---
 
 
-{% image headshot.jpg alt="Ian Carrico" %}
+<img src="/img/headshot.jpg" alt="Ian Carrico">
 
 # Ian Carrico
 

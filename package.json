@@ -1,6 +1,6 @@
 {
   "name": "iamcarrico",
-  "version": "2.0.0",
+  "version": "4.0.0",
   "homepage": "http://iamcarrico.com",
   "repository": "https://github.com/iamcarrico/iamcarrico",
   "description": "My own little personal blog",
@@ -10,17 +10,16 @@
     "url": "https://github.com/iamcarrico"
   },
   "scripts": {
-    "install": "bundle install",
-    "start": "gulp server",
-    "build": "gulp build"
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
-  "dependencies": {},
   "devDependencies": {
-    "gulp": ">= 3.8.0 < 4",
-    "gulp-poole": "git://github.com/iamcarrico/gulp-poole#master"
+    "@11ty/eleventy": "^3.0.0",
+    "sass": "^1.0.0",
+    "luxon": "^3.0.0"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=18.0.0"
   },
   "license": "(MIT OR CC-BY-SA-4.0)"
 }
