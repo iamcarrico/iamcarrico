@@ -35,18 +35,16 @@ directions:
 cocktail_image: "/img/2013/menta-julep-inside.jpg"
 ---
 
-<figure>
-  <img src="/img/2013/menta-julep-header.jpg" alt="The elixir of long life">
-  <figcaption>Photo by <a target="\_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a></figcaption>
-</figure>
+{% figure "/img/2013/menta-julep-header.jpg", "The elixir of long life" %}
+  Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>
+{% endfigure %}
 
 Some of the best liqueurs, in my opinion, stem from old recipes that have been perfected over the years, and Branca Menta is no exception. This old family recipe is the result of the Branca family’s work from over a hundred years ago.
 
 The recipe was developed in 1845 with the creation of Fernet Branca by Maria Scala. The family then used a similar base and spices to produce Branca Menta, their second product. Branca Menta is similar to Fernet Branca in that it is a dark, rich liqueur, but the Branca Menta has a strong mint flavor to accompany it.
 
-<figure>
-  <img src="/img/2013/menta-julep-body.jpg" alt="The elixir of long life">
-  <figcaption>Photo by <a target="\_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a></figcaption>
-</figure>
+{% figure "/img/2013/menta-julep-body.jpg", "The elixir of long life" %}
+  Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>
+{% endfigure %}
 
 Branca Menta can be used in a variety of cocktails or all by itself. I usually enjoy it chilled over some ice, or over vanilla ice cream. In a cocktail, it can be used to add a sweet, minty addition to any flavor profile. However, since it is almost summer, and I am in Texas, there is only one thing on my mind: a perfect mint julep. Using Branca Menta as a replacement for the mint flavor adds a more herbal touch to this traditional drink, but it still holds on to the cool, refreshing qualities that make the mint julep so wonderful for a hot Texas afternoon.

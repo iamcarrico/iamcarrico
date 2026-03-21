@@ -41,10 +41,9 @@ directions:
 cocktail_image: "/img/2013/lovers-flight-inside.jpg"
 ---
 
-<figure>
-  <img src="/img/2013/lovers-flight-header.jpg" alt="The elixir of long life">
-  <figcaption>Photo by <a target="\_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a></figcaption>
-</figure>
+{% figure "/img/2013/lovers-flight-header.jpg", "The elixir of long life" %}
+  Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>
+{% endfigure %}
 
 Just south of the Texas border, a unique plant called the Turnera Diffusa is grown. It is usually called by its more colloquial name, Damiana, and is the base for an herbal liqueur of the same name.
 

@@ -37,10 +37,9 @@ directions:
 cocktail_image: "/img/2013/elixir-of-long-life-inside.jpg"
 ---
 
-<figure>
-  <img src="/img/2013/elixir-of-long-life-header.jpg" alt="The elixir of long life">
-  <figcaption>Photo by <a target="\_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a></figcaption>
-</figure>
+{% figure "/img/2013/elixir-of-long-life-header.jpg", "The elixir of long life" %}
+  Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>
+{% endfigure %}
 
 In 1605, an old manuscript was given to the monks of the Carthusian Order. After careful study, the apothecarian wisdom held within this tome was distilled, quite literally, until the monks were able to create the formula for a long and healthy life: Chartreuse.
 

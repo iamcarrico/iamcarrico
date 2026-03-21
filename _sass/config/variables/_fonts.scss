@@ -9,5 +9,5 @@ $georgia:   Georgia, "Times New Roman", "DejaVu Serif", serif;
 $courier:   "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Project fonts
-$playfair: "Playfair Display", $georgia;
-$lora:     "Lora", $georgia;
+$playfair: "Playfair Display", ui-serif, $courier;
+$lora:     "Lora", ui-serif, $georgia;

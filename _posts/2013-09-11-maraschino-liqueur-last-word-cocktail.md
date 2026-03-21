@@ -38,10 +38,9 @@ directions:
 cocktail_image: "/img/2013/maraschino-and-the-last-word-inside.jpg"
 ---
 
-<figure>
-  <img src="/img/2013/maraschino-and-the-last-word-header.jpg" alt="The elixir of long life">
-  <figcaption>Photo by <a target="\_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a></figcaption>
-</figure>
+{% figure "/img/2013/maraschino-and-the-last-word-header.jpg", "The elixir of long life" %}
+  Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>
+{% endfigure %}
 
 I am sure you have seen the almost florescent unnatural jars of maraschino cherries in your grocery store, but this is not on our agenda for today. The original maraschino cherries come from the marasca cherry juice, after Luxardo Distilling Company makes, from it, their famous liqueur of the same name, Maraschino.
 

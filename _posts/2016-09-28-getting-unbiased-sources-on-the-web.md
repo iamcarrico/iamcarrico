@@ -10,10 +10,9 @@ teaser_image: "/img/2016/google-search-result_sm.jpg"
 description: "Every day, we are hit with a drudge of information. How do we differentiate the facts from the bias? Some tips that I use to try and wade through the information on the internet."
 ---
 
-<figure>
-  <img src="/img/2016/google-search-result_md.jpg" srcset="/img/2016/google-search-result_sm.jpg 350w, /img/2016/google-search-result_md.jpg 748w, /img/2016/google-search-result_lg.jpg 1496w" alt="A man reading a newspaper in front of the window">
-  <figcaption><a href="https://www.flickr.com/photos/useanthonyryansphotos/7946386402/" target="\_blank">Google search page close-up</a> by <a href="https://www.flickr.com/photos/useanthonyryansphotos/" target="\_blank">Anthony Ryan</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="\_blank">CC BY-SA 2.0</a></figcaption>
-</figure>
+{% figure "/img/2016/google-search-result_md.jpg", "Google search results page", "/img/2016/google-search-result_sm.jpg 350w, /img/2016/google-search-result_md.jpg 748w, /img/2016/google-search-result_lg.jpg 1496w" %}
+  <a href="https://www.flickr.com/photos/useanthonyryansphotos/7946386402/" target="_blank">Google search page close-up</a> by <a href="https://www.flickr.com/photos/useanthonyryansphotos/" target="_blank">Anthony Ryan</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC BY-SA 2.0</a>
+{% endfigure %}
 
 
 Every day, we are hit with a drudge of information. We get it from social media, from the radio, from our TVs, etc. But with all this information, sometimes it is very difficult, if not impossible, to dig out what is true and what is biased or entirely made up on the internet.
@@ -27,10 +26,9 @@ When we insert bias into our searches, the output tends to be biased. Google and
 
 Take for example, the topic of the United States economy. I searched today for two different topics, "us economy median income" and "is the us economy falling apart". The first one is looking for information, and does not include bias. Google responded with reports from wikipedia, the New York Times, CNN, and the US Census Bureau. All give straight-forward information on what the median income is currently. The second search gave articles from Business Insider, New York Magazine, Zero Hedge, Open Your Eyes, Government Slaves, and The Blaze. Of those, Business Insider gives advice, NY Mag is an analysis piece, Zero Hedge/Open Your Eyes/Government Slaves are all highly biased "alternative news" blogs, and The Blaze is a news/entertainment network founded by Glen Beck.
 
-<figure>
-  <img src="/img/2016/google-biased-vs-unbiased_md.png" srcset="/img/2016/google-biased-vs-unbiased_sm.png 350w, /img/2016/google-biased-vs-unbiased.png 748w, /img/2016/google-biased-vs-unbiased_lg.png 1496w" alt="A man reading a newspaper in front of the window">
-  <figcaption>Side-by-side comparisons of the two sets of search results.</figcaption>
-</figure>
+{% figure "/img/2016/google-biased-vs-unbiased_md.png", "Side-by-side comparison of biased vs unbiased search results", "/img/2016/google-biased-vs-unbiased_sm.png 350w, /img/2016/google-biased-vs-unbiased.png 748w, /img/2016/google-biased-vs-unbiased_lg.png 1496w" %}
+  Side-by-side comparisons of the two sets of search results.
+{% endfigure %}
 
 Now, these two searches aren't exactly looking for the same information— but they do illustrate the point that a biased search will give you a biased result.
 

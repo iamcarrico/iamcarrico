@@ -37,10 +37,9 @@ cocktail_image: "/img/2013/blackberry-inside.jpg"
 ---
 
 
-<figure>
-  <img src="/img/2013/blackberry-header.jpg" alt="The elixir of long life">
-  <figcaption>Photo by <a target="\_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a></figcaption>
-</figure>
+{% figure "/img/2013/blackberry-header.jpg", "The elixir of long life" %}
+  Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>
+{% endfigure %}
 
 Summertime cooking down south means some good brisket in a smoker, slaw in the kitchen, and a cobbler in the oven. Nothing finishes out a good barbeque better than a blackberry cobbler, so in honor of this desert, I created my own blackberry liqueur for a sweet refreshment.
 

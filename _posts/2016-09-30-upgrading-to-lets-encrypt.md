@@ -11,10 +11,9 @@ teaser_image: "/img/2016/gold-lock_sm.jpg"
 description: "How I used Let's Encrypt for my own SSL/TLS certificates on all of my web servers."
 ---
 
-<figure>
-  <img src="/img/2016/gold-lock_md.jpg" srcset="/img/2016/gold-lock_sm.jpg 350w, /img/2016/gold-lock_md.jpg 748w, /img/2016/gold-lock_lg.jpg 1496w" alt="A gold lock on a blue door.">
-  <figcaption><a href="https://www.flickr.com/photos/fischerfotos/7454996046/" target="\_blank">Gold Lock</a> by <a href="https://www.flickr.com/photos/fischerfotos/" target="\_blank">Mark Fischer</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="\_blank">CC BY-SA 2.0</a></figcaption>
-</figure>
+{% figure "/img/2016/gold-lock_md.jpg", "A gold lock on a blue door.", "/img/2016/gold-lock_sm.jpg 350w, /img/2016/gold-lock_md.jpg 748w, /img/2016/gold-lock_lg.jpg 1496w" %}
+  <a href="https://www.flickr.com/photos/fischerfotos/7454996046/" target="_blank">Gold Lock</a> by <a href="https://www.flickr.com/photos/fischerfotos/" target="_blank">Mark Fischer</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC BY-SA 2.0</a>
+{% endfigure %}
 
 [HTTPS is important](https://theintercept.com/2014/08/15/cat-video-hack/). It is a requirement for all browser implementations of HTTP/2, service workers, and [Mozilla is depreciating non-secure HTTP](https://blog.mozilla.org/security/2015/04/30/deprecating-non-secure-http/). But HTTPS can be hard, and takes more time to setup than what we are used to— not to mention you need to get certificates, and the headache continues.
 

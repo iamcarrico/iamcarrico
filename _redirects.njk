@@ -1,0 +1,8 @@
+---
+layout: false
+permalink: /_redirects
+eleventyExcludeFromCollections: true
+---
+{% for item in collections.all %}{% if item.data.redirect_from %}{% if item.data.redirect_from is string %}{{ item.data.redirect_from }} {{ item.url }} 301
+{% else %}{% for from in item.data.redirect_from %}{{ from }} {{ item.url }} 301
+{% endfor %}{% endif %}{% endif %}{% endfor %}

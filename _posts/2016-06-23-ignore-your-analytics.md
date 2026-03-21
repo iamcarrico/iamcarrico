@@ -11,10 +11,9 @@ teaser_image: "/img/2016/a-very-angry-man_sm.jpg"
 description: "Performance is an extension of user experience— our work is to make the user feel better using our site. Why don't we use our user's happiness as a metric for performance tests?"
 ---
 
-<figure>
-  <img src="/img/2016/a-very-angry-man_md.jpg" srcset="/img/2016/a-very-angry-man_sm.jpg 350w, /img/2016/a-very-angry-man_md.jpg 748w, /img/2016/a-very-angry-man_lg.jpg 1496w" alt="This might be how your users are reacting right now">
-  <figcaption><a href="https://www.flickr.com/photos/barkbud/4544202389/" target="\_blank">uh oh</a> by <a href="https://www.flickr.com/photos/barkbud/" target="\_blank">bark</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="\_blank">CC BY 2.0</a></figcaption>
-</figure>
+{% figure "/img/2016/a-very-angry-man_md.jpg", "This might be how your users are reacting right now", "/img/2016/a-very-angry-man_sm.jpg 350w, /img/2016/a-very-angry-man_md.jpg 748w, /img/2016/a-very-angry-man_lg.jpg 1496w" %}
+  <a href="https://www.flickr.com/photos/barkbud/4544202389/" target="_blank">uh oh</a> by <a href="https://www.flickr.com/photos/barkbud/" target="_blank">bark</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>
+{% endfigure %}
 
 There are a variety of methods for performance engineers to monitor their sites, SpeedIndex, start render, DOMContentLoaded, the list goes on and on. There is even work being done to make these numerical metrics to reference when users can actually interact with content. We have PerformanceTiming, and other web APIs to have application-specific performance analytics.
 

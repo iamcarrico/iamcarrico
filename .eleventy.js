@@ -78,6 +78,13 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => b.date - a.date);
   });
 
+  // Shortcodes
+  eleventyConfig.addPairedShortcode('figure', function(caption, src, alt, srcset) {
+    const srcsetAttr = srcset ? ` srcset="${srcset}"` : '';
+    const captionHtml = caption.trim() ? `\n  <figcaption>${caption.trim()}</figcaption>` : '';
+    return `<figure>\n  <img src="${src}"${srcsetAttr} alt="${alt}">${captionHtml}\n</figure>`;
+  });
+
   // Filters
   eleventyConfig.addFilter('dateFormat', function(date, format) {
     return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(format);
