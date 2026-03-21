@@ -1,3 +1,36 @@
+@charset "UTF-8";
+/**
+* Theme custom properties — light (default) and dark overrides.
+* All color usage in partials should reference these vars, not Sass variables directly.
+*/
+:root {
+  --color-bg: #F7F5F2;
+  --color-text: #1C1C1E;
+  --color-grey: #8A8580;
+  --color-accent: #C4622D;
+  --color-accent-dark: rgb(154.5228215768, 77.2614107884, 35.4771784232);
+  --color-accent-hover: rgb(133.7842323651, 66.8921161826, 30.7157676349);
+  --color-accent-shadow: rgba(196, 98, 45, 0.3);
+  --color-border: rgb(186.9098360656, 184, 181.0901639344);
+  --color-footer-bg: rgb(239.2285714286, 235.2857142857, 229.3714285714);
+  --color-hero-border: rgb(211.3647540984, 209.5, 207.6352459016);
+  --color-code-bg: #f0ede8;
+}
+
+[data-theme=dark] {
+  --color-bg: #18181a;
+  --color-text: #f0ede8;
+  --color-grey: #9a948e;
+  --color-accent: #d4744a;
+  --color-accent-dark: #C4622D;
+  --color-accent-hover: rgb(209.5331950207, 110.5165975104, 56.9668049793);
+  --color-accent-shadow: rgba(212, 116, 74, 0.3);
+  --color-border: #3a3a3c;
+  --color-footer-bg: #111113;
+  --color-hero-border: #3a3a3c;
+  --color-code-bg: #2c2c2e;
+}
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -593,7 +626,7 @@ video {
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f7f7f7;
+  background-color: var(--color-code-bg);
   border-radius: 3px;
 }
 
@@ -604,8 +637,9 @@ body {
   font-family: "Lora", Georgia, "Times New Roman", "DejaVu Serif", serif;
   font-size: 17px;
   line-height: 24px;
-  color: #1C1C1E;
-  background-color: #F7F5F2;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: background-color 0.2s, color 0.2s;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -641,16 +675,16 @@ h6 {
 a {
   text-decoration: none;
   transition: color 0.3s;
-  color: #C4622D;
+  color: var(--color-accent);
 }
 a:link {
-  color: #C4622D;
+  color: var(--color-accent);
 }
 a:visited {
-  color: #C4622D;
+  color: var(--color-accent);
 }
 a:hover, a:focus {
-  color: rgb(133.7842323651, 66.8921161826, 30.7157676349);
+  color: var(--color-accent-hover);
 }
 
 ul ul,
@@ -663,7 +697,7 @@ ol ul {
 hr {
   border: 0;
   height: 1px;
-  background: #8A8580;
+  background: var(--color-border);
   margin: 2em 0;
 }
 
@@ -676,11 +710,11 @@ em {
 }
 
 blockquote {
-  border-left: 3px #C4622D solid;
+  border-left: 3px var(--color-accent) solid;
   margin-left: 1em;
   padding-left: 0.75em;
   font-style: italic;
-  color: #8A8580;
+  color: var(--color-grey);
 }
 
 figure {
@@ -693,7 +727,7 @@ figure:before, figcaption {
   position: absolute;
   background: rgba(0, 0, 0, 0.75);
   font-size: 0.9em;
-  color: #F7F5F2;
+  color: var(--color-bg);
   bottom: 0;
   transition: all 0.4s ease;
 }
@@ -725,14 +759,14 @@ figure:hover:before {
 }
 
 ::-moz-selection {
-  background: #C4622D;
-  color: #F7F5F2;
+  background: var(--color-accent);
+  color: var(--color-bg);
   text-shadow: none;
 }
 
 ::selection {
-  background: #C4622D;
-  color: #F7F5F2;
+  background: var(--color-accent);
+  color: var(--color-bg);
   text-shadow: none;
 }
 
@@ -785,9 +819,9 @@ input:focus,
 button:focus,
 select:focus,
 textarea:focus {
-  border-color: rgb(175.2614107884, 87.6307053942, 40.2385892116);
-  background-color: #F7F5F2;
-  box-shadow: 0 0 4px rgba(196, 98, 45, 0.3);
+  border-color: var(--color-accent-dark);
+  background-color: var(--color-bg);
+  box-shadow: 0 0 4px var(--color-accent-shadow);
 }
 @media (min-width: 720px) {
   input,
@@ -799,7 +833,7 @@ textarea:focus {
 }
 
 .required {
-  color: #C4622D;
+  color: var(--color-accent);
 }
 
 @media (min-width: 720px) {
@@ -818,10 +852,10 @@ input[type=reset],
 input[type=button] {
   width: auto;
   float: right;
-  border: 1px solid #8A8580;
+  border: 1px solid var(--color-grey);
   line-height: 1.8em;
   padding: 0 3em;
-  background-color: #F7F5F2;
+  background-color: var(--color-bg);
   border-radius: 2px;
   cursor: pointer;
 }
@@ -830,9 +864,9 @@ button:hover,
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover {
-  background-color: #C4622D;
-  border-color: #C4622D;
-  color: #F7F5F2;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
 }
 
 /**
@@ -845,7 +879,7 @@ header {
   max-width: 48em;
   margin: 0 auto;
   padding: 2em 1em;
-  border-bottom: 1px solid rgb(186.9098360656, 184, 181.0901639344);
+  border-bottom: 1px solid var(--color-border);
 }
 header .site-name {
   font-family: "Playfair Display", Georgia, "Times New Roman", "DejaVu Serif", serif;
@@ -857,7 +891,7 @@ header .site-name {
 header .site-name a,
 header .site-name a:link,
 header .site-name a:visited {
-  color: #1C1C1E;
+  color: var(--color-text);
 }
 header .site-name a .word,
 header .site-name a:link .word,
@@ -865,7 +899,7 @@ header .site-name a:visited .word {
   display: inline;
 }
 header .site-name a:hover {
-  color: #C4622D;
+  color: var(--color-accent);
 }
 header nav .menubar {
   display: flex;
@@ -875,27 +909,57 @@ header nav .menubar {
 header .menuitem {
   font-family: "Lora", Georgia, "Times New Roman", "DejaVu Serif", serif;
   font-size: 0.9em;
-  color: #1C1C1E;
+  color: var(--color-text);
   letter-spacing: 0.02em;
   transition: color 0.2s;
 }
 header .menuitem:hover, header .menuitem:focus {
-  color: #C4622D;
+  color: var(--color-accent);
 }
 header .menuitem.active {
-  color: #C4622D;
-  border-bottom: 1px solid #C4622D;
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
   padding-bottom: 1px;
 }
 header .menuitem.active-trail {
-  color: #C4622D;
+  color: var(--color-accent);
 }
 header .menuitem.icon {
-  color: #8A8580;
+  color: var(--color-grey);
   font-size: 0.8em;
 }
 header .menuitem.icon:hover {
-  color: #C4622D;
+  color: var(--color-accent);
+}
+header .theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1;
+  color: var(--color-grey);
+  display: flex;
+  align-items: center;
+  transition: color 0.8s;
+  width: 1.5em;
+}
+header .theme-toggle:hover {
+  color: var(--color-accent);
+}
+header .theme-toggle .icon-sun,
+header .theme-toggle .icon-moon {
+  display: none;
+  margin: 0 auto;
+}
+
+[data-theme=light] header .theme-toggle .icon-moon,
+:root:not([data-theme=dark]) header .theme-toggle .icon-moon {
+  display: inline;
+}
+
+[data-theme=dark] header .theme-toggle .icon-sun {
+  display: inline;
 }
 
 /**
@@ -903,7 +967,7 @@ header .menuitem.icon:hover {
 */
 .home-hero {
   padding: 3em 0 2em;
-  border-bottom: 1px solid rgb(211.3647540984, 209.5, 207.6352459016);
+  border-bottom: 1px solid var(--color-hero-border);
   margin-bottom: 2.5em;
 }
 .home-hero .hero-name {
@@ -912,12 +976,12 @@ header .menuitem.icon:hover {
   font-weight: 700;
   line-height: 1.1;
   margin: 0 0 0.35em;
-  color: #1C1C1E;
+  color: var(--color-text);
 }
 .home-hero .hero-tagline {
   font-family: "Lora", Georgia, "Times New Roman", "DejaVu Serif", serif;
   font-size: 1.1em;
-  color: #8A8580;
+  color: var(--color-grey);
   margin: 0;
   line-height: 1.5;
 }
@@ -930,7 +994,7 @@ header .menuitem.icon:hover {
   font-size: 0.75em;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #8A8580;
+  color: var(--color-grey);
   margin-bottom: 1.25em;
 }
 .home-latest .all-writings {
@@ -938,7 +1002,7 @@ header .menuitem.icon:hover {
   margin-top: 1.75em;
   font-family: "Lora", Georgia, "Times New Roman", "DejaVu Serif", serif;
   font-size: 0.9em;
-  color: #C4622D;
+  color: var(--color-accent);
   text-decoration: none;
   letter-spacing: 0.02em;
 }
@@ -1072,8 +1136,8 @@ main {
 * Footer
 */
 footer {
-  background-color: rgb(239.2285714286, 235.2857142857, 229.3714285714);
-  border-top: 1px solid rgb(186.9098360656, 184, 181.0901639344);
+  background-color: var(--color-footer-bg);
+  border-top: 1px solid var(--color-border);
   width: 100%;
   margin-top: 4em;
 }
@@ -1087,15 +1151,15 @@ footer .inner {
   margin: 0 auto;
   padding: 1.5em 1em;
   font-size: 0.9em;
-  color: #8A8580;
+  color: var(--color-grey);
 }
 footer .contact a {
   display: block;
   padding: 0.15em 0;
-  color: #8A8580;
+  color: var(--color-grey);
 }
 footer .contact a:hover {
-  color: #C4622D;
+  color: var(--color-accent);
 }
 footer .copyright {
   padding: 0.75em 0 0;

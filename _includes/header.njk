@@ -14,6 +14,10 @@
         <a class="menuitem {{ current }}" role="menuitem" href="{{ nav.url }}">{{ nav.name }}</a>
       {% endfor %}
       <a class="menuitem icon" role="menuitem" href="/feed.xml">rss&nbsp;feed</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="icon-moon" aria-hidden="true">☽</span>
+        <span class="icon-sun" aria-hidden="true">☀</span>
+      </button>
     </div>
   </nav>
 </header>

@@ -1,6 +1,9 @@
 // Entry point — each partial manages its own dependencies via @use.
 // Order matters: globals before design.
 
+// Themes — must come first to define CSS custom properties
+@use '../_sass/global/themes';
+
 // Global
 @use '../_sass/global/normalize';
 @use '../_sass/global/syntax';

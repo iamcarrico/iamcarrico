@@ -13,6 +13,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
+<script>
+  (function () {
+    var stored = localStorage.getItem('theme');
+    var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
 
 </head>
 <body>
@@ -20,12 +27,6 @@
   <h1 class="site-name title"><a href="/"><span class="word">I. </span><span class="word">Am. </span><span class="word">Carrico.</span></a></h1>
   <nav id="nav" role="navigation">
     <div class="menubar" role="menubar">
-      
-        
-        
-          
-        
-        <a class="menuitem " role="menuitem" href="/">Home</a>
       
         
         
@@ -58,6 +59,10 @@
         <a class="menuitem " role="menuitem" href="/the-boys-club/">The Boys Club</a>
       
       <a class="menuitem icon" role="menuitem" href="/feed.xml">rss&nbsp;feed</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="icon-moon" aria-hidden="true">☽</span>
+        <span class="icon-sun" aria-hidden="true">☀</span>
+      </button>
     </div>
   </nav>
 </header>
@@ -126,6 +131,7 @@
   
 
 
+  <script src="/js/theme.js"></script>
   <script src="/js/footer.js"></script>
 </body>
 </html>

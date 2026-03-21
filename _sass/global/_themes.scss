@@ -1,0 +1,35 @@
+@use 'sass:color';
+@use '../config/variables/colors' as *;
+
+/**
+* Theme custom properties — light (default) and dark overrides.
+* All color usage in partials should reference these vars, not Sass variables directly.
+*/
+
+:root {
+  --color-bg:             #{$white};
+  --color-text:           #{$black};
+  --color-grey:           #{$grey};
+  --color-accent:         #{$terracotta};
+  --color-accent-dark:    #{color.adjust($terracotta, $lightness: -10%)};
+  --color-accent-hover:   #{color.adjust($terracotta, $lightness: -15%)};
+  --color-accent-shadow:  rgba(#{color.red($terracotta)}, #{color.green($terracotta)}, #{color.blue($terracotta)}, 0.3);
+  --color-border:         #{color.adjust($grey, $lightness: 20%)};
+  --color-footer-bg:      #{color.adjust($white, $lightness: -4%)};
+  --color-hero-border:    #{color.adjust($grey, $lightness: 30%)};
+  --color-code-bg:        #f0ede8;
+}
+
+[data-theme="dark"] {
+  --color-bg:             #18181a;
+  --color-text:           #f0ede8;
+  --color-grey:           #9a948e;
+  --color-accent:         #d4744a;
+  --color-accent-dark:    #{$terracotta};
+  --color-accent-hover:   #{color.adjust($terracotta, $lightness: 5%)};
+  --color-accent-shadow:  rgba(212, 116, 74, 0.3);
+  --color-border:         #3a3a3c;
+  --color-footer-bg:      #111113;
+  --color-hero-border:    #3a3a3c;
+  --color-code-bg:        #2c2c2e;
+}

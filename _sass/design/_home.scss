@@ -1,4 +1,3 @@
-@use 'sass:color';
 @use '../config' as *;
 
 /**
@@ -7,7 +6,7 @@
 
 .home-hero {
   padding: 3em 0 2em;
-  border-bottom: 1px solid color.adjust($grey, $lightness: 30%);
+  border-bottom: 1px solid var(--color-hero-border);
   margin-bottom: 2.5em;
 
   .hero-name {
@@ -16,13 +15,13 @@
     font-weight: 700;
     line-height: 1.1;
     margin: 0 0 0.35em;
-    color: $black;
+    color: var(--color-text);
   }
 
   .hero-tagline {
     @include lora;
     font-size: 1.1em;
-    color: $grey;
+    color: var(--color-grey);
     margin: 0;
     line-height: 1.5;
   }
@@ -36,7 +35,7 @@
     font-size: 0.75em;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: $grey;
+    color: var(--color-grey);
     margin-bottom: 1.25em;
   }
 
@@ -45,7 +44,7 @@
     margin-top: 1.75em;
     @include lora;
     font-size: 0.9em;
-    color: $terracotta;
+    color: var(--color-accent);
     text-decoration: none;
     letter-spacing: 0.02em;
 

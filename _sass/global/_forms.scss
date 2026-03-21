@@ -1,4 +1,3 @@
-@use 'sass:color';
 @use '../config' as *;
 
 /**
@@ -26,9 +25,9 @@ textarea {
   transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
 
   &:focus {
-    border-color: color.adjust($terracotta, $lightness: -5%);
-    background-color: $white;
-    box-shadow: 0 0 4px rgba($terracotta, 0.3);
+    border-color: var(--color-accent-dark);
+    background-color: var(--color-bg);
+    box-shadow: 0 0 4px var(--color-accent-shadow);
   }
 
   @media (min-width: 720px) {
@@ -37,7 +36,7 @@ textarea {
 }
 
 .required {
-  color: $terracotta;
+  color: var(--color-accent);
 }
 
 label {
@@ -56,16 +55,16 @@ input[type="reset"],
 input[type="button"] {
   width: auto;
   float: right;
-  border: 1px solid $grey;
+  border: 1px solid var(--color-grey);
   line-height: 1.8em;
   padding: 0 3em;
-  background-color: $white;
+  background-color: var(--color-bg);
   border-radius: 2px;
   cursor: pointer;
 
   &:hover {
-    background-color: $terracotta;
-    border-color: $terracotta;
-    color: #F7F5F2;
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-bg);
   }
 }

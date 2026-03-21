@@ -1,4 +1,3 @@
-@use 'sass:color';
 @use '../config' as *;
 
 /**
@@ -12,7 +11,7 @@ header {
   max-width: 48em;
   margin: 0 auto;
   padding: 2em 1em;
-  border-bottom: 1px solid color.adjust($grey, $lightness: 20%);
+  border-bottom: 1px solid var(--color-border);
 
   .site-name {
     @include playfair;
@@ -24,7 +23,7 @@ header {
     a,
     a:link,
     a:visited {
-      color: $black;
+      color: var(--color-text);
 
       .word {
         display: inline;
@@ -32,7 +31,7 @@ header {
     }
 
     a:hover {
-      color: $terracotta;
+      color: var(--color-accent);
     }
   }
 
@@ -45,32 +44,65 @@ header {
   .menuitem {
     @include lora;
     font-size: 0.9em;
-    color: $black;
+    color: var(--color-text);
     letter-spacing: 0.02em;
     transition: color 0.2s;
 
     &:hover,
     &:focus {
-      color: $terracotta;
+      color: var(--color-accent);
     }
 
     &.active {
-      color: $terracotta;
-      border-bottom: 1px solid $terracotta;
+      color: var(--color-accent);
+      border-bottom: 1px solid var(--color-accent);
       padding-bottom: 1px;
     }
 
     &.active-trail {
-      color: $terracotta;
+      color: var(--color-accent);
     }
 
     &.icon {
-      color: $grey;
+      color: var(--color-grey);
       font-size: 0.8em;
 
       &:hover {
-        color: $terracotta;
+        color: var(--color-accent);
       }
     }
   }
+
+  .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1;
+    color: var(--color-grey);
+    display: flex;
+    align-items: center;
+    transition: color 0.8s;
+    width: 1.5em;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    .icon-sun,
+    .icon-moon {
+      display: none;
+      margin: 0 auto;
+    }
+  }
+}
+
+[data-theme="light"] header .theme-toggle .icon-moon,
+:root:not([data-theme="dark"]) header .theme-toggle .icon-moon {
+  display: inline;
+}
+
+[data-theme="dark"] header .theme-toggle .icon-sun {
+  display: inline;
 }
