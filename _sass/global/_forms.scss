@@ -1,16 +1,16 @@
+@use 'sass:color';
+@use '../config' as *;
+
 /**
-* Form elements: Inputs, buttons, etc.
+* Form elements
 */
 
 form {
   max-width: 525px;
 }
 
-fieldset {
-}
-
-legend {
-}
+fieldset {}
+legend {}
 
 input,
 button,
@@ -24,8 +24,9 @@ textarea {
   margin-bottom: 1em;
 
   transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
+
   &:focus {
-    border-color: darken($terracotta, 5%);
+    border-color: color.adjust($terracotta, $lightness: -5%);
     background-color: $white;
     box-shadow: 0 0 4px rgba($terracotta, 0.3);
   }
@@ -66,14 +67,5 @@ input[type="button"] {
     background-color: $terracotta;
     border-color: $terracotta;
     color: #F7F5F2;
-  }
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea,
-select {
-  &:focus {
   }
 }

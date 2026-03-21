@@ -1,4 +1,5 @@
 // Mixins
+@use 'variables/fonts' as *;
 
 @mixin playfair {
   font-family: $playfair;

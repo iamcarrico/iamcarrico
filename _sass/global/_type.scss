@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use '../config' as *;
+
 /**
 * Typography
 */
@@ -34,7 +37,7 @@ a {
   &:visited { color: $visited; }
 
   &:hover, &:focus {
-    color: darken($terracotta, 15%);
+    color: color.adjust($terracotta, $lightness: -15%);
   }
 }
 

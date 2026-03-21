@@ -1,67 +1,76 @@
+@use 'sass:color';
+@use '../config' as *;
+
 /**
- * The header partial.
- */
+* Header & nav
+*/
 
 header {
-  @extend %clearfix;
-  @extend %max-width;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 48em;
+  margin: 0 auto;
+  padding: 2em 1em;
+  border-bottom: 1px solid color.adjust($grey, $lightness: 20%);
 
-  .title {
-    float: left;
-    width: 75%;
-    font-size: 4em;
-    line-height: 1em;
+  .site-name {
+    @include playfair;
+    font-size: 1.6em;
+    font-weight: 700;
     margin: 0;
-
-    .word {
-      display: block;
-    }
+    line-height: 1;
 
     a,
     a:link,
     a:visited {
       color: $black;
-    }
 
-    @media (min-width: 33.25em) {
-      margin-top: 1em;
       .word {
         display: inline;
       }
     }
+
+    a:hover {
+      color: $terracotta;
+    }
   }
 
-  nav {
-    width: 25%;
-    float: right;
+  nav .menubar {
+    display: flex;
+    align-items: center;
+    gap: 1.75em;
+  }
 
-    .menubar,
-    .menuitem {
-      display: block;
-      margin-bottom: .5em;
-      padding-right: .25em;
-      width: 100%;
-      text-align: right;
+  .menuitem {
+    @include lora;
+    font-size: 0.9em;
+    color: $black;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+
+    &:hover,
+    &:focus {
+      color: $terracotta;
     }
 
-    @media (min-width: 23em) {
-      width: 100%;
-      position: absolute;
+    &.active {
+      color: $terracotta;
+      border-bottom: 1px solid $terracotta;
+      padding-bottom: 1px;
+    }
 
-      .menuitem {
-        display: inline-block;
-        width: auto;
-        margin-left: .75em;
+    &.active-trail {
+      color: $terracotta;
+    }
 
-        &:first-child {
-          margin-left: 0;
-        }
+    &.icon {
+      color: $grey;
+      font-size: 0.8em;
+
+      &:hover {
+        color: $terracotta;
       }
-    }
-
-    @media (min-width: 33.25em) {
-      margin: 1em 1em 0 0;
     }
   }
 }

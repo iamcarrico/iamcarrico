@@ -1,9 +1,11 @@
+@use '../global/extendables' as *;
+
 /**
  * For all the recipes that we will put on here.
  */
 
 .recipie-card {
-  @extend %clearfix;
+  @include clearfix;
   padding: 1em;
   border: 1px solid black;
   margin: 2em;

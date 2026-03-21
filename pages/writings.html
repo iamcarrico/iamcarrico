@@ -1,0 +1,16 @@
+---
+layout: default
+css_id: writings
+pagination:
+  data: collections.posts
+  size: 4
+permalink: "{% if pagination.pageNumber == 0 %}/writings/{% else %}/writings/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+<h1>Writings</h1>
+
+{% for post in pagination.items %}
+  {% include "teaser.njk" %}
+{% endfor %}
+
+{% include "pagination.njk" %}

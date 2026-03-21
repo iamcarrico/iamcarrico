@@ -1,25 +1,26 @@
-// Entry point for Eleventy Sass compilation.
-// All partials live in _sass/ and are imported here.
+// Entry point — each partial manages its own dependencies via @use.
+// Order matters: globals before design.
 
-@import '../_sass/config/config';
+// Global
+@use '../_sass/global/normalize';
+@use '../_sass/global/syntax';
+@use '../_sass/global/syntax_overrides';
+@use '../_sass/global/type';
+@use '../_sass/global/fonts';
+@use '../_sass/global/icons';
+@use '../_sass/global/forms';
 
-@import '../_sass/global/normalize';
-@import '../_sass/global/extendables';
-@import '../_sass/global/syntax';
-@import '../_sass/global/syntax_overrides';
-@import '../_sass/global/type';
-@import '../_sass/global/fonts';
-@import '../_sass/global/icons';
-@import '../_sass/global/forms';
+// Design
+@use '../_sass/design/header';
+@use '../_sass/design/home';
+@use '../_sass/design/main';
+@use '../_sass/design/about';
+@use '../_sass/design/contact';
+@use '../_sass/design/post';
+@use '../_sass/design/talk';
+@use '../_sass/design/category';
+@use '../_sass/design/recipie-card';
+@use '../_sass/design/footer';
 
-@import '../_sass/design/header';
-@import '../_sass/design/main';
-@import '../_sass/design/about';
-@import '../_sass/design/contact';
-@import '../_sass/design/post';
-@import '../_sass/design/talk';
-@import '../_sass/design/category';
-@import '../_sass/design/recipie-card';
-@import '../_sass/design/footer';
-
-@import '../_sass/print';
+// Print
+@use '../_sass/print';

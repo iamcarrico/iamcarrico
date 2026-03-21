@@ -1,15 +1,20 @@
 ---
 layout: default
 css_id: home
-pagination:
-  data: collections.posts
-  size: 4
-  alias: post
-permalink: "{% if pagination.pageNumber == 0 %}/{% else %}/writings/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 
-{% for post in pagination.items %}
-  {% include "teaser.njk" %}
-{% endfor %}
+<section class="home-hero">
+  <h1 class="hero-name">Ian Carrico</h1>
+  <p class="hero-tagline">Attorney. Former web performance engineer. Writing about law, tech, and everything in between.</p>
+</section>
 
-{% include "pagination.njk" %}
+<section class="home-latest">
+  <p class="section-label">Latest writing</p>
+
+  {% set post = collections.posts | first %}
+  {% if post %}
+    {% include "teaser.njk" %}
+  {% endif %}
+
+  <a href="/writings/" class="all-writings">See all writings &rarr;</a>
+</section>

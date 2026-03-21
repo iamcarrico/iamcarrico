@@ -1,0 +1,56 @@
+@use 'sass:color';
+@use '../config' as *;
+
+/**
+* Homepage
+*/
+
+.home-hero {
+  padding: 3em 0 2em;
+  border-bottom: 1px solid color.adjust($grey, $lightness: 30%);
+  margin-bottom: 2.5em;
+
+  .hero-name {
+    @include playfair;
+    font-size: 2.8em;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 0.35em;
+    color: $black;
+  }
+
+  .hero-tagline {
+    @include lora;
+    font-size: 1.1em;
+    color: $grey;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.home-latest {
+  margin-bottom: 3em;
+
+  .section-label {
+    @include lora;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $grey;
+    margin-bottom: 1.25em;
+  }
+
+  .all-writings {
+    display: inline-block;
+    margin-top: 1.75em;
+    @include lora;
+    font-size: 0.9em;
+    color: $terracotta;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
