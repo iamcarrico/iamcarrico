@@ -18,16 +18,16 @@ select,
 textarea {
   display: block;
   width: 100%;
-  font-family: $pt;
+  font-family: $lora;
   padding: 0.375em;
   outline: 0;
   margin-bottom: 1em;
 
   transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
   &:focus {
-    border-color: darken($blue, 5%);
+    border-color: darken($terracotta, 5%);
     background-color: $white;
-    box-shadow: 0 0 4px rgba($blue, 0.5);
+    box-shadow: 0 0 4px rgba($terracotta, 0.3);
   }
 
   @media (min-width: 720px) {
@@ -36,9 +36,8 @@ textarea {
 }
 
 .required {
-  color: red;
+  color: $terracotta;
 }
-
 
 label {
   @media (min-width: 720px) {
@@ -56,18 +55,17 @@ input[type="reset"],
 input[type="button"] {
   width: auto;
   float: right;
-  border: 1px solid #c6c6c6;
+  border: 1px solid $grey;
   line-height: 1.8em;
   padding: 0 3em;
-  background-color: lighten(gray, 30%);
+  background-color: $white;
   border-radius: 2px;
+  cursor: pointer;
 
   &:hover {
-    background-color: desaturate(lighten($blue, 20%), 55%);
-  }
-
-  &:active {
-
+    background-color: $terracotta;
+    border-color: $terracotta;
+    color: #F7F5F2;
   }
 }
 
@@ -76,8 +74,6 @@ input[type="password"],
 input[type="email"],
 textarea,
 select {
-
   &:focus {
-
   }
 }

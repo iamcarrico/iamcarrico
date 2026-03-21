@@ -1,12 +1,11 @@
+// Palette
+$white          : #F7F5F2;   // warm off-white — background
+$black          : #1C1C1E;   // deep charcoal — body text
+$grey           : #8A8580;   // muted warm grey — metadata, captions
+$terracotta     : #C4622D;   // accent
 
-
-$white          : #FFFFFF;
-$black          : #333333;
-$grey           : lighten($black, 70%);
-$blue           : #2090B4;
-
-// Base color variables.
-$link           : $blue;
-$visited        : $link;
-$selection-bg   : #66B360;
-$selection      : $white;
+// Semantic aliases
+$link           : $terracotta;
+$visited        : $terracotta;
+$selection-bg   : $terracotta;
+$selection      : #F7F5F2;

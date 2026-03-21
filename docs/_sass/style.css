@@ -609,48 +609,61 @@ footer .inner, header {
 }
 
 /**
-* Typography: Headings, body text, lists, code, and more for a versatile and durable typography system.
+* Typography
 */
 body {
-  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
-}
-.fonts-loaded body, body.fonts-loaded {
-  font-family: "pt", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-}
-body {
+  font-family: "Lora", Georgia, "Times New Roman", "DejaVu Serif", serif;
   font-size: 17px;
   line-height: 24px;
-  color: #333333;
+  color: #1C1C1E;
+  background-color: #F7F5F2;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
-}
-.fonts-loaded h1, h1.fonts-loaded, .fonts-loaded h2, h2.fonts-loaded, .fonts-loaded h3, h3.fonts-loaded, .fonts-loaded h4, h4.fonts-loaded, .fonts-loaded h5, h5.fonts-loaded, .fonts-loaded h6, h6.fonts-loaded {
-  font-family: "pt", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
+  font-family: "Playfair Display", Georgia, "Times New Roman", "DejaVu Serif", serif;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 h1 {
-  line-height: 1.2;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1.1em;
+}
+
+h6 {
+  font-size: 1em;
 }
 
 a {
   text-decoration: none;
   transition: color 0.3s;
-  color: #2090B4;
+  color: #C4622D;
 }
 a:link {
-  color: #2090B4;
+  color: #C4622D;
 }
 a:visited {
-  color: #2090B4;
+  color: #C4622D;
 }
 a:hover, a:focus {
-  color: #10485a;
+  color: rgb(133.7842323651, 66.8921161826, 30.7157676349);
 }
+
 ul ul,
 ul ol,
 ol ol,
@@ -661,12 +674,12 @@ ol ul {
 hr {
   border: 0;
   height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  background: #8A8580;
+  margin: 2em 0;
 }
 
 strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 em {
@@ -674,15 +687,13 @@ em {
 }
 
 blockquote {
-  border-left: 3px #333333 solid;
+  border-left: 3px #C4622D solid;
   margin-left: 1em;
-  padding-left: 0.4em;
+  padding-left: 0.75em;
   font-style: italic;
+  color: #8A8580;
 }
 
-/**
- * Taken lovingly from https://css-tricks.com/slide-in-image-captions/
- */
 figure {
   display: block;
   position: relative;
@@ -693,7 +704,7 @@ figure:before, figcaption {
   position: absolute;
   background: rgba(0, 0, 0, 0.75);
   font-size: 0.9em;
-  color: white;
+  color: #F7F5F2;
   bottom: 0;
   transition: all 0.4s ease;
 }
@@ -725,32 +736,17 @@ figure:hover:before {
 }
 
 ::-moz-selection {
-  background: #66B360;
-  color: #FFFFFF;
+  background: #C4622D;
+  color: #F7F5F2;
   text-shadow: none;
 }
 
 ::selection {
-  background: #66B360;
-  color: #FFFFFF;
+  background: #C4622D;
+  color: #F7F5F2;
   text-shadow: none;
 }
 
-/**
- * All the font files.
- */
-@font-face {
-  font-family: "pt";
-  font-style: normal;
-  font-weight: normal;
-  src: url("/fonts/pt.woff2?1407277128") format("woff2"), url("/fonts/pt.woff?1407277128") format("woff"), url("/fonts/pt.ttf?1407277128") format("truetype");
-}
-@font-face {
-  font-family: "pt";
-  font-style: italic;
-  font-weight: normal;
-  src: url("/fonts/pt-italic.woff2?1407277128") format("woff2"), url("/fonts/pt-italic.woff?1407277128") format("woff"), url("/fonts/pt-italic.ttf?1407277128") format("truetype");
-}
 @font-face {
   font-family: "icomoon";
   src: url("/fonts/icomoon.eot?ifts57");
@@ -790,7 +786,7 @@ select,
 textarea {
   display: block;
   width: 100%;
-  font-family: "pt", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-family: "Lora", Georgia, "Times New Roman", "DejaVu Serif", serif;
   padding: 0.375em;
   outline: 0;
   margin-bottom: 1em;
@@ -800,9 +796,9 @@ input:focus,
 button:focus,
 select:focus,
 textarea:focus {
-  border-color: rgb(28.1509433962, 126.679245283, 158.3490566038);
-  background-color: #FFFFFF;
-  box-shadow: 0 0 4px rgba(32, 144, 180, 0.5);
+  border-color: rgb(175.2614107884, 87.6307053942, 40.2385892116);
+  background-color: #F7F5F2;
+  box-shadow: 0 0 4px rgba(196, 98, 45, 0.3);
 }
 @media (min-width: 720px) {
   input,
@@ -814,7 +810,7 @@ textarea:focus {
 }
 
 .required {
-  color: red;
+  color: #C4622D;
 }
 
 @media (min-width: 720px) {
@@ -833,19 +829,23 @@ input[type=reset],
 input[type=button] {
   width: auto;
   float: right;
-  border: 1px solid #c6c6c6;
+  border: 1px solid #8A8580;
   line-height: 1.8em;
   padding: 0 3em;
-  background-color: rgb(204.5, 204.5, 204.5);
+  background-color: #F7F5F2;
   border-radius: 2px;
+  cursor: pointer;
 }
 .submit:hover,
 button:hover,
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover {
-  background-color: rgb(142.4849056604, 164.4536970933, 171.5150943396);
+  background-color: #C4622D;
+  border-color: #C4622D;
+  color: #F7F5F2;
 }
+
 /**
  * The header partial.
  */
@@ -865,7 +865,7 @@ header .title .word {
 header .title a,
 header .title a:link,
 header .title a:visited {
-  color: #333333;
+  color: #1C1C1E;
 }
 @media (min-width: 33.25em) {
   header .title {

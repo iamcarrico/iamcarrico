@@ -1,14 +1,9 @@
-////////////////////////
-// Mixins Partials
-//
-// All of your mixins should go in this file.
-////////////////////////
+// Mixins
 
-@mixin pt {
-  font-family: $helvetica;
+@mixin playfair {
+  font-family: $playfair;
+}
 
-  .fonts-loaded &,
-  &.fonts-loaded {
-    font-family: $pt;
-  }
+@mixin lora {
+  font-family: $lora;
 }

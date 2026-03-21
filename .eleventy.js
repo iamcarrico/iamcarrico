@@ -2,6 +2,7 @@
 
 const path = require('path');
 const sass = require('sass');
+const yaml = require('js-yaml');
 const { DateTime } = require('luxon');
 
 module.exports = function(eleventyConfig) {
@@ -24,6 +25,9 @@ module.exports = function(eleventyConfig) {
       };
     },
   });
+
+  // YAML data file support (.yaml and .yml)
+  eleventyConfig.addDataExtension('yaml,yml', (contents) => yaml.load(contents));
 
   // Ignore old Jekyll build output
   eleventyConfig.ignores.add('_site');
@@ -59,6 +63,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('currentYear', function() {
     return new Date().getFullYear();
+  });
+
+  eleventyConfig.addFilter('startsWith', function(str, prefix) {
+    return String(str).startsWith(prefix);
   });
 
   eleventyConfig.addFilter('striptags', function(html) {

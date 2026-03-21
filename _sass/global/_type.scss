@@ -1,79 +1,44 @@
 /**
-* Typography: Headings, body text, lists, code, and more for a versatile and durable typography system.
+* Typography
 */
 
 body {
-  @include pt;
+  @include lora;
   font-size: 17px;
   line-height: 24px;
   color: $black;
+  background-color: $white;
 }
-
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
-  @include pt;
-  font-weight: normal;
-}
-
-h1 {
+  @include playfair;
+  font-weight: 700;
   line-height: 1.2;
 }
 
-h2 {
-
-}
-
-h3 {
-
-}
-
-h4 {
-
-}
-
-h5 {
-
-}
-
-h6 {
-
-}
-
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 1em; }
 
 // Links
-//
-// The order of link states are based on Eric Meyer's article:
-// http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
 a {
   text-decoration: none;
   transition: color .3s;
   color: $link;
 
-  &:link {
-    color: $link;
-  }
-
-  &:visited {
-    color: $visited;
-  }
+  &:link    { color: $link; }
+  &:visited { color: $visited; }
 
   &:hover, &:focus {
-    color: mix(#000, $link, 50%);
-  }
-
-  &:active, &.active {
-
+    color: darken($terracotta, 15%);
   }
 }
-
 
 // Lists
-
-ul, ol {
-
-}
-
 ul ul,
 ul ol,
 ol ol,
@@ -81,50 +46,25 @@ ol ul {
   margin-bottom: 0;
 }
 
-ul {
-
-}
-
-ol {
-
-}
-
-li {
-
-}
-
-ul.unstyled,
-ol.unstyled {
-
-}
-
-// Misc.
-
+// Misc
 hr {
   border: 0;
   height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  background: $grey;
+  margin: 2em 0;
 }
 
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
-}
+strong { font-weight: 600; }
+em     { font-style: italic; }
 
 blockquote {
-  border-left: 3px $black solid;
+  border-left: 3px $terracotta solid;
   margin-left: 1em;
-  padding-left: 0.4em;
+  padding-left: 0.75em;
   font-style: italic;
+  color: $grey;
 }
 
-/**
- * Taken lovingly from https://css-tricks.com/slide-in-image-captions/
- */
 figure {
   display: block;
   position: relative;
@@ -135,7 +75,7 @@ figure {
   position: absolute;
   background: rgba(0, 0, 0, 0.75);
   font-size: .9em;
-  color: white;
+  color: $white;
   bottom: 0;
   transition: all 0.4s ease;
 }
@@ -168,8 +108,5 @@ figure:hover:before {
   opacity: 0;
 }
 
-
-// Remove text-shadow in selection highlight: h5bp.com/i
-// These selection declarations have to be separate
 ::-moz-selection { background: $selection-bg; color: $selection; text-shadow: none; }
-::selection { background: $selection-bg; color: $selection; text-shadow: none; }
+::selection      { background: $selection-bg; color: $selection; text-shadow: none; }

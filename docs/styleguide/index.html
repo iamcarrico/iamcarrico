@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Style Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="canonical" href="https://iamcarrico.com/styleguide/">
+<link rel="alternate" type="application/rss+xml" title="I. Am. Carrico." href="https://iamcarrico.com/feed.xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <header>
+  <h1 class="site-name title"><a href="/"><span class="word">I. </span><span class="word">Am. </span><span class="word">Carrico.</span></a></h1>
+  <nav id="nav" role="navigation">
+    <div class="menubar" role="menubar">
+      
+        
+        
+          
+        
+        <a class="menuitem " role="menuitem" href="/">Home</a>
+      
+        
+        
+          
+        
+        <a class="menuitem " role="menuitem" href="/about/">About</a>
+      
+        
+        
+          
+        
+        <a class="menuitem " role="menuitem" href="/contact/">Contact</a>
+      
+        
+        
+          
+        
+        <a class="menuitem " role="menuitem" href="/talks/">Talks</a>
+      
+        
+        
+          
+        
+        <a class="menuitem " role="menuitem" href="/the-boys-club/">The Boys Club</a>
+      
+      <a class="menuitem icon" role="menuitem" href="/feed.xml">rss&nbsp;feed</a>
+    </div>
+  </nav>
+</header>
+
+
+  <main role="main">
+    
+<style>
+  .sg-section { margin: 3em 0; padding-bottom: 2em; border-bottom: 1px solid #ccc; }
+  .sg-section:last-child { border-bottom: none; }
+  .sg-label { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.1em; color: #999; margin-bottom: 0.5em; }
+  .sg-swatches { display: flex; flex-wrap: wrap; gap: 1em; margin-top: 1em; }
+  .sg-swatch { width: 120px; }
+  .sg-swatch-color { height: 80px; border-radius: 4px; border: 1px solid rgba(0,0,0,0.1); }
+  .sg-swatch-name { font-size: 0.8em; margin-top: 0.4em; }
+  .sg-swatch-hex { font-size: 0.75em; color: #999; font-family: monospace; }
+  .sg-type-row { margin: 0.75em 0; }
+  .sg-type-meta { font-size: 0.75em; color: #999; font-family: monospace; }
+  .sg-hr-preview { margin: 1em 0; }
+  .sg-code-block { background: #f5f5f5; padding: 1em; border-radius: 4px; font-family: monospace; font-size: 0.9em; }
+</style>
+
+<h1>Style Guide</h1>
+<p>A living reference for the visual language of this site. Not linked from the nav — just for design work.</p>
+
+
+<div class="sg-section">
+  <div class="sg-label">Colors</div>
+
+  <div class="sg-swatches">
+    <div class="sg-swatch">
+      <div class="sg-swatch-color" style="background: #1C1C1E;"></div>
+      <div class="sg-swatch-name">Charcoal (body text)</div>
+      <div class="sg-swatch-hex">#1C1C1E</div>
+    </div>
+    <div class="sg-swatch">
+      <div class="sg-swatch-color" style="background: #C4622D;"></div>
+      <div class="sg-swatch-name">Terracotta (accent)</div>
+      <div class="sg-swatch-hex">#C4622D</div>
+    </div>
+    <div class="sg-swatch">
+      <div class="sg-swatch-color" style="background: #8A8580;"></div>
+      <div class="sg-swatch-name">Warm grey (metadata)</div>
+      <div class="sg-swatch-hex">#8A8580</div>
+    </div>
+    <div class="sg-swatch">
+      <div class="sg-swatch-color" style="background: #F7F5F2; border: 1px solid #ddd;"></div>
+      <div class="sg-swatch-name">Off-white (background)</div>
+      <div class="sg-swatch-hex">#F7F5F2</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="sg-section">
+  <div class="sg-label">Typography — Headings</div>
+
+  <div class="sg-type-row"><span class="sg-type-meta">h1 &nbsp;</span><h1 style="display:inline">The quick brown fox</h1></div>
+  <div class="sg-type-row"><span class="sg-type-meta">h2 &nbsp;</span><h2 style="display:inline">The quick brown fox</h2></div>
+  <div class="sg-type-row"><span class="sg-type-meta">h3 &nbsp;</span><h3 style="display:inline">The quick brown fox</h3></div>
+  <div class="sg-type-row"><span class="sg-type-meta">h4 &nbsp;</span><h4 style="display:inline">The quick brown fox</h4></div>
+  <div class="sg-type-row"><span class="sg-type-meta">h5 &nbsp;</span><h5 style="display:inline">The quick brown fox</h5></div>
+  <div class="sg-type-row"><span class="sg-type-meta">h6 &nbsp;</span><h6 style="display:inline">The quick brown fox</h6></div>
+</div>
+
+<div class="sg-section">
+  <div class="sg-label">Typography — Body</div>
+
+  <p>This is a standard paragraph. Body text is set at 17px with a 24px line height in the PT typeface. <a href="#">This is what a link looks like</a>, and <strong>this is bold</strong>, and <em>this is italic</em>. The quick brown fox jumps over the lazy dog.</p>
+
+  <p>A second paragraph to show spacing between blocks of text. Readability is a function of line length, leading, and typeface — all three matter.</p>
+
+  <blockquote>This is a blockquote. It gets a left border and italic style to set it apart from body copy.</blockquote>
+
+  <hr class="sg-hr-preview">
+  <div class="sg-type-meta">hr — horizontal rule</div>
+</div>
+
+<div class="sg-section">
+  <div class="sg-label">Typography — Lists</div>
+
+  <div style="display: flex; gap: 3em; flex-wrap: wrap;">
+    <div>
+      <div class="sg-type-meta">Unordered</div>
+      <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item
+          <ul>
+            <li>Nested item</li>
+            <li>Another nested</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="sg-type-meta">Ordered</div>
+      <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item
+          <ol>
+            <li>Nested item</li>
+            <li>Another nested</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="sg-section">
+  <div class="sg-label">Typography — Code</div>
+
+  <p>Inline <code>code looks like this</code> inside a sentence.</p>
+
+  <div class="sg-code-block">// A code block<br>
+function example() {<br>
+&nbsp;&nbsp;return 'hello world';<br>
+}</div>
+</div>
+
+
+<div class="sg-section">
+  <div class="sg-label">Components — Post Teaser</div>
+  <div class="sg-type-meta" style="margin-bottom: 1em;">As it appears on the home page</div>
+
+  
+  
+    <article class="blog-post teaser">
+  
+    <a href="/writings/upgrading-to-lets-encrypt/"><img class="teaser-image" src="/img/2016/gold-lock_sm.jpg" alt="Upgrading to Let&#39;s Encrypt"></a>
+  
+  <h2 class="title"><a href="/writings/upgrading-to-lets-encrypt/">Upgrading to Let&#39;s Encrypt</a></h2>
+  <div class="metadatas">
+    <span class="categories">
+      <span class="category">security</span> <span class="category">server</span> <span class="category">nginx</span> 
+    </span>&nbsp;-&nbsp;
+    <span class="date">2016-09-30</span>
+  </div>
+  <div class="content">
+    
+      How I used Let&#39;s Encrypt for my own SSL/TLS certificates on all of my web servers.
+    
+  </div>
+</article>
+
+  
+</div>
+
+<div class="sg-section">
+  <div class="sg-label">Components — Pagination</div>
+  <div class="sg-type-meta" style="margin-bottom: 1em;">Simulated — both states shown</div>
+
+  <div class="pagination">
+    <span class="disabled previous">Previous</span>
+    <span class="page_number">1 of 6</span>
+    <a href="#" class="next">Next</a>
+  </div>
+
+  <br>
+
+  <div class="pagination">
+    <a href="#" class="previous">Previous</a>
+    <span class="page_number">3 of 6</span>
+    <a href="#" class="next">Next</a>
+  </div>
+</div>
+
+<div class="sg-section">
+  <div class="sg-label">Components — Figure &amp; Caption</div>
+
+  <figure>
+    <img src="/img/2016/reading-the-newspaper_md.jpg"
+         srcset="/img/2016/reading-the-newspaper_sm.jpg 350w, /img/2016/reading-the-newspaper_md.jpg 748w"
+         alt="A man reading a newspaper">
+    <figcaption>Hover to reveal — caption text slides in from the left</figcaption>
+  </figure>
+</div>
+
+  </main>
+
+  <footer role="contentinfo">
+  <div class="inner">
+    <span class="contact">
+      <a href="https://github.com/iamcarrico/" target="_blank" class="github"><span class="icon">github</span> github.com/iamcarrico</a>
+      <a href="https://twitter.com/iamcarrico/" target="_blank" class="twitter"><span class="icon">twitter</span> twitter.com/iamcarrico</a>
+      <a href="https://www.goodreads.com/iamcarrico" target="_blank" class="goodreads"><span class="icon">goodreads</span> goodreads.com/iamcarrico</a>
+    </span>
+
+    <span class="copyright">
+      &copy; 2026 Ian Carrico
+    </span>
+  </div>
+</footer>
+
+
+  
+
+
+  <script src="/js/footer.js"></script>
+</body>
+</html>
