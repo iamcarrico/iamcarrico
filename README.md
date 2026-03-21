@@ -1,6 +1,7 @@
 # I. Am. Carrico. blog
 
-Welcome to the code repository for my blog. It is a specialty Jekyll site, with my own little flair mixed on it.
+Welcome to the code repository for my blog.
+
 
 
 ## Development

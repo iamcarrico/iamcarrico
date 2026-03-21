@@ -1,21 +1,24 @@
 ---
-layout: rss-feed
+layout: false
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>{{ site.name }}</title>
-		<description>{{ site.description }}</description>
-		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}{{ page.url }}" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:10 %}
-			<item>
-				<title>{{ post.title }}</title>
-				<description>{{ post.description | strip_html }}</description>
-				<pubDate>{{ post.date | date: "%a, %d %b %Y %T %Z" }}</pubDate>
-				<link>{{ site.url }}{{ post.url }}</link>
-				<guid>{{ site.url }}{{ post.url }}</guid>
-			</item>
-		{% endfor %}
-	</channel>
+  <channel>
+    <title>{{ site.name }}</title>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+    {% for post in collections.posts %}
+      {% if loop.index0 < 10 %}
+      <item>
+        <title>{{ post.data.title }}</title>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <guid>{{ site.url }}{{ post.url }}</guid>
+        <pubDate>{{ post.date | dateFormat("EEE, dd LLL yyyy HH:mm:ss +0000") }}</pubDate>
+        {% if post.data.description %}<description>{{ post.data.description }}</description>{% endif %}
+      </item>
+      {% endif %}
+    {% endfor %}
+  </channel>
 </rss>

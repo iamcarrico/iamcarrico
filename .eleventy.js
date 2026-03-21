@@ -46,8 +46,14 @@ module.exports = function(eleventyConfig) {
   // YAML data file support (.yaml and .yml)
   eleventyConfig.addDataExtension('yaml,yml', (contents) => yaml.load(contents));
 
-  // Ignore old Jekyll build output
+  // Exclude draft posts from production builds
+  eleventyConfig.addPreprocessor('drafts', '*', (data) => {
+    if (isProd && data.draft) return false;
+  });
+
+  // Ignore directories/files that shouldn't be compiled as pages
   eleventyConfig.ignores.add('_site');
+  eleventyConfig.ignores.add('README.md');
 
   // Passthrough copies
   eleventyConfig.addPassthroughCopy('img');
