@@ -4,6 +4,9 @@
 # Dependencies
 node_modules
 
+# Build output
+docs
+
 # Sass cache
 .sass-cache
 

@@ -2,26 +2,43 @@
 
 const path = require('path');
 const sass = require('sass');
+const { minify } = require('terser');
 const yaml = require('js-yaml');
 const { DateTime } = require('luxon');
 
+const isProd = process.env.ELEVENTY_ENV === 'production';
+
 module.exports = function(eleventyConfig) {
 
-  // Sass compilation via custom template format — no plugin needed
+  // Sass compilation — partials (starting with _) are skipped
   eleventyConfig.addTemplateFormats('scss');
   eleventyConfig.addExtension('scss', {
     outputFileExtension: 'css',
     compile: function(_inputContent, inputPath) {
       const parsed = path.parse(inputPath);
-      // Skip Sass partials (files starting with _)
       if (parsed.name.startsWith('_')) return;
 
       return () => {
         const result = sass.compile(inputPath, {
-          style: process.env.ELEVENTY_ENV === 'production' ? 'compressed' : 'expanded',
+          style: isProd ? 'compressed' : 'expanded',
           sourceMap: false,
         });
         return result.css;
+      };
+    },
+  });
+
+  // JS compilation — minify in production via esbuild; only top-level js/ files (not vendor/)
+  eleventyConfig.addTemplateFormats('js');
+  eleventyConfig.addExtension('js', {
+    outputFileExtension: 'js',
+    compile: function(inputContent, inputPath) {
+      if (!/^\.\/js\/[^/]+\.js$/.test(inputPath)) return;
+
+      return async () => {
+        if (!isProd) return inputContent;
+        const result = await minify(inputContent);
+        return result.code;
       };
     },
   });
@@ -35,7 +52,6 @@ module.exports = function(eleventyConfig) {
   // Passthrough copies
   eleventyConfig.addPassthroughCopy('img');
   eleventyConfig.addPassthroughCopy('fonts');
-  eleventyConfig.addPassthroughCopy('js');
   eleventyConfig.addPassthroughCopy('CNAME');
 
   // Layout aliases — lets existing front matter (layout: post) keep working

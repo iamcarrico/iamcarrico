@@ -13,7 +13,7 @@
   --color-accent:         #{$terracotta};
   --color-accent-dark:    #{color.adjust($terracotta, $lightness: -10%)};
   --color-accent-hover:   #{color.adjust($terracotta, $lightness: -15%)};
-  --color-accent-shadow:  rgba(#{color.red($terracotta)}, #{color.green($terracotta)}, #{color.blue($terracotta)}, 0.3);
+  --color-accent-shadow:  rgba(196, 98, 45, 0.3);
   --color-border:         #{color.adjust($grey, $lightness: 20%)};
   --color-footer-bg:      #{color.adjust($white, $lightness: -4%)};
   --color-hero-border:    #{color.adjust($grey, $lightness: 30%)};
