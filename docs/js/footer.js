@@ -1,1 +1,0 @@
-"use strict";document.fonts.ready.then(function(){document.documentElement.classList.add("fonts-loaded")}).catch(function(){document.documentElement.classList.add("fonts-unavailable")});
