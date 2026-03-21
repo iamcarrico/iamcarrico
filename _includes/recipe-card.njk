@@ -1,0 +1,35 @@
+<div class="recipie-card">
+  <h2 class="recipie-card--title">{{ cocktail_title }}</h2>
+  {% if cocktail_image %}<img class="recipie-card--image" alt="{{ cocktail_title }}" src="{{ cocktail_image }}">{% endif %}
+  {% if yield %}
+    <div class="recipie-card--yield">
+      <strong>Yield:</strong> {{ yield }}
+    </div>
+  {% endif %}
+  {% if glassware %}
+    <div class="recipie-card--glasswear">
+      <strong>Glassware:</strong> {{ glassware | join(', ') if glassware is iterable and glassware is not string else glassware }}
+    </div>
+  {% endif %}
+  {% if tools %}
+    <div class="recipie-card--tools">
+      <strong>Tools:</strong> {{ tools | join(', ') }}
+    </div>
+  {% endif %}
+  <div class="recipie-card--ingredients">
+    <h3>Ingredients</h3>
+    <ul>
+      {% for ingredient in ingredients %}
+        <li>{{ ingredient.amount }} {{ ingredient.unit }} &mdash; {{ ingredient.ingredient }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="recipie-card--directions">
+    <h3>Directions</h3>
+    <ol>
+      {% for direction in directions %}
+        <li>{{ direction }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+</div>

@@ -9,7 +9,7 @@ permalink: /styleguide/
   .sg-section:last-child { border-bottom: none; }
   .sg-label { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.1em; color: #999; margin-bottom: 0.5em; }
   .sg-swatches { display: flex; flex-wrap: wrap; gap: 1em; margin-top: 1em; }
-  .sg-swatch { width: 120px; }
+  .sg-swatch { width: 110px; }
   .sg-swatch-color { height: 80px; border-radius: 4px; border: 1px solid rgba(0,0,0,0.1); }
   .sg-swatch-name { font-size: 0.8em; margin-top: 0.4em; }
   .sg-swatch-hex { font-size: 0.75em; color: #999; font-family: monospace; }
@@ -28,26 +28,75 @@ permalink: /styleguide/
 <div class="sg-section">
   <div class="sg-label">Colors</div>
 
-  <div class="sg-swatches">
-    <div class="sg-swatch">
-      <div class="sg-swatch-color" style="background: #1C1C1E;"></div>
-      <div class="sg-swatch-name">Charcoal (body text)</div>
-      <div class="sg-swatch-hex">#1C1C1E</div>
+  <div data-theme="light" style="margin-top: 1.5em; background: var(--color-bg); padding: 1em; border-radius: 4px;">
+    <div class="sg-type-meta" style="margin-bottom: 0.5em;">Light mode</div>
+    <div class="sg-swatches">
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-text);"></div>
+        <div class="sg-swatch-name">Text</div>
+        <div class="sg-swatch-hex">--color-text</div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-accent);"></div>
+        <div class="sg-swatch-name">Accent</div>
+        <div class="sg-swatch-hex">--color-accent</div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-grey);"></div>
+        <div class="sg-swatch-name">Grey</div>
+        <div class="sg-swatch-hex">--color-grey</div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-bg); border: 1px solid var(--color-border);"></div>
+        <div class="sg-swatch-name">Background</div>
+        <div class="sg-swatch-hex">--color-bg</div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-footer-bg); border: 1px solid var(--color-border);"></div>
+        <div class="sg-swatch-name">Footer bg</div>
+        <div class="sg-swatch-hex">--color-footer-bg</div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-code-bg);"></div>
+        <div class="sg-swatch-name">Code bg</div>
+        <div class="sg-swatch-hex">--color-code-bg</div>
+      </div>
     </div>
-    <div class="sg-swatch">
-      <div class="sg-swatch-color" style="background: #C4622D;"></div>
-      <div class="sg-swatch-name">Terracotta (accent)</div>
-      <div class="sg-swatch-hex">#C4622D</div>
-    </div>
-    <div class="sg-swatch">
-      <div class="sg-swatch-color" style="background: #8A8580;"></div>
-      <div class="sg-swatch-name">Warm grey (metadata)</div>
-      <div class="sg-swatch-hex">#8A8580</div>
-    </div>
-    <div class="sg-swatch">
-      <div class="sg-swatch-color" style="background: #F7F5F2; border: 1px solid #ddd;"></div>
-      <div class="sg-swatch-name">Off-white (background)</div>
-      <div class="sg-swatch-hex">#F7F5F2</div>
+  </div>
+
+  <div data-theme="dark" style="margin-top: 1.5em; background: var(--color-bg); padding: 1em; border-radius: 4px;">
+    <div class="sg-type-meta" style="margin-bottom: 0.5em; color: var(--color-grey);">Dark mode</div>
+    <div class="sg-swatches">
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-text);"></div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Text</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-text</div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-accent);"></div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Accent</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-accent</div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-grey);"></div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Grey</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-grey</div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-bg); border: 1px solid var(--color-border);"></div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Background</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-bg</div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-footer-bg); border: 1px solid var(--color-border);"></div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Footer bg</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-footer-bg</div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-code-bg);"></div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Code bg</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-code-bg</div>
+      </div>
     </div>
   </div>
 </div>
@@ -138,30 +187,43 @@ function example() {<br>
 
 <div class="sg-section">
   <div class="sg-label">Components — Pagination</div>
-  <div class="sg-type-meta" style="margin-bottom: 1em;">Simulated — both states shown</div>
+  <div class="sg-type-meta" style="margin-bottom: 1em;">First page (no previous)</div>
 
-  <div class="pagination">
-    <span class="disabled previous">Previous</span>
-    <span class="page_number">1 of 6</span>
-    <a href="#" class="next">Next</a>
-  </div>
+  {% set pagination = { pages: [1,2,3,4,5,6], pageNumber: 0, href: { previous: null, next: "#" } } %}
+  {% include "pagination.njk" %}
 
   <br>
+  <div class="sg-type-meta" style="margin: 1em 0;">Middle page (both links active)</div>
 
-  <div class="pagination">
-    <a href="#" class="previous">Previous</a>
-    <span class="page_number">3 of 6</span>
-    <a href="#" class="next">Next</a>
-  </div>
+  {% set pagination = { pages: [1,2,3,4,5,6], pageNumber: 2, href: { previous: "#", next: "#" } } %}
+  {% include "pagination.njk" %}
 </div>
 
 <div class="sg-section">
   <div class="sg-label">Components — Figure &amp; Caption</div>
 
-  <figure>
-    <img src="/img/2016/reading-the-newspaper_md.jpg"
-         srcset="/img/2016/reading-the-newspaper_sm.jpg 350w, /img/2016/reading-the-newspaper_md.jpg 748w"
-         alt="A man reading a newspaper">
-    <figcaption>Hover to reveal — caption text slides in from the left</figcaption>
-  </figure>
+  {% figure "/img/2016/reading-the-newspaper_md.jpg", "A man reading a newspaper", "/img/2016/reading-the-newspaper_sm.jpg 350w, /img/2016/reading-the-newspaper_md.jpg 748w" %}
+    <a href="https://www.flickr.com/photos/ironypoisoning/13934769509/" target="_blank">Reading Le Monde by our window</a> by <a href="https://www.flickr.com/photos/ironypoisoning/" target="_blank">Connie Ma</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC BY-SA 2.0</a>
+  {% endfigure %}
+</div>
+
+<div class="sg-section">
+  <div class="sg-label">Components — Recipe Card</div>
+  <div class="sg-type-meta" style="margin-bottom: 1em;">As used in The Boys Club posts</div>
+
+  {% set cocktail_title = "Example Cocktail" %}
+  {% set cocktail_image = "/img/2013/menta-julep-inside.jpg" %}
+  {% set yield = "1 cocktail" %}
+  {% set glassware = ["Coupe glass"] %}
+  {% set tools = ["Shaker", "Strainer"] %}
+  {% set ingredients = [
+    { amount: 2, unit: "fl. oz.", ingredient: "gin" },
+    { amount: 0.75, unit: "fl. oz.", ingredient: "lemon juice" },
+    { amount: 0.75, unit: "fl. oz.", ingredient: "simple syrup" }
+  ] %}
+  {% set directions = [
+    "Combine all ingredients in a shaker with ice.",
+    "Shake well and strain into a chilled coupe glass."
+  ] %}
+  {% include "recipe-card.njk" %}
 </div>

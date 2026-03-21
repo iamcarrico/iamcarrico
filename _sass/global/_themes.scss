@@ -20,6 +20,20 @@
   --color-code-bg:        #f0ede8;
 }
 
+[data-theme="light"] {
+  --color-bg:             #{$white};
+  --color-text:           #{$black};
+  --color-grey:           #{$grey};
+  --color-accent:         #{$terracotta};
+  --color-accent-dark:    #{color.adjust($terracotta, $lightness: -10%)};
+  --color-accent-hover:   #{color.adjust($terracotta, $lightness: -15%)};
+  --color-accent-shadow:  rgba(196, 98, 45, 0.3);
+  --color-border:         #{color.adjust($grey, $lightness: 20%)};
+  --color-footer-bg:      #{color.adjust($white, $lightness: -4%)};
+  --color-hero-border:    #{color.adjust($grey, $lightness: 30%)};
+  --color-code-bg:        #f0ede8;
+}
+
 [data-theme="dark"] {
   --color-bg:             #18181a;
   --color-text:           #f0ede8;

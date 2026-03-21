@@ -68,6 +68,11 @@ blockquote {
   color: var(--color-grey);
 }
 
+embed, img, object, video {
+    max-width: 100%;
+    height: auto;
+}
+
 figure {
   display: block;
   position: relative;
