@@ -69,7 +69,7 @@ I listen to Here and Now during my lunch hour, and while driving around town oft
 
 ## Occasional Articles
 
-These are places that I will read either on the road, or specific articles as they show up— but do not seek out content from them on a periodic basis. Most of the liberal bias I have with my news comes from these sources. Although, when it comes to large publications (e.g. NY Times) their bias comes in the opinion section (I do not read) and with the stories they select— not necissarily with the content as much.
+These are places that I will read either on the road, or specific articles as they show up— but do not seek out content from them on a periodic basis. Most of the liberal bias I have with my news comes from these sources. Although, when it comes to large publications (e.g. NY Times) their bias comes in the opinion section (I do not read) and with the stories they select— not necessarily with the content as much.
 
 [Wall Street Journal](http://www.wsj.com/)
 _(Conservative)_

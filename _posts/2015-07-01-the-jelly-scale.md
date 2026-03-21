@@ -20,7 +20,7 @@ After traveling to all of these diners, I have come up with my own rating system
 
 ## One Jelly
 
-One jelly diners have the saddest assortment of jelly possible. You sit down, and get excited that you are in a true diner, then as you get your toast you look in the jelly basket to only find grape jelly. No strawberry, no marmalade— just grape to be seen. At this moment you usually are immediately taken back to when you mother gave you grape cough syrup as a child, and are horrified that your sad white toast will only be accompanied by what you hope is real butter.
+One jelly diners have the saddest assortment of jelly possible. You sit down, and get excited that you are in a true diner, then as you get your toast you look in the jelly basket to only find grape jelly. No strawberry, no marmalade— just grape to be seen. At this moment you usually are immediately taken back to when your mother gave you grape cough syrup as a child, and are horrified that your sad white toast will only be accompanied by what you hope is real butter.
 
 ## Two Jellies
 

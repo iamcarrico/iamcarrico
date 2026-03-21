@@ -1,5 +1,4 @@
 ---
-layout: theboysclub
 title:  "The Lover's Flight"
 date:   2013-07-22 12:00:00
 categories:
@@ -10,6 +9,7 @@ categories:
 image: "/img/2013/lovers-flight-header.jpg"
 teaser_image: "/img/2013/lovers-flight-header.jpg"
 description: "Just south of the Texas border, a unique plant called the Turnera Diffusa is grown. It is usually called by its more colloquial name, Damiana, and is the base for an herbal liqueur of the..."
+redirect_from: "/writings/the-lovers-flight/"
 cocktail_title: "The Lover’s Flight"
 yield: "1 cocktail"
 glassware:

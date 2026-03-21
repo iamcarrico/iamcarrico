@@ -78,6 +78,11 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => b.date - a.date);
   });
 
+  eleventyConfig.addCollection('boysclub', function(api) {
+    return api.getFilteredByGlob('_the-boys-club/**/*.md')
+      .sort((a, b) => b.date - a.date);
+  });
+
   // Shortcodes
   eleventyConfig.addPairedShortcode('figure', function(caption, src, alt, srcset) {
     const srcsetAttr = srcset ? ` srcset="${srcset}"` : '';

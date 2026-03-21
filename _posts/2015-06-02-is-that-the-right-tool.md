@@ -22,7 +22,7 @@ This weekend, I needed to fix a wobbly chair. There was a bolt that was a little
 
 The internet is littered with blog posts arguing for one technology over another. There are many posts about needing to use the next shiny tool, some arguing for more stable technologies, some even positing we should [stop writing “Stop Using” posts](http://jdsteinbach.com/stop-writing/). Generally, these posts all articulate the benefits of one technology— but rarely do they answer the question that is needed: Is this the right tool for the job?
 
-Just like the conversation above, many developers tend to stick with the technologies that they are familiar with. Many others do the opposite, moving towards the latest bleeding-edge tool that is built. More often that not, a middle-road needs to be take, considering both the familiar and the bleeding-edge, the mature tool and the new tool, taking an honest look at the capabilities of each technology.
+Just like the conversation above, many developers tend to stick with the technologies that they are familiar with. Many others do the opposite, moving towards the latest bleeding-edge tool that is built. More often than not, a middle-road needs to be taken, considering both the familiar and the bleeding-edge, the mature tool and the new tool, taking an honest look at the capabilities of each technology.
 
 ## Familiarity vs. Bleeding-edge
 

@@ -1,5 +1,4 @@
 ---
-layout: theboysclub
 title:  "The Menta Julep, A Branca Menta Cocktail"
 date:   2013-05-13 12:00:00
 categories:
@@ -9,6 +8,7 @@ categories:
 image: "/img/2013/menta-julep-header.jpg"
 teaser_image: "/img/2013/menta-julep-header.jpg"
 description: "Some of the best liqueurs, in my opinion, stem from old recipes that have been perfected over the years, and Branca Menta is no exception. This old family recipe is the result of the Branca..."
+redirect_from: "/writings/the-menta-julep-a-branca-menta-cocktail/"
 cocktail_title: "The Last Word"
 yield: "1 cocktail"
 glassware:

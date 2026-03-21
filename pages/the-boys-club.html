@@ -11,8 +11,6 @@ Back in 2013, I wrote for a liquor and cocktail blog called "The Boys Club". Tha
 
 <br>
 
-{% for post in collections.posts %}
-  {% if "the boys club" in post.data.categories %}
-    {% include "teaser.njk" %}
-  {% endif %}
+{% for post in collections.boysclub %}
+  {% include "teaser.njk" %}
 {% endfor %}

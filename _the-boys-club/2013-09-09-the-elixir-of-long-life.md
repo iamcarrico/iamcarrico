@@ -1,5 +1,4 @@
 ---
-layout: theboysclub
 title:  "The Elixir of Long Life"
 date:   2013-09-09 12:00:00
 categories:
@@ -10,6 +9,7 @@ categories:
 image: "/img/2013/elixir-of-long-life-header.jpg"
 teaser_image: "/img/2013/elixir-of-long-life-header.jpg"
 description: "In 1605, an old manuscript was given to the monks of the Carthusian Order. After careful study, the apothecarian wisdom held within this tome was distilled, quite literally, until the monks were able to create..."
+redirect_from: "/writings/the-elixir-of-long-life/"
 cocktail_title: "Gin and Monks"
 yield: "1 cocktail"
 glassware:

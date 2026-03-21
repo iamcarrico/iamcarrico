@@ -1,5 +1,4 @@
 ---
-layout: theboysclub
 title:  "DIY Blackberry Liquor"
 date:   2013-06-10 12:00:00
 categories:
@@ -9,8 +8,9 @@ categories:
 image: "/img/2013/blackberry-header.jpg"
 teaser_image: "/img/2013/blackberry-header.jpg"
 description: "Summertime cooking down south means some good brisket in a smoker, slaw in the kitchen, and a cobbler in the oven. Nothing finishes out a good barbeque better than a blackberry cobbler, so in honor..."
+redirect_from: "/writings/diy-blackberry-liqueur/"
 cocktail_title: "DIY Blackberry Liqueur"
-yield: "1 bottle liquer"
+yield: "1 bottle liqueur"
 glassware:
   - Julep cup or tumbler
 tools:

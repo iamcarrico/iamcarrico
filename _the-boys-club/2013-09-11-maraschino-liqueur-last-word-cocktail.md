@@ -1,5 +1,4 @@
 ---
-layout: theboysclub
 title:  "Maraschino Liqueur and The Last Word"
 date:   2013-09-11 12:00:00
 categories:
@@ -10,6 +9,7 @@ categories:
   - The Boys Club
 image: "/img/2013/maraschino-and-the-last-word-header.jpg"
 teaser_image: "/img/2013/maraschino-and-the-last-word-header.jpg"
+redirect_from: "/writings/maraschino-liqueur-last-word-cocktail/"
 description: "I am sure you have seen the almost florescent unnatural jars of maraschino cherries in your grocery store, but this is not on our agenda for today. The original maraschino cherries come from the..."
 cocktail_title: "The Last Word"
 yield: "1 cocktail"
