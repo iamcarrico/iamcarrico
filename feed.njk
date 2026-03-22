@@ -1,0 +1,26 @@
+---
+layout: false
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.name | escape }}</title>
+    <link>{{ site.url }}</link>
+    <description>Writing by {{ site.author | escape }}</description>
+    <language>en-us</language>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+    {% set latestPost = collections.posts | first %}
+    <lastBuildDate>{{ latestPost.date | dateFormat("EEE, dd LLL yyyy HH:mm:ss +0000") }}</lastBuildDate>
+    {% for post in collections.posts %}{% if loop.index0 < 10 %}
+      <item>
+        <title>{{ post.data.title | escape }}</title>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <pubDate>{{ post.date | dateFormat("EEE, dd LLL yyyy HH:mm:ss +0000") }}</pubDate>
+        {% if post.data.description %}<description>{{ post.data.description | striptags | escape }}</description>{% endif %}
+      </item>
+    {% endif %}{% endfor %}
+  </channel>
+</rss>

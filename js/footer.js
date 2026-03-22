@@ -28,6 +28,15 @@ document.fonts.ready.then(function() {
     }
   });
 
+  // Mobile nav toggle.
+  window.toggleMenu = function () {
+    var nav = document.getElementById('nav');
+    var btn = document.querySelector('.menu-toggle');
+    var isOpen = nav.classList.toggle('nav-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
   // Called by the toggle button.
   window.toggleTheme = function () {
     var current = document.documentElement.getAttribute('data-theme');
