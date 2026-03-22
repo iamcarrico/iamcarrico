@@ -15,6 +15,7 @@ header {
   border-bottom: 1px solid var(--color-border);
 
   .site-name {
+    order: 1;
     @include playfair;
     font-size: 1.6em;
     font-weight: 700;
@@ -38,12 +39,14 @@ header {
 
   // Mobile: nav is hidden by default, slides down when open
   nav {
+    order: 3;
     @include lora;
     overflow: hidden;
     max-height: 0;
     opacity: 0;
     width: 100%;
     transition: max-height 0.3s ease, opacity 0.3s ease;
+    margin-top: 1em;
 
     &.nav-open {
       max-height: 20em;
@@ -77,6 +80,7 @@ header {
       color: var(--color-accent);
       border-bottom: 1px solid var(--color-accent);
       padding-bottom: 1px;
+      margin-bottom: .6em;
     }
 
     &.active-trail {
@@ -94,6 +98,7 @@ header {
   }
 
   .header-controls {
+    order: 2;
     display: flex;
     align-items: center;
     gap: 1em;
@@ -103,7 +108,6 @@ header {
       font-size: 1em;
       line-height: 1;
       width: 1.5em;
-      display: flex;
       margin: 0;
     }
   }
@@ -160,11 +164,13 @@ header {
     flex-wrap: nowrap;
 
     nav {
+      order: 2;
       overflow: visible;
       max-height: none;
       opacity: 1;
       width: auto;
       transition: none;
+      margin-top: 0;
 
       .menubar {
         flex-direction: row;
@@ -178,6 +184,14 @@ header {
     .menuitem {
       padding: 0;
       width: auto;
+
+      &.active {
+        margin-bottom: 0;
+      }
+    }
+
+    .header-controls {
+      order: 3;
     }
 
     .menu-toggle {
