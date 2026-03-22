@@ -1,5 +1,6 @@
 'use strict';
 
+const fs = require("node:fs");
 const path = require('path');
 const sass = require('sass');
 const { minify } = require('terser');
@@ -7,6 +8,7 @@ const yaml = require('js-yaml');
 const { DateTime } = require('luxon');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const Image = require('@11ty/eleventy-img');
+
 
 const isProd = process.env.ELEVENTY_ENV === 'production';
 
