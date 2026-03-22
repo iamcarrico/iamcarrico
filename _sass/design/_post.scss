@@ -16,8 +16,17 @@
     margin-top: 1em;
   }
 
+  figure {
+    margin: 1em 0;
+  }
+
   &.full {
     width: 100%;
+
+    .content {
+      max-width: 32em;
+      margin: 0 auto;
+    }
   }
 
   &.teaser {
@@ -34,20 +43,6 @@
 
       &:nth-child(even) .teaser-image {
         float: right;
-      }
-    }
-  }
-
-  @media (min-width: 600px) {
-    &.full .content {
-      p, pre {
-        max-width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      figure {
-        margin: 1em 0;
       }
     }
   }

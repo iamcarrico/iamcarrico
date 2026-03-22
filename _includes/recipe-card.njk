@@ -1,9 +1,7 @@
 <div class="recipie-card">
   <h2 class="recipie-card--title">{{ cocktail_title }}</h2>
   {% if cocktail_image %}
-
-    {% figure cocktail_image, cocktail_title %}    {% endfigure %}
-
+    <img class="recipie-card--image" alt="{{ cocktail_title }}" src="{{ cocktail_image }}">
   {% endif %}
   {% if yield %}
     <div class="recipie-card--yield">
