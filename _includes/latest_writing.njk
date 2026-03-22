@@ -1,0 +1,6 @@
+<p class="section-label">Latest writing</p>
+
+{% set post = collections.posts | first %}
+{% if post %}
+  {% include "teaser.njk" %}
+{% endif %}

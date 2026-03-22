@@ -2,7 +2,9 @@
 layout: post
 title:  "I Am No Designer"
 date:   2013-05-13 12:00:00
-categories: jekyll backend
+categories:
+  - jekyll
+  - backend
 redirect_from: "/i-am-no-designer/"
 ---
 

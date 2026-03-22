@@ -4,17 +4,12 @@ css_id: home
 ---
 
 <section class="home-hero">
-  <h1 class="hero-name">Ian Carrico</h1>
-  <p class="hero-tagline">Attorney. Former software engineer. <br>Writing about code.</p>
+  <h1 class="hero-name">Ian J. Carrico</h1>
+  <p class="hero-tagline">Attorney. Former software engineer. <br>Writing about code, computer and legal.</p>
 </section>
 
 <section class="home-latest">
-  <p class="section-label">Latest writing</p>
-
-  {% set post = collections.posts | first %}
-  {% if post %}
-    {% include "teaser.njk" %}
-  {% endif %}
+  {% include "latest_writing.njk" %}
 
   <a href="/writings/" class="all-writings">See all writings &rarr;</a>
 </section>

@@ -86,6 +86,7 @@ figure {
   color: var(--color-bg);
   bottom: 0;
   transition: all 0.4s ease;
+  color: $white;  // Override since we do not want to have black text on black.
 }
 
 figcaption {
@@ -94,6 +95,7 @@ figcaption {
   opacity: 0;
   left: -30%;
   font-style: italic;
+
 }
 
 figure:hover figcaption {

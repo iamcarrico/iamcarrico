@@ -6,12 +6,12 @@ categories:
   - politics
   - news
   - media
-image: "/img/2016/reading-the-newspaper_md.jpg"
+image: "/img/2016/reading-the-newspaper_lg.jpg"
 teaser_image: "/img/2016/reading-the-newspaper_sm.jpg"
 description: "Where do I go to find news about our world? Number 5 will astound you."
 ---
 
-{% figure "/img/2016/reading-the-newspaper_md.jpg", "A man reading a newspaper in front of the window", "/img/2016/reading-the-newspaper_sm.jpg 350w, /img/2016/reading-the-newspaper_md.jpg 748w, /img/2016/reading-the-newspaper_lg.jpg 1496w" %}
+{% figure "/img/2016/reading-the-newspaper_lg.jpg", "A man reading a newspaper in front of the window", "/img/2016/reading-the-newspaper_sm.jpg 350w, /img/2016/reading-the-newspaper_lg.jpg 748w, /img/2016/reading-the-newspaper_lg.jpg 1496w" %}
   <a href="https://www.flickr.com/photos/ironypoisoning/13934769509/" target="_blank">Reading Le Monde by our window.</a> by <a href="https://www.flickr.com/photos/ironypoisoning/" target="_blank">Connie Ma</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC BY-SA 2.0</a>
 {% endfigure %}
 

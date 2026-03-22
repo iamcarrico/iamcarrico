@@ -26,6 +26,8 @@
   },
   "license": "(MIT OR CC-BY-SA-4.0)",
   "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2"
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "sharp": "^0.34.5"
   }
 }

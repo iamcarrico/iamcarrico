@@ -30,15 +30,6 @@
 .home-latest {
   margin-bottom: 3em;
 
-  .section-label {
-    @include lora;
-    font-size: 0.75em;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--color-grey);
-    margin-bottom: 1.25em;
-  }
-
   .all-writings {
     display: inline-block;
     margin-top: 1.75em;

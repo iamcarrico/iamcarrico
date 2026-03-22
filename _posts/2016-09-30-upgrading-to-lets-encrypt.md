@@ -6,12 +6,12 @@ categories:
   - security
   - server
   - nginx
-image: "/img/2016/gold-lock_md.jpg"
+image: "/img/2016/gold-lock_lg.jpg"
 teaser_image: "/img/2016/gold-lock_sm.jpg"
 description: "How I used Let's Encrypt for my own SSL/TLS certificates on all of my web servers."
 ---
 
-{% figure "/img/2016/gold-lock_md.jpg", "A gold lock on a blue door.", "/img/2016/gold-lock_sm.jpg 350w, /img/2016/gold-lock_md.jpg 748w, /img/2016/gold-lock_lg.jpg 1496w" %}
+{% figure "/img/2016/gold-lock_lg.jpg", "A gold lock on a blue door.", "/img/2016/gold-lock_sm.jpg 350w, /img/2016/gold-lock_lg.jpg 748w, /img/2016/gold-lock_lg.jpg 1496w" %}
   <a href="https://www.flickr.com/photos/fischerfotos/7454996046/" target="_blank">Gold Lock</a> by <a href="https://www.flickr.com/photos/fischerfotos/" target="_blank">Mark Fischer</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC BY-SA 2.0</a>
 {% endfigure %}
 

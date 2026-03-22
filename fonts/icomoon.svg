@@ -1,5 +1,11 @@
 <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
+        <symbol id="chevron--left" viewBox="0 0 32 32" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <polygon points="10 16 20 6 21.4 7.4 12.8 16 21.4 24.6 20 26" />
+        </symbol>
+        <symbol id="chevron--right" viewBox="0 0 32 32" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <polygon points="22 16 12 26 10.6 24.6 19.2 16 10.6 7.4 12 6" />
+        </symbol>
         <symbol id="close" viewBox="0 0 32 32" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink">
             <polygon points="17.4141 16 24 9.4141 22.5859 8 16 14.5859 9.4143 8 8 9.4141 14.5859 16 8 22.5859 9.4143 24 16 17.4141 22.5859 24 24 22.5859 17.4141 16" />
         </symbol>

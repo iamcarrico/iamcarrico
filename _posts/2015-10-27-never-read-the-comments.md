@@ -6,12 +6,12 @@ categories:
   - harassment
   - community
   - social media
-image: "/img/2015/kittens_md.jpg"
+image: "/img/2015/kittens_lg.jpg"
 teaser_image: "/img/2015/kittens_sm.jpg"
 description: "I have not been on social media much as of late, this is why."
 ---
 
-{% figure "/img/2015/kittens_md.jpg", "Kittens, because we all needs some cuteness for this post", "/img/2015/kittens_sm.jpg 350w, /img/2015/kittens_md.jpg 748w, /img/2015/kittens_lg.jpg 1496w" %}
+{% figure "/img/2015/kittens_lg.jpg", "Kittens, because we all needs some cuteness for this post", "/img/2015/kittens_sm.jpg 350w, /img/2015/kittens_lg.jpg 748w, /img/2015/kittens_lg.jpg 1496w" %}
   <a href="https://www.flickr.com/photos/17251154@N00/11574522195/" target="_blank">Kittens!</a> by <a href="https://www.flickr.com/photos/17251154@N00/" target="_blank">Sy</a> / <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">CC BY-NC-CA 2.0</a>
 {% endfigure %}
 

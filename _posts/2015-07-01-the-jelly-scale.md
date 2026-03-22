@@ -4,13 +4,13 @@ title:  "The Jelly Scale: A Diner Rating System"
 date:   2015-07-01 12:00:00
 categories:
   - diner
-image: "/img/2015/jelly_scale_md.jpg"
+image: "/img/2015/jelly_scale_lg.jpg"
 teaser_image: "/img/2015/jelly_scale_sm.jpg"
 description: "If you have ever traveled with me, you will know there are few things I enjoy more than a good greasy spoon diner for breakfast. I have come up with my own scale for labeling the types of diners I go to."
 shortlink: "http://iamc.co/1NwPM0Z"
 ---
 
-{% figure "/img/2015/jelly_scale_md.jpg", "A scale for all diners to be labeled unequally", "/img/2015/jelly_scale_sm.jpg 350w, /img/2015/jelly_scale_md.jpg 748w, /img/2015/jelly_scale_lg.jpg 1496w" %}
+{% figure "/img/2015/jelly_scale_lg.jpg", "A scale for all diners to be labeled unequally", "/img/2015/jelly_scale_sm.jpg 350w, /img/2015/jelly_scale_lg.jpg 748w, /img/2015/jelly_scale_lg.jpg 1496w" %}
   <a href="https://www.flickr.com/photos/spcummings/2619290140/" target="_blank">Diner jam</a> by <a href="https://www.flickr.com/photos/spcummings/" target="_blank">Stephen Cummings</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>
 {% endfigure %}
 

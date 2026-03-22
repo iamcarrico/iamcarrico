@@ -8,15 +8,12 @@ categories:
   - law
   - code
   - artificial intelligence
-image: "/img/2016/gold-lock_md.jpg"
-teaser_image: "/img/2016/gold-lock_sm.jpg"
+image: "/img/2026/long-stretch-of-highway-in-west-texas.jpg"
 description: "Welcome to my new website, hopefully I will maintain this one."
 ---
 
-{% figure "/img/2016/gold-lock_md.jpg", "A gold lock on a blue door.", "/img/2016/gold-lock_sm.jpg 350w, /img/2016/gold-lock_md.jpg 748w, /img/2016/gold-lock_lg.jpg 1496w" %}
-  <a href="https://www.flickr.com/photos/fischerfotos/7454996046/" target="_blank">Gold Lock</a> by <a href="https://www.flickr.com/photos/fischerfotos/" target="_blank">Mark Fischer</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC BY-SA 2.0</a>
+{% figure "/img/2026/long-stretch-of-highway-in-west-texas.jpg", "A long stretch of highway in West Texas.  On the right is a sign that gives the distance to Alpine and Marfa." %}
+  <a href="https://www.flickr.com/photos/joncutrer/46809546994/" target="_blank">Long stretch of highway in West Texas</a> by <a href="https://www.flickr.com/photos/joncutrer/" target="_blank">Jonathan Cutrer</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>
 {% endfigure %}
 
-Three years ago I began to question if I was on the right track. Two years ago, I realized where I needed to chart my path. Last year, I enrolled at Georgetown Law.
-
-The reason is a simple proposition: <strong>We need more people involved in law and policy that understand the underlying technology that we rely on daily</strong>.
+It is time to reintroduce myself, as it has been ten years since I wrote on this humble blog.  Since writing about content delivery networks, web performance, and open source, I have managed to change careers to becoming a lawyer ([I am a lawyer, not your lawyer.](/disclaimer)).

@@ -6,6 +6,7 @@ const { minify } = require('terser');
 const yaml = require('js-yaml');
 const { DateTime } = require('luxon');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const Image = require('@11ty/eleventy-img');
 
 const isProd = process.env.ELEVENTY_ENV === 'production';
 
@@ -88,10 +89,52 @@ module.exports = function(eleventyConfig) {
   });
 
   // Shortcodes
-  eleventyConfig.addPairedShortcode('figure', function(caption, src, alt, srcset) {
-    const srcsetAttr = srcset ? ` srcset="${srcset}"` : '';
+  eleventyConfig.addPairedShortcode('figure', async function(caption, src, alt) {
     const captionHtml = caption.trim() ? `\n  <figcaption>${caption.trim()}</figcaption>` : '';
-    return `<figure>\n  <img src="${src}"${srcsetAttr} alt="${alt}">${captionHtml}\n</figure>`;
+
+    try {
+      const metadata = await Image('.' + src, {
+        widths: [400, 800, 1600],
+        formats: ['webp', 'jpeg'],
+        outputDir: './docs/img/',
+        urlPath: '/img/',
+        sharpWebpOptions: { quality: 90 },
+        sharpJpegOptions: { quality: 90, progressive: true },
+      });
+
+      const imageHtml = Image.generateHTML(metadata, {
+        alt: alt || '',
+        sizes: '(min-width: 48em) 748px, 100vw',
+        loading: 'lazy',
+        decoding: 'async',
+      });
+
+      return `<figure>\n  ${imageHtml}${captionHtml}\n</figure>`;
+    } catch(e) {
+      // Image not found (e.g. placeholder in a draft) — fall back to plain img
+      return `<figure>\n  <img src="${src}" alt="${alt || ''}">${captionHtml}\n</figure>`;
+    }
+  });
+
+  // Image URL filter — runs eleventy-img and returns a single generated URL.
+  // Use for meta tags and anywhere a plain URL (not markup) is needed.
+  eleventyConfig.addAsyncFilter('imageUrl', async function(src, width, format) {
+    if (!src) return src;
+    const fmt = format || 'jpeg';
+    const filePath = './' + src.replace(/^\//, '');
+    try {
+      const metadata = await Image(filePath, {
+        widths: [width || 1200],
+        formats: [fmt],
+        outputDir: './docs/img/',
+        urlPath: '/img/',
+        sharpJpegOptions: { quality: 90, progressive: true },
+        sharpWebpOptions: { quality: 90 },
+      });
+      return metadata[fmt][0].url;
+    } catch(e) {
+      return src;
+    }
   });
 
   // Filters

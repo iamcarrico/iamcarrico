@@ -6,12 +6,12 @@ categories:
   - performance
   - web development
   - UX
-image: "/img/2016/a-very-angry-man_md.jpg"
+image: "/img/2016/a-very-angry-man_lg.jpg"
 teaser_image: "/img/2016/a-very-angry-man_sm.jpg"
 description: "Performance is an extension of user experience— our work is to make the user feel better using our site. Why don't we use our user's happiness as a metric for performance tests?"
 ---
 
-{% figure "/img/2016/a-very-angry-man_md.jpg", "This might be how your users are reacting right now", "/img/2016/a-very-angry-man_sm.jpg 350w, /img/2016/a-very-angry-man_md.jpg 748w, /img/2016/a-very-angry-man_lg.jpg 1496w" %}
+{% figure "/img/2016/a-very-angry-man_lg.jpg", "This might be how your users are reacting right now", "/img/2016/a-very-angry-man_sm.jpg 350w, /img/2016/a-very-angry-man_lg.jpg 748w, /img/2016/a-very-angry-man_lg.jpg 1496w" %}
   <a href="https://www.flickr.com/photos/barkbud/4544202389/" target="_blank">uh oh</a> by <a href="https://www.flickr.com/photos/barkbud/" target="_blank">bark</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>
 {% endfigure %}
 

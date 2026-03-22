@@ -8,10 +8,17 @@ layout: default
     <span class="categories">
       {% for category in categories %}<span class="category">{{ category }}</span> {% endfor %}
     </span>&nbsp;-&nbsp;
-    <span class="date">{{ page.date | dateFormat("yyyy-MM-dd") }}</span>
+    <span class="date">{{ page.date | dateFormat("DDD") }}</span>
   </div>
   <div class="content">
     {{ content | safe }}
   </div>
-  {% include "comments.njk" %}
 </article>
+
+
+{% set latestPost = collections.posts | first %}
+{% if latestPost.url != page.url %}
+  <div class="latest_writing">
+    {% include "latest_writing.njk" %}
+  </div>
+{% endif %}
