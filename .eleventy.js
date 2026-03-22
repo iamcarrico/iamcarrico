@@ -96,10 +96,14 @@ module.exports = function(eleventyConfig) {
       const metadata = await Image('.' + src, {
         widths: [400, 800, 1600],
         formats: ['webp', 'jpeg'],
-        outputDir: './docs/img/',
-        urlPath: '/img/',
+        outputDir: '.cache/@11ty/img/',
+        urlPath: '/img/built/',
         sharpWebpOptions: { quality: 90 },
         sharpJpegOptions: { quality: 90, progressive: true },
+      });
+
+      eleventyConfig.on("eleventy.after", () => {
+        fs.cpSync(".cache/@11ty/img/", "_site/img/built/", { recursive: true });
       });
 
       const imageHtml = Image.generateHTML(metadata, {
@@ -126,11 +130,16 @@ module.exports = function(eleventyConfig) {
       const metadata = await Image(filePath, {
         widths: [width || 1200],
         formats: [fmt],
-        outputDir: './docs/img/',
-        urlPath: '/img/',
+        outputDir: '.cache/@11ty/img/',
+        urlPath: '/img/built/',
         sharpJpegOptions: { quality: 90, progressive: true },
         sharpWebpOptions: { quality: 90 },
       });
+
+      eleventyConfig.on("eleventy.after", () => {
+        fs.cpSync(".cache/@11ty/img/", "_site/img/built/", { recursive: true });
+      });
+
       return metadata[fmt][0].url;
     } catch(e) {
       return src;
