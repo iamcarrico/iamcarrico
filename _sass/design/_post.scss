@@ -17,7 +17,6 @@
   }
 
   &.full {
-    //float: left;
     width: 100%;
   }
 
@@ -35,6 +34,18 @@
 
       &:nth-child(even) .teaser-image {
         float: right;
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    .content {
+      max-width: 85%;
+      margin: 0 auto;
+
+      > figure {
+        width: 120%;
+        margin-left: -10%;
       }
     }
   }
