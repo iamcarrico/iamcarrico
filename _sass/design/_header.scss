@@ -1,11 +1,12 @@
 @use '../config' as *;
 
 /**
-* Header & nav
+* Header & nav — mobile first
 */
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   max-width: 48em;
@@ -35,24 +36,37 @@ header {
     }
   }
 
+  // Mobile: nav is hidden by default, slides down when open
   nav {
-     @include lora;
+    @include lora;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    width: 100%;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
 
-     .menubar {
+    &.nav-open {
+      max-height: 20em;
+      opacity: 1;
+    }
+
+    .menubar {
       display: flex;
-      align-items: center;
-      gap: 1.75em;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 0.5em 0 1em;
+      border-top: 1px solid var(--color-border);
     }
   }
 
-
-
   .menuitem {
-
     font-size: 0.9em;
     color: var(--color-text);
     letter-spacing: 0.02em;
     transition: color 0.2s;
+    padding: 0.6em 0;
+    width: 100%;
 
     &:hover,
     &:focus {
@@ -84,11 +98,6 @@ header {
     align-items: center;
     gap: 1em;
 
-    // On desktop, hide the menu toggle but keep the theme toggle visible
-    .menu-toggle {
-      display: none;
-    }
-
     a, button {
       padding: 0;
       font-size: 1em;
@@ -99,16 +108,39 @@ header {
     }
   }
 
+  // Mobile: show the hamburger
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25em;
+    font-size: 1.25em;
+    color: var(--color-text);
+    line-height: 1;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    .icon-close {
+      display: none;
+    }
+
+    &[aria-expanded="true"] {
+      .icon-open  { display: none; }
+      .icon-close { display: inline; }
+    }
+  }
+
   .theme-toggle {
     background: none;
     border: none;
     cursor: pointer;
-
     color: var(--color-grey);
-
     align-items: center;
     transition: color 0.8s;
-
 
     &:hover {
       color: var(--color-accent);
@@ -122,62 +154,34 @@ header {
   }
 }
 
-@media (max-width: 40em) {
+// Desktop: switch to horizontal nav, hide hamburger
+@media (min-width: 40em) {
   header {
-    flex-wrap: wrap;
-    position: relative;
+    flex-wrap: nowrap;
 
+    nav {
+      overflow: visible;
+      max-height: none;
+      opacity: 1;
+      width: auto;
+      transition: none;
 
-    .header-controls .menu-toggle {
-      display: flex;
-      align-items: center;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.25em;
-      font-size: 1.25em;
-      color: var(--color-text);
-      line-height: 1;
-
-      &:hover {
-        color: var(--color-accent);
-      }
-
-      .icon-close {
-        display: none;
-      }
-
-      &[aria-expanded="true"] {
-        .icon-open  { display: none; }
-        .icon-close { display: inline; }
+      .menubar {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.75em;
+        padding: 0;
+        border-top: none;
       }
     }
 
-    nav {
-      overflow: hidden;
-      max-height: 0;
-      opacity: 0;
-      width: 100%;
-      transition: max-height 0.3s ease, opacity 0.3s ease;
+    .menuitem {
+      padding: 0;
+      width: auto;
+    }
 
-      &.nav-open {
-        max-height: 20em;
-        opacity: 1;
-      }
-
-      .menubar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-        padding: 0.5em 0 1em;
-        border-top: 1px solid var(--color-border);
-
-        .menuitem {
-          padding: 0.6em 0;
-          width: 100%;
-        }
-
-      }
+    .menu-toggle {
+      display: none;
     }
   }
 }
