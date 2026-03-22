@@ -8,11 +8,9 @@ image: "/img/2015/jelly_scale_lg.jpg"
 teaser_image: "/img/2015/jelly_scale_sm.jpg"
 description: "If you have ever traveled with me, you will know there are few things I enjoy more than a good greasy spoon diner for breakfast. I have come up with my own scale for labeling the types of diners I go to."
 shortlink: "http://iamc.co/1NwPM0Z"
+image_alt: "A scale for all diners to be labeled unequally"
+image_caption: '<a href="https://www.flickr.com/photos/spcummings/2619290140/" target="_blank">Diner jam</a> by <a href="https://www.flickr.com/photos/spcummings/" target="_blank">Stephen Cummings</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>'
 ---
-
-{% figure "/img/2015/jelly_scale_lg.jpg", "A scale for all diners to be labeled unequally", "/img/2015/jelly_scale_sm.jpg 350w, /img/2015/jelly_scale_lg.jpg 748w, /img/2015/jelly_scale_lg.jpg 1496w" %}
-  <a href="https://www.flickr.com/photos/spcummings/2619290140/" target="_blank">Diner jam</a> by <a href="https://www.flickr.com/photos/spcummings/" target="_blank">Stephen Cummings</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>
-{% endfigure %}
 
 If you have ever traveled with me, you will know there are few things I enjoy more than a good greasy spoon diner for breakfast. Before traveling to any new city the first thing I do is lookup what diners are in the area, and try out new ones. Usually, I will do a new diner every morning— although sometimes a diner will be worth going to again and again. Almost every time, I will order a similar plate: two eggs over easy, bacon, hashbrowns, and toast. Although, sometimes I cannot turn down a good plate of pancakes or french toast.
 

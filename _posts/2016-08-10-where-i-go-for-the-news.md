@@ -9,11 +9,9 @@ categories:
 image: "/img/2016/reading-the-newspaper_lg.jpg"
 teaser_image: "/img/2016/reading-the-newspaper_sm.jpg"
 description: "Where do I go to find news about our world? Number 5 will astound you."
+image_alt: "A man reading a newspaper in front of the window"
+image_caption: '<a href="https://www.flickr.com/photos/ironypoisoning/13934769509/" target="_blank">Reading Le Monde by our window.</a> by <a href="https://www.flickr.com/photos/ironypoisoning/" target="_blank">Connie Ma</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC BY-SA 2.0</a>'
 ---
-
-{% figure "/img/2016/reading-the-newspaper_lg.jpg", "A man reading a newspaper in front of the window", "/img/2016/reading-the-newspaper_sm.jpg 350w, /img/2016/reading-the-newspaper_lg.jpg 748w, /img/2016/reading-the-newspaper_lg.jpg 1496w" %}
-  <a href="https://www.flickr.com/photos/ironypoisoning/13934769509/" target="_blank">Reading Le Monde by our window.</a> by <a href="https://www.flickr.com/photos/ironypoisoning/" target="_blank">Connie Ma</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC BY-SA 2.0</a>
-{% endfigure %}
 
 I have been asked before what news sources I use at the present moment to stay up-to-date on the current affairs. With the proliferation of various news sites across the internet, it is sometimes difficult to know what sources are trustworthy. While this list is by no means perfect, it at least gives a glimpse of what I use. I try to make at least my daily news to be as centrist as possible, although certainly some of the more occasional outlets I read are more liberally biased.
 

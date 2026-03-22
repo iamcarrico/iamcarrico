@@ -8,7 +8,17 @@ const yaml = require('js-yaml');
 const { DateTime } = require('luxon');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const Image = require('@11ty/eleventy-img');
+const { eleventyImageTransformPlugin } = require('@11ty/eleventy-img');
 
+const IMAGE_OPTIONS = {
+  widths: [400, 800, 1600],
+  formats: ['webp', 'jpeg'],
+  outputDir: '.cache/@11ty/img/',
+  urlPath: '/img/built/',
+  inputDir: '.',
+  sharpWebpOptions: { quality: 90 },
+  sharpJpegOptions: { quality: 90, progressive: true },
+};
 
 const isProd = process.env.ELEVENTY_ENV === 'production';
 
@@ -16,6 +26,13 @@ module.exports = function(eleventyConfig) {
 
   // Syntax highlighting — Prism.js at build time, no runtime JS
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, IMAGE_OPTIONS);
+
+	eleventyConfig.on("eleventy.after", () => {
+		fs.cpSync(".cache/@11ty/img/", "_site/img/built/", { recursive: true });
+	});
 
   // Sass compilation — partials (starting with _) are skipped
   eleventyConfig.addTemplateFormats('scss');
@@ -91,35 +108,9 @@ module.exports = function(eleventyConfig) {
   });
 
   // Shortcodes
-  eleventyConfig.addPairedShortcode('figure', async function(caption, src, alt) {
+  eleventyConfig.addPairedShortcode('figure', function(caption, src, alt) {
     const captionHtml = caption.trim() ? `\n  <figcaption>${caption.trim()}</figcaption>` : '';
-
-    try {
-      const metadata = await Image('.' + src, {
-        widths: [400, 800, 1600],
-        formats: ['webp', 'jpeg'],
-        outputDir: '.cache/@11ty/img/',
-        urlPath: '/img/built/',
-        sharpWebpOptions: { quality: 90 },
-        sharpJpegOptions: { quality: 90, progressive: true },
-      });
-
-      eleventyConfig.on("eleventy.after", () => {
-        fs.cpSync(".cache/@11ty/img/", "_site/img/built/", { recursive: true });
-      });
-
-      const imageHtml = Image.generateHTML(metadata, {
-        alt: alt || '',
-        sizes: '(min-width: 48em) 748px, 100vw',
-        loading: 'lazy',
-        decoding: 'async',
-      });
-
-      return `<figure>\n  ${imageHtml}${captionHtml}\n</figure>`;
-    } catch(e) {
-      // Image not found (e.g. placeholder in a draft) — fall back to plain img
-      return `<figure>\n  <img src="${src}" alt="${alt || ''}">${captionHtml}\n</figure>`;
-    }
+    return `<figure>\n  <img src="${src}" alt="${alt || ''}" sizes="(min-width: 48em) 748px, 100vw" loading="lazy" decoding="async">${captionHtml}\n</figure>`;
   });
 
   // Image URL filter — runs eleventy-img and returns a single generated URL.
@@ -128,24 +119,14 @@ module.exports = function(eleventyConfig) {
     if (!src) return src;
     const fmt = format || 'jpeg';
     const filePath = './' + src.replace(/^\//, '');
-    try {
-      const metadata = await Image(filePath, {
-        widths: [width || 1200],
-        formats: [fmt],
-        outputDir: '.cache/@11ty/img/',
-        urlPath: '/img/built/',
-        sharpJpegOptions: { quality: 90, progressive: true },
-        sharpWebpOptions: { quality: 90 },
-      });
 
-      eleventyConfig.on("eleventy.after", () => {
-        fs.cpSync(".cache/@11ty/img/", "_site/img/built/", { recursive: true });
-      });
+    const metadata = await Image(filePath, {
+      widths: [width || 1200],
+      formats: [fmt],
+      ...IMAGE_OPTIONS,
+    });
 
-      return metadata[fmt][0].url;
-    } catch(e) {
-      return src;
-    }
+    return metadata[fmt][0].url;
   });
 
   // Filters

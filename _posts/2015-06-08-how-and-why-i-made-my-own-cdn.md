@@ -5,14 +5,12 @@ date:   2015-06-08 12:00:00
 categories:
   - performance
   - CDN
-image: img/2015/global_network_lg.jpg
+image: /img/2015/global_network_lg.jpg
 description: "My site loads two different pages depending on whether or not there are cookies set that mark the CSS and fonts have been loaded already. There was no CDN that would allow me to do this without immense cost. I did what any sane developer would do, I created my own CDN."
 shortlink: http://iamc.co/1RXKa2T
+image_alt: "Global CDNs are a requirement"
+image_caption: '<a href="https://www.flickr.com/photos/marcela-palma/12239000755/in/photolist-b3AtCt-jDw5wp-taB9TL-tEj534-tnJ2bb-tBYHHY-tnJ2qQ-o562bA-o6mxio-tE11s1-u5ZcnJ-tbt3xP-kKgCL8-tQSSec-tbiTTd-tQRKkK-u8hKni-u7XgXd-tfvquG-hxk7mm-i5UZkT-twPaLA-fboVJR-joqc54" target="_blank">Internet computer business</a> by <a href="https://www.flickr.com/photos/marcela-palma/" target="_blank">Marcela Palma</a> / <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">CC BY-NC-SA 2.0</a>'
 ---
-
-{% figure "/img/2015/global_network_lg.jpg", "Global CDNs are a requirement", "/img/2015/global_network_sm.jpg 350w, /img/2015/global_network_lg.jpg 748w, /img/2015/global_network_lg.jpg 1496w" %}
-  <a href="https://www.flickr.com/photos/marcela-palma/12239000755/in/photolist-b3AtCt-jDw5wp-taB9TL-tEj534-tnJ2bb-tBYHHY-tnJ2qQ-o562bA-o6mxio-tE11s1-u5ZcnJ-tbt3xP-kKgCL8-tQSSec-tbiTTd-tQRKkK-u8hKni-u7XgXd-tfvquG-hxk7mm-i5UZkT-twPaLA-fboVJR-joqc54" target="_blank">Internet computer business</a> by <a href="https://www.flickr.com/photos/marcela-palma/" target="_blank">Marcela Palma</a> / <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">CC BY-NC-SA 2.0</a>
-{% endfigure %}
 
 Before we begin I am just going to say it: You probably don’t need to do this. There are many great CDN options out there that are great. But, I had specific requirements that made it a necessity that I build my own. I would highly recommend [MaxCDN](https://www.maxcdn.com/) for your own use; I have had great interactions with their team.
 
@@ -32,7 +30,7 @@ I can deploy any changes I need just by running '```ansible-playbook -i hosts pl
 
 ## DNS
 
-{% figure "/img/2015/aws_dns_info_lg.png", "AWS Route 53 interface", "/img/2015/aws_dns_info_lg.png 748w, /img/2015/aws_dns_info_lg.png 1496w" %}
+{% figure "/img/2015/aws_dns_info_lg.png", "AWS Route 53 interface" %}
   The servers I have setup within AWS's system.
 {% endfigure %}
 
@@ -44,7 +42,7 @@ This works well mostly because Amazon’s data centers are relatively close to D
 
 The final piece to the puzzle is how to deploy to each server without requiring a bunch of extra or repeated work. Already, I have a gulp task that compiles my Jekyll site and run some optimizations just by running '```gulp deploy```'. This also commits to the [live branch](https://github.com/iamcarrico/iamcarrico/tree/live) of my repository with the files ready for the server. The missing piece was how to push those changes to four servers at the same time, without causing any downtime. I first thought about using Ansible, but did not want to be stuck unable to deploy to servers if I had issues with my local machine in whatever way.
 
-{% figure "/img/2015/dploy_lg.png", "My dploy.io dashboard", "/img/2015/dploy_lg.png 748w, /img/2015/dploy_lg.png 1496w" %}
+{% figure "/img/2015/dploy_lg.png", "My dploy.io dashboard" %}
   Dploy.io makes deployment incredibly easy, with helpful status messages
 {% endfigure %}
 
