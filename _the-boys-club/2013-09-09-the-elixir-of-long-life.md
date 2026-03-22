@@ -7,6 +7,8 @@ categories:
   - Liqueur
   - The Boys Club
 image: "/img/2013/elixir-of-long-life-header.jpg"
+image_alt: "The elixir of long life"
+image_caption:  'Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>'
 teaser_image: "/img/2013/elixir-of-long-life-header.jpg"
 description: "In 1605, an old manuscript was given to the monks of the Carthusian Order. After careful study, the apothecarian wisdom held within this tome was distilled, quite literally, until the monks were able to create..."
 redirect_from: "/writings/the-elixir-of-long-life/"
@@ -36,10 +38,6 @@ directions:
   - Strain into a chilled cocktail glass.
 cocktail_image: "/img/2013/elixir-of-long-life-inside.jpg"
 ---
-
-{% figure "/img/2013/elixir-of-long-life-header.jpg", "The elixir of long life" %}
-  Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>
-{% endfigure %}
 
 In 1605, an old manuscript was given to the monks of the Carthusian Order. After careful study, the apothecarian wisdom held within this tome was distilled, quite literally, until the monks were able to create the formula for a long and healthy life: Chartreuse.
 

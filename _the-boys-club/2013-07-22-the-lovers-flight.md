@@ -7,6 +7,8 @@ categories:
   - Liqueur
   - The Boys Club
 image: "/img/2013/lovers-flight-header.jpg"
+image_alt: "The elixir of long life"
+image_caption:  'Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>'
 teaser_image: "/img/2013/lovers-flight-header.jpg"
 description: "Just south of the Texas border, a unique plant called the Turnera Diffusa is grown. It is usually called by its more colloquial name, Damiana, and is the base for an herbal liqueur of the..."
 redirect_from: "/writings/the-lovers-flight/"
@@ -41,9 +43,6 @@ directions:
 cocktail_image: "/img/2013/lovers-flight-inside.jpg"
 ---
 
-{% figure "/img/2013/lovers-flight-header.jpg", "The elixir of long life" %}
-  Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>
-{% endfigure %}
 
 Just south of the Texas border, a unique plant called the Turnera Diffusa is grown. It is usually called by its more colloquial name, Damiana, and is the base for an herbal liqueur of the same name.
 

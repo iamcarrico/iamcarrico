@@ -11,7 +11,6 @@ const Image = require('@11ty/eleventy-img');
 const { eleventyImageTransformPlugin } = require('@11ty/eleventy-img');
 
 const IMAGE_OPTIONS = {
-  widths: [400, 800, 1600],
   formats: ['webp', 'jpeg'],
   outputDir: '.cache/@11ty/img/',
   urlPath: '/img/built/',

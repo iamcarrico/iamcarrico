@@ -6,7 +6,8 @@ categories:
   - Liqueur
   - The Boys Club
 image: "/img/2013/menta-julep-header.jpg"
-teaser_image: "/img/2013/menta-julep-header.jpg"
+image_alt: "The elixir of long life"
+image_caption:  'Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>'
 description: "Some of the best liqueurs, in my opinion, stem from old recipes that have been perfected over the years, and Branca Menta is no exception. This old family recipe is the result of the Branca..."
 redirect_from: "/writings/the-menta-julep-a-branca-menta-cocktail/"
 cocktail_title: "The Last Word"
@@ -34,10 +35,6 @@ directions:
   - Add mint for garnish.
 cocktail_image: "/img/2013/menta-julep-inside.jpg"
 ---
-
-{% figure "/img/2013/menta-julep-header.jpg", "The elixir of long life" %}
-  Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>
-{% endfigure %}
 
 Some of the best liqueurs, in my opinion, stem from old recipes that have been perfected over the years, and Branca Menta is no exception. This old family recipe is the result of the Branca family’s work from over a hundred years ago.
 

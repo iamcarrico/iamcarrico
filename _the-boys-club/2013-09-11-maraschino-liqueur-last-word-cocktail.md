@@ -8,7 +8,8 @@ categories:
   - Liqueur Guide
   - The Boys Club
 image: "/img/2013/maraschino-and-the-last-word-header.jpg"
-teaser_image: "/img/2013/maraschino-and-the-last-word-header.jpg"
+image_alt: "A classic cocktail in a crystal glass.  The glass has a chartreuse-green drink inside, and there is a pen fountain in the background slightly out of focus. "
+image_caption:  'Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>'
 redirect_from: "/writings/maraschino-liqueur-last-word-cocktail/"
 description: "I am sure you have seen the almost florescent unnatural jars of maraschino cherries in your grocery store, but this is not on our agenda for today. The original maraschino cherries come from the..."
 cocktail_title: "The Last Word"
@@ -37,10 +38,6 @@ directions:
   - Strain into a chilled cocktail glass.
 cocktail_image: "/img/2013/maraschino-and-the-last-word-inside.jpg"
 ---
-
-{% figure "/img/2013/maraschino-and-the-last-word-header.jpg", "The elixir of long life" %}
-  Photo by <a target="_blank" href="https://500px.com/alessiofangano">Alessio Fangano</a>
-{% endfigure %}
 
 I am sure you have seen the almost florescent unnatural jars of maraschino cherries in your grocery store, but this is not on our agenda for today. The original maraschino cherries come from the marasca cherry juice, after Luxardo Distilling Company makes, from it, their famous liqueur of the same name, Maraschino.
 

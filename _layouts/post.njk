@@ -12,7 +12,7 @@ layout: default
   </div>
   {% if image %}
     <figure class="post-hero">
-      <img src="{{ image }}" alt="{{ image_alt or title }}" sizes="(min-width: 48em) 748px, 100vw" loading="eager" decoding="async">
+      <img src="{{ image }}" alt="{{ image_alt or title }}" sizes="(min-width: 48em) 748px, 100vw" eleventy:widths="400,800,1600" loading="eager" decoding="async">
       {% if image_caption %}<figcaption>{{ image_caption | safe }}</figcaption>{% endif %}
     </figure>
   {% endif %}
