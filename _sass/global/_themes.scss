@@ -18,6 +18,17 @@
   --color-footer-bg:      #{color.adjust($white, $lightness: -4%)};
   --color-hero-border:    #{color.adjust($grey, $lightness: 30%)};
   --color-code-bg:        #f0ede8;
+
+  // Syntax token colors — light
+  --syntax-comment:       #8A8580;
+  --syntax-keyword:       #7c3aed;
+  --syntax-string:        #2d7a3a;
+  --syntax-number:        #c0621d;
+  --syntax-function:      #1a5f7a;
+  --syntax-operator:      #6b4f9e;
+  --syntax-tag:           #1a5f7a;
+  --syntax-attr-name:     #7c5c3c;
+  --syntax-punctuation:   #5c5855;
 }
 
 [data-theme="light"] {
@@ -32,6 +43,17 @@
   --color-footer-bg:      #{color.adjust($white, $lightness: -4%)};
   --color-hero-border:    #{color.adjust($grey, $lightness: 30%)};
   --color-code-bg:        #f0ede8;
+
+  // Syntax token colors — light
+  --syntax-comment:       #8A8580;
+  --syntax-keyword:       #7c3aed;
+  --syntax-string:        #2d7a3a;
+  --syntax-number:        #c0621d;
+  --syntax-function:      #1a5f7a;
+  --syntax-operator:      #6b4f9e;
+  --syntax-tag:           #1a5f7a;
+  --syntax-attr-name:     #7c5c3c;
+  --syntax-punctuation:   #5c5855;
 }
 
 [data-theme="dark"] {
@@ -46,4 +68,15 @@
   --color-footer-bg:      #111113;
   --color-hero-border:    #3a3a3c;
   --color-code-bg:        #2c2c2e;
+
+  // Syntax token colors — dark
+  --syntax-comment:       #9a948e;
+  --syntax-keyword:       #c4a0e8;
+  --syntax-string:        #7ec8a0;
+  --syntax-number:        #d4744a;
+  --syntax-function:      #5bb8d4;
+  --syntax-operator:      #b39ddb;
+  --syntax-tag:           #5bb8d4;
+  --syntax-attr-name:     #d4a478;
+  --syntax-punctuation:   #a0968e;
 }

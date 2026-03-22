@@ -33,33 +33,33 @@ permalink: /styleguide/
     <div class="sg-swatches">
       <div class="sg-swatch">
         <div class="sg-swatch-color" style="background: var(--color-text);"></div>
-        <div class="sg-swatch-name">Text</div>
-        <div class="sg-swatch-hex">--color-text</div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Text</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-text</div>
       </div>
       <div class="sg-swatch">
         <div class="sg-swatch-color" style="background: var(--color-accent);"></div>
-        <div class="sg-swatch-name">Accent</div>
-        <div class="sg-swatch-hex">--color-accent</div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Accent</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-accent</div>
       </div>
       <div class="sg-swatch">
         <div class="sg-swatch-color" style="background: var(--color-grey);"></div>
-        <div class="sg-swatch-name">Grey</div>
-        <div class="sg-swatch-hex">--color-grey</div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Grey</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-grey</div>
       </div>
       <div class="sg-swatch">
         <div class="sg-swatch-color" style="background: var(--color-bg); border: 1px solid var(--color-border);"></div>
-        <div class="sg-swatch-name">Background</div>
-        <div class="sg-swatch-hex">--color-bg</div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Background</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-bg</div>
       </div>
       <div class="sg-swatch">
         <div class="sg-swatch-color" style="background: var(--color-footer-bg); border: 1px solid var(--color-border);"></div>
-        <div class="sg-swatch-name">Footer bg</div>
-        <div class="sg-swatch-hex">--color-footer-bg</div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Footer bg</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-footer-bg</div>
       </div>
       <div class="sg-swatch">
         <div class="sg-swatch-color" style="background: var(--color-code-bg);"></div>
-        <div class="sg-swatch-name">Code bg</div>
-        <div class="sg-swatch-hex">--color-code-bg</div>
+        <div class="sg-swatch-name" style="color: var(--color-text);">Code bg</div>
+        <div class="sg-swatch-hex" style="color: var(--color-grey);">--color-code-bg</div>
       </div>
     </div>
   </div>
@@ -165,11 +165,45 @@ permalink: /styleguide/
   <div class="sg-label">Typography — Code</div>
 
   <p>Inline <code>code looks like this</code> inside a sentence.</p>
+</div>
 
-  <div class="sg-code-block">// A code block<br>
-function example() {<br>
-&nbsp;&nbsp;return 'hello world';<br>
-}</div>
+{# ————————————————————————
+   SYNTAX HIGHLIGHTING
+   ———————————————————————— #}
+<div class="sg-section">
+  <div class="sg-label">Syntax Highlighting — JavaScript</div>
+  <div class="sg-type-meta" style="margin-bottom: 1em;">Prism.js at build time — colors update with dark mode</div>
+
+{% highlight "js" %}
+/**
+ * Debounce — delays invoking fn until after `wait` ms have elapsed
+ * since the last time it was called.
+ */
+function debounce(fn, wait = 300) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), wait);
+  };
+}
+
+// Example: debounce a scroll listener so it only fires 200ms after scrolling stops
+const SCROLL_THRESHOLD = 120;
+
+const onScroll = debounce(function handleScroll(event) {
+  const scrollY = window.scrollY || document.documentElement.scrollTop;
+  const header = document.querySelector('.site-header');
+  const isCondensed = header.classList.contains('condensed');
+
+  if (scrollY > SCROLL_THRESHOLD && !isCondensed) {
+    header.classList.add('condensed');
+  } else if (scrollY <= SCROLL_THRESHOLD && isCondensed) {
+    header.classList.remove('condensed');
+  }
+}, 200);
+
+window.addEventListener('scroll', onScroll, { passive: true });
+{% endhighlight %}
 </div>
 
 {# ————————————————————————

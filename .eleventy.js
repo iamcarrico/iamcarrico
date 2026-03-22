@@ -5,10 +5,14 @@ const sass = require('sass');
 const { minify } = require('terser');
 const yaml = require('js-yaml');
 const { DateTime } = require('luxon');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 const isProd = process.env.ELEVENTY_ENV === 'production';
 
 module.exports = function(eleventyConfig) {
+
+  // Syntax highlighting — Prism.js at build time, no runtime JS
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // Sass compilation — partials (starting with _) are skipped
   eleventyConfig.addTemplateFormats('scss');
