@@ -1,0 +1,21 @@
+@use '../config' as *;
+
+
+.latest_writing,
+.home-latest {
+
+  .section-label {
+    @include lora;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-grey);
+    margin-bottom: 1.25em;
+  }
+}
+
+.latest_writing {
+  padding: 3em 0 2em;
+  border-top: 1px solid var(--color-hero-border);
+  margin-top: 2.5em;
+}

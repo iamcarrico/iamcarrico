@@ -1,16 +1,15 @@
+@use '../config' as *;
+
 /**
-* Form elements: Inputs, buttons, etc.
+* Form elements
 */
 
 form {
   max-width: 525px;
 }
 
-fieldset {
-}
-
-legend {
-}
+fieldset {}
+legend {}
 
 input,
 button,
@@ -18,16 +17,17 @@ select,
 textarea {
   display: block;
   width: 100%;
-  font-family: $pt;
+  font-family: $lora;
   padding: 0.375em;
   outline: 0;
   margin-bottom: 1em;
 
   transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
+
   &:focus {
-    border-color: darken($blue, 5%);
-    background-color: $white;
-    box-shadow: 0 0 4px rgba($blue, 0.5);
+    border-color: var(--color-accent-dark);
+    background-color: var(--color-bg);
+    box-shadow: 0 0 4px var(--color-accent-shadow);
   }
 
   @media (min-width: 720px) {
@@ -36,9 +36,8 @@ textarea {
 }
 
 .required {
-  color: red;
+  color: var(--color-accent);
 }
-
 
 label {
   @media (min-width: 720px) {
@@ -56,28 +55,16 @@ input[type="reset"],
 input[type="button"] {
   width: auto;
   float: right;
-  border: 1px solid #c6c6c6;
+  border: 1px solid var(--color-grey);
   line-height: 1.8em;
   padding: 0 3em;
-  background-color: lighten(gray, 30%);
+  background-color: var(--color-bg);
   border-radius: 2px;
+  cursor: pointer;
 
   &:hover {
-    background-color: desaturate(lighten($blue, 20%), 55%);
-  }
-
-  &:active {
-
-  }
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea,
-select {
-
-  &:focus {
-
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-bg);
   }
 }

@@ -1,6 +1,8 @@
+@use '../global/extendables' as *;
+
 /**
- * The blog post partial.
- */
+* Blog post
+*/
 
 .blog-post {
 
@@ -14,14 +16,22 @@
     margin-top: 1em;
   }
 
+  figure {
+    margin: 1em 0;
+  }
+
   &.full {
-    float: left;
     width: 100%;
+
+    .content {
+      max-width: 32em;
+      margin: 0 auto;
+    }
   }
 
   &.teaser {
-    @extend %clearfix;
-    margin-bottom: 40px;
+    @include clearfix;
+    margin-bottom: 2.5em;
 
     @media (min-width: 400px) {
       .teaser-image {
@@ -31,10 +41,8 @@
         margin-right: 1em;
       }
 
-      &:nth-child(even) {
-        .teaser-image {
-          float:right;
-        }
+      &:nth-child(even) .teaser-image {
+        float: right;
       }
     }
   }

@@ -1,0 +1,17 @@
+---
+layout: false
+permalink: /_headers
+eleventyExcludeFromCollections: true
+---
+
+# Headers for all sites
+/
+  Content-Security-Policy: default-src 'self';
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: all=()
+
+# Production-Only Headers
+https://iamcarrico.com
+  Strict-Transport-Security: max-age=31536000; includeSubDomains

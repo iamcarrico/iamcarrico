@@ -7,15 +7,12 @@ categories:
   - http2
   - server
   - nginx
-image: "/img/2016/sloth_md.jpg"
+image: "/img/2016/sloth_lg.jpg"
 teaser_image: "/img/2016/sloth_sm.jpg"
 description: "HTTP/2 has been around, it is time I upgraded my servers to use it."
+image_alt: "Sloths, for when you want your site to be faster"
+image_caption: '<a href="https://www.flickr.com/photos/nh53/14990032495/" target="_blank">3-toed Sloth</a> by <a href="https://www.flickr.com/photos/nh53/" target="_blank">NH53</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>'
 ---
-
-<figure>
-  <img src="/img/2016/sloth_md.jpg" srcset="/img/2016/sloth_sm.jpg 350w, /img/2016/sloth_md.jpg 748w, /img/2016/sloth_lg.jpg 1496w" alt="Sloths, for when you want your site to be faster">
-  <figcaption><a href="https://www.flickr.com/photos/nh53/14990032495/" target="\_blank">3-toed Sloth</a> by <a href="https://www.flickr.com/photos/nh53/" target="\_blank">NH53</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="\_blank">CC BY 2.0</a></figcaption>
-</figure>
 
 When I relaunched my site a while back, with an emphasis on performance, I ensured that it was using SPDY. But I have been a little slow to upgrade it to use the full HTTP/2 protocol— primarily because it was low on my list. This weekend, I changed all of that— and fairly quickly got my server running HTTP/2 with very little fuss or mess.
 
@@ -41,7 +38,7 @@ For the configuration of the site, make sure to remove all references to `spdy`,
 server {
   listen [::]:443 ssl http2;
   listen 443 ssl http2;
-  server_name iamcarico.com;
+  server_name iamcarrico.com;
 
   # Make sure to also have your SSL certificates!
   ssl_certificate /etc/nginx/ssl/server.crt;

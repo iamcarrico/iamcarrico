@@ -1,19 +1,14 @@
-////////////////////////
-// Extendables Partials
-//
-// All of your extendable classes, ids, and placeholder extendables
-//   should go in this file.
-////////////////////////
+// Shared layout helpers as mixins (not placeholders) so they work cleanly across @use boundaries.
 
-%clearfix {
-	&:after {
+@mixin clearfix {
+  &:after {
     content: "";
     display: table;
     clear: both;
   }
 }
 
-%max-width {
+@mixin max-width {
   max-width: 50em;
-  margin: 0 auto 0;
+  margin: 0 auto;
 }

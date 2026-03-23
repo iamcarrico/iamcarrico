@@ -3,8 +3,13 @@ layout: default
 css_id: home
 ---
 
-{% for post in paginator.posts %}
-  {% include teaser.html post=post %}
-{% endfor %}
+<section class="home-hero">
+  <h1 class="hero-name">Ian J. Carrico</h1>
+  <p class="hero-tagline">Attorney. Former software engineer. <br>Writing about code, computer and legal.</p>
+</section>
 
-{% include pagination.html %}
+<section class="home-latest">
+  {% include "latest_writing.njk" %}
+
+  <a href="/writings/" class="all-writings">See all writings &rarr;</a>
+</section>

@@ -1,0 +1,15 @@
+{% if pagination.pages | length > 1 %}
+<div class="pagination">
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" class="icon previous">previous</a>
+  {% else %}
+    <span class="icon disabled previous">previous</span>
+  {% endif %}
+  <span class="page_number">{{ pagination.pageNumber + 1 }} of {{ pagination.pages | length }}</span>
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" class="icon next">next</a>
+  {% else %}
+    <span class="icon disabled next">next</span>
+  {% endif %}
+</div>
+{% endif %}

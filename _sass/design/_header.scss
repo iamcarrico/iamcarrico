@@ -1,67 +1,210 @@
+@use '../config' as *;
+
 /**
- * The header partial.
- */
+* Header & nav — mobile first
+*/
 
 header {
-  @extend %clearfix;
-  @extend %max-width;
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 48em;
+  margin: 0 auto;
+  padding: 2em 1em;
+  border-bottom: 1px solid var(--color-border);
 
-  .title {
-    float: left;
-    width: 75%;
-    font-size: 4em;
-    line-height: 1em;
+  .site-name {
+    order: 1;
+    @include playfair;
+    font-size: 1.6em;
+    font-weight: 700;
     margin: 0;
-
-    .word {
-      display: block;
-    }
+    line-height: 1;
 
     a,
     a:link,
     a:visited {
-      color: $black;
-    }
+      color: var(--color-text);
 
-    @media (min-width: 33.25em) {
-      margin-top: 1em;
       .word {
         display: inline;
       }
     }
+
+    a:hover {
+      color: var(--color-accent);
+    }
   }
 
+  // Mobile: nav is hidden by default, slides down when open
   nav {
-    width: 25%;
-    float: right;
+    order: 3;
+    @include lora;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    width: 100%;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    margin-top: 1em;
 
-    .menubar,
-    .menuitem {
-      display: block;
-      margin-bottom: .5em;
-      padding-right: .25em;
-      width: 100%;
-      text-align: right;
+    &.nav-open {
+      max-height: 20em;
+      opacity: 1;
     }
 
-    @media (min-width: 23em) {
-      width: 100%;
-      position: absolute;
+    .menubar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 0.5em 0 1em;
+      border-top: 1px solid var(--color-border);
+    }
+  }
 
-      .menuitem {
-        display: inline-block;
-        width: auto;
-        margin-left: .75em;
+  .menuitem {
+    font-size: 0.9em;
+    color: var(--color-text);
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+    padding: 0.6em 0;
+    width: 100%;
 
-        &:first-child {
-          margin-left: 0;
-        }
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+    }
+
+    &.active {
+      color: var(--color-accent);
+      border-bottom: 1px solid var(--color-accent);
+      padding-bottom: 1px;
+      margin-bottom: .6em;
+    }
+
+    &.active-trail {
+      color: var(--color-accent);
+    }
+
+    &.icon {
+      color: var(--color-grey);
+      font-size: 0.8em;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  .header-controls {
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    a, button {
+      padding: 0;
+      font-size: 1em;
+      line-height: 1;
+      width: 1.5em;
+      margin: 0;
+    }
+  }
+
+  // Mobile: show the hamburger
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25em;
+    font-size: 1.25em;
+    color: var(--color-text);
+    line-height: 1;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    .icon-close {
+      display: none;
+    }
+
+    &[aria-expanded="true"] {
+      .icon-open  { display: none; }
+      .icon-close { display: inline; }
+    }
+  }
+
+  .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-grey);
+    align-items: center;
+    transition: color 0.8s;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    .icon-sun,
+    .icon-moon {
+      display: none;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Desktop: switch to horizontal nav, hide hamburger
+@media (min-width: 40em) {
+  header {
+    flex-wrap: nowrap;
+
+    nav {
+      order: 2;
+      overflow: visible;
+      max-height: none;
+      opacity: 1;
+      width: auto;
+      transition: none;
+      margin-top: 0;
+
+      .menubar {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.75em;
+        padding: 0;
+        border-top: none;
       }
     }
 
-    @media (min-width: 33.25em) {
-      margin: 1em 1em 0 0;
+    .menuitem {
+      padding: 0;
+      width: auto;
+
+      &.active {
+        margin-bottom: 0;
+      }
+    }
+
+    .header-controls {
+      order: 3;
+    }
+
+    .menu-toggle {
+      display: none;
     }
   }
+}
+
+[data-theme="light"] header .theme-toggle .icon-moon,
+:root:not([data-theme="dark"]) header .theme-toggle .icon-moon {
+  display: inline;
+}
+
+[data-theme="dark"] header .theme-toggle .icon-sun {
+  display: inline;
 }

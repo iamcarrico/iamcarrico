@@ -1,0 +1,14 @@
+- name: Writings
+  url: /writings/
+
+- name: About
+  url: /about/
+
+- name: Contact
+  url: /contact/
+
+- name: Talks
+  url: /talks/
+
+- name: The Boys Club
+  url: /the-boys-club/

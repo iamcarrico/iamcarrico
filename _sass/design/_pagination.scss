@@ -1,0 +1,15 @@
+/**
+* Pagination
+*/
+
+.pagination {
+  text-align: center;
+
+  > * {
+    vertical-align: bottom;
+  }
+
+  .icon {
+    font-size: 2em;
+  }
+}

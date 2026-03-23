@@ -1,23 +1,55 @@
-/**
- * All the font files.
- */
-
-$timestamp: 1407277128;
+// Self-hosted fonts — OFL licensed, no Google dependency.
 
 @font-face {
-  font-family: 'pt';
+  font-family: 'Lora';
+  src: url('/fonts/lora-regular.woff2') format('woff2'),
+       url('/fonts/lora-regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
-  font-weight: normal;
-  src: url('/fonts/pt.woff2?#{$timestamp}') format('woff2'),
-       url('/fonts/pt.woff?#{$timestamp}') format('woff'),
-       url('/fonts/pt.ttf?#{$timestamp}') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'pt';
+  font-family: 'Lora';
+  src: url('/fonts/lora-italic.woff2') format('woff2'),
+       url('/fonts/lora-italic.ttf') format('truetype');
+  font-weight: 400;
   font-style: italic;
-  font-weight: normal;
-  src: url('/fonts/pt-italic.woff2?#{$timestamp}') format('woff2'),
-       url('/fonts/pt-italic.woff?#{$timestamp}') format('woff'),
-       url('/fonts/pt-italic.ttf?#{$timestamp}') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('/fonts/lora-600.woff2') format('woff2'),
+       url('/fonts/lora-600.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/playfair-display-regular.woff2') format('woff2'),
+       url('/fonts/playfair-display-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/playfair-display-italic.woff2') format('woff2'),
+       url('/fonts/playfair-display-italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/playfair-display-700.woff2') format('woff2'),
+       url('/fonts/playfair-display-700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }

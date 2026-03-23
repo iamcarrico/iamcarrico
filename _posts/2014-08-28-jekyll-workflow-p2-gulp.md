@@ -2,14 +2,14 @@
 layout: post
 title:  "Jekyll Workflow Part 2: Automation with Gulp"
 date:   2014-08-28 09:00:00
-image: img/2014/gulpjs.png
+image: /img/2014/gulpjs.png
 shortlink: http://iamc.co/1C6fzt4
 categories:
   - jekyll
   - gulp
 ---
 
-![Gulp.js](/img/2014/gulpjs.png)
+
 The [first blog post](/writings/jekyll-workflow-p1-building/) in this series talked about how to use the [Mr. Poole Generator](https://github.com/iamcarrico/generator-poole) to create a custom Jekyll site. The generator packs in many features to create amazing blogs or static sites. Probably the most powerful portion of the generator is the [Gulp.js](http://gulpjs.com) tasks that come bundled in the [Gulp tools for Poole](https://github.com/iamcarrico/gulp-poole).
 
 This post will go over the main tasks that Mr. Poole runs, and how they were made. The source code can be found completely at https://github.com/iamcarrico/gulp-poole. The package is also published to npm, therefore it can be installed on any project.

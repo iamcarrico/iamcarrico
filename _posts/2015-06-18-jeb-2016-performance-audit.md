@@ -5,25 +5,22 @@ date:   2015-06-18 12:00:00
 categories:
   - performance
   - perf-audit
-image: "img/2015/jeb.png"
+image: "/img/2015/jeb.png"
 description: "A performance review of jeb2016.com, and how the performance of the campaign site can be improved."
 shortlink: http://iamc.co/1eqwyyX
+image_alt: "¡Jeb!"
+image_caption: "A recreation of the Jeb! Campaign logo. This post is in no way affiliated with the official campaign."
 ---
-
-<figure>
-  <img src="/img/2015/jeb.png" alt="¡Jeb!">
-  <figcaption>A recreation of the Jeb! Campaign logo. This post is in no way affiliated with the official campaign.</figcaption>
-</figure>
 
 Wanting to always be fair with my work— I have completed a performance review of the Jeb! Campaign site. This is similar to the work I did for the [Hillary Clinton performance audit](https://iamcarrico.com/writings/hillary-clinton-performance-audit/) I did last month, and follows the same general workflow.
 
-* [Tests](#tests)
-* [Overview](#overview)
-* [Server configuration](#server-configuration)
-* [DNS lookups](#dns-lookups)
-* [CDN use](#cdn-use)
-* [Asset loading](#asset-loading)
-* [Pre-rendering](#pre-rendering)
+- [Tests](#tests)
+- [Overview](#overview)
+- [Server configuration](#server-configuration)
+- [DNS lookups](#dns-lookups)
+- [CDN use](#cdn-use)
+- [Asset loading](#asset-loading)
+- [Pre-rendering](#pre-rendering)
 
 
 ## Tests

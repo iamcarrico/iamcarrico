@@ -5,15 +5,12 @@ date:   2015-06-08 12:00:00
 categories:
   - performance
   - CDN
-image: img/2015/global_network_md.jpg
+image: /img/2015/global_network_lg.jpg
 description: "My site loads two different pages depending on whether or not there are cookies set that mark the CSS and fonts have been loaded already. There was no CDN that would allow me to do this without immense cost. I did what any sane developer would do, I created my own CDN."
 shortlink: http://iamc.co/1RXKa2T
+image_alt: "Global CDNs are a requirement"
+image_caption: '<a href="https://www.flickr.com/photos/marcela-palma/12239000755/in/photolist-b3AtCt-jDw5wp-taB9TL-tEj534-tnJ2bb-tBYHHY-tnJ2qQ-o562bA-o6mxio-tE11s1-u5ZcnJ-tbt3xP-kKgCL8-tQSSec-tbiTTd-tQRKkK-u8hKni-u7XgXd-tfvquG-hxk7mm-i5UZkT-twPaLA-fboVJR-joqc54" target="_blank">Internet computer business</a> by <a href="https://www.flickr.com/photos/marcela-palma/" target="_blank">Marcela Palma</a> / <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">CC BY-NC-SA 2.0</a>'
 ---
-
-<figure>
-  <img src="/img/2015/global_network_md.jpg" srcset="/img/2015/global_network_sm.jpg 350w, /img/2015/global_network_md.jpg 748w, /img/2015/global_network_lg.jpg 1496w" alt="Global CDNs are a requirement">
-  <figcaption><a href="https://www.flickr.com/photos/marcela-palma/12239000755/in/photolist-b3AtCt-jDw5wp-taB9TL-tEj534-tnJ2bb-tBYHHY-tnJ2qQ-o562bA-o6mxio-tE11s1-u5ZcnJ-tbt3xP-kKgCL8-tQSSec-tbiTTd-tQRKkK-u8hKni-u7XgXd-tfvquG-hxk7mm-i5UZkT-twPaLA-fboVJR-joqc54" target="\_blank">Internet computer business</a> by <a href="https://www.flickr.com/photos/marcela-palma/" target="\_blank">Marcela Palma</a> / <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="\_blank">CC BY-NC-SA 2.0</a></figcaption>
-</figure>
 
 Before we begin I am just going to say it: You probably don’t need to do this. There are many great CDN options out there that are great. But, I had specific requirements that made it a necessity that I build my own. I would highly recommend [MaxCDN](https://www.maxcdn.com/) for your own use; I have had great interactions with their team.
 
@@ -33,10 +30,9 @@ I can deploy any changes I need just by running '```ansible-playbook -i hosts pl
 
 ## DNS
 
-<figure>
-  <img src="/img/2015/aws_dns_info_md.png" srcset="/img/2015/aws_dns_info_md.png 748w, /img/2015/aws_dns_info_lg.png 1496w" alt="AWS Route 53 interface">
-  <figcaption>The servers I have setup within AWS's system.</figcaption>
-</figure>
+{% figure "/img/2015/aws_dns_info_lg.png", "AWS Route 53 interface" %}
+  The servers I have setup within AWS's system.
+{% endfigure %}
 
 Having four servers is only part of the problem though, how do I get users to get to the server closest to them? I looked at several DNS providers from Dyn to Zerigo, but only one provided the features I needed for a reasonable cost. Amazon’s [Route 53](https://aws.amazon.com/route53/) costs me $6 / year to have each DNS lookup direct users to whatever the closest server is based on latency.
 
@@ -46,10 +42,9 @@ This works well mostly because Amazon’s data centers are relatively close to D
 
 The final piece to the puzzle is how to deploy to each server without requiring a bunch of extra or repeated work. Already, I have a gulp task that compiles my Jekyll site and run some optimizations just by running '```gulp deploy```'. This also commits to the [live branch](https://github.com/iamcarrico/iamcarrico/tree/live) of my repository with the files ready for the server. The missing piece was how to push those changes to four servers at the same time, without causing any downtime. I first thought about using Ansible, but did not want to be stuck unable to deploy to servers if I had issues with my local machine in whatever way.
 
-<figure>
-  <img src="/img/2015/dploy_md.png" srcset="/img/2015/dploy_md.png 748w, /img/2015/dploy_lg.png 1496w" alt="My dploy.io dashboard">
-  <figcaption>Dploy.io makes deployment incredibly easy, with helpful status messages</figcaption>
-</figure>
+{% figure "/img/2015/dploy_lg.png", "My dploy.io dashboard" %}
+  Dploy.io makes deployment incredibly easy, with helpful status messages
+{% endfigure %}
 
 The solution, was [dploy.io](http://dploy.io/). A simple deployment tool, free for my single repository and user, that could deploy to each of my servers at one. All it took was to create a ```dploy``` user on each server, and assign it the proper sudo permissions to only restart Varnish.
 

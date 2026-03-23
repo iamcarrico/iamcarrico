@@ -1,0 +1,46 @@
+@use '../config' as *;
+
+/**
+* Homepage
+*/
+
+.home-hero {
+  padding: 3em 0 2em;
+  border-bottom: 1px solid var(--color-hero-border);
+  margin-bottom: 2.5em;
+
+  .hero-name {
+    @include playfair;
+    font-size: 2.8em;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 0.35em;
+    color: var(--color-text);
+  }
+
+  .hero-tagline {
+    @include lora;
+    font-size: 1.1em;
+    color: var(--color-grey);
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.home-latest {
+  margin-bottom: 3em;
+
+  .all-writings {
+    display: inline-block;
+    margin-top: 1.75em;
+    @include lora;
+    font-size: 0.9em;
+    color: var(--color-accent);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

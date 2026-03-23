@@ -1,25 +1,47 @@
-//= require vendor/fontfaceobserver
-//= require vendor/fastclick
+'use strict';
 
-(function() {
-  'use strict';
+// Use the native CSS Font Loading API to signal when custom fonts are ready.
+// The .fonts-loaded class can be used in CSS to swap to the custom typeface
+// while .fonts-unavailable provides a fallback style if loading fails.
+document.fonts.ready.then(function() {
+  document.documentElement.classList.add('fonts-loaded');
+}).catch(function() {
+  document.documentElement.classList.add('fonts-unavailable');
+});
 
-  // Enable fastclick.
-  FastClick.attach(document.body);
+/**
+ * Theme toggle — light / dark mode.
+ * The initial theme is set inline in <head> (see head.njk) to prevent FOUC.
+ * This file provides the toggle function and system preference listener.
+ */
+(function () {
+  var STORAGE_KEY = 'theme';
 
-  var fontPromises = [];
-  var pt = new FontFaceObserver('pt');
-  var italic = new FontFaceObserver('pt', {style: 'italic'});
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
 
-  fontPromises.push(pt.check(null, 5000));
-  fontPromises.push(italic.check(null, 5000));
-
-  Promise.all(fontPromises).then(function() {
-    // If all promises are fulfilled, then add the proper class to signify.
-    document.documentElement.className += " fonts-loaded";
-  }, function() {
-    // A font did not load, create a class so that we know that we have
-    // failed as loaders of fonts.
-    document.documentElement.className += " fonts-unavailable";
+  // Listen for system preference changes only when the user hasn't set a manual override.
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+    if (!localStorage.getItem(STORAGE_KEY)) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
   });
+
+  // Mobile nav toggle.
+  window.toggleMenu = function () {
+    var nav = document.getElementById('nav');
+    var btn = document.querySelector('.menu-toggle');
+    var isOpen = nav.classList.toggle('nav-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+
+  // Called by the toggle button.
+  window.toggleTheme = function () {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem(STORAGE_KEY, next);
+  };
 })();

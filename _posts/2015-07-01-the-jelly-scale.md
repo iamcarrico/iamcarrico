@@ -4,16 +4,13 @@ title:  "The Jelly Scale: A Diner Rating System"
 date:   2015-07-01 12:00:00
 categories:
   - diner
-image: "/img/2015/jelly_scale_md.jpg"
+image: "/img/2015/jelly_scale_lg.jpg"
 teaser_image: "/img/2015/jelly_scale_sm.jpg"
 description: "If you have ever traveled with me, you will know there are few things I enjoy more than a good greasy spoon diner for breakfast. I have come up with my own scale for labeling the types of diners I go to."
 shortlink: "http://iamc.co/1NwPM0Z"
+image_alt: "A scale for all diners to be labeled unequally"
+image_caption: '<a href="https://www.flickr.com/photos/spcummings/2619290140/" target="_blank">Diner jam</a> by <a href="https://www.flickr.com/photos/spcummings/" target="_blank">Stephen Cummings</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>'
 ---
-
-<figure>
-  <img src="/img/2015/jelly_scale_md.jpg" srcset="/img/2015/jelly_scale_sm.jpg 350w, /img/2015/jelly_scale_md.jpg 748w, /img/2015/jelly_scale_lg.jpg 1496w" alt="A scale for all diners to be labeled unequally">
-  <figcaption><a href="https://www.flickr.com/photos/spcummings/2619290140/" target="\_blank">Diner jam</a> by <a href="https://www.flickr.com/photos/spcummings/" target="\_blank">Stephen Cummings</a> / <a href="https://creativecommons.org/licenses/by/2.0/" target="\_blank">CC BY 2.0</a></figcaption>
-</figure>
 
 If you have ever traveled with me, you will know there are few things I enjoy more than a good greasy spoon diner for breakfast. Before traveling to any new city the first thing I do is lookup what diners are in the area, and try out new ones. Usually, I will do a new diner every morning— although sometimes a diner will be worth going to again and again. Almost every time, I will order a similar plate: two eggs over easy, bacon, hashbrowns, and toast. Although, sometimes I cannot turn down a good plate of pancakes or french toast.
 
@@ -21,7 +18,7 @@ After traveling to all of these diners, I have come up with my own rating system
 
 ## One Jelly
 
-One jelly diners have the saddest assortment of jelly possible. You sit down, and get excited that you are in a true diner, then as you get your toast you look in the jelly basket to only find grape jelly. No strawberry, no marmalade— just grape to be seen. At this moment you usually are immediately taken back to when you mother gave you grape cough syrup as a child, and are horrified that your sad white toast will only be accompanied by what you hope is real butter.
+One jelly diners have the saddest assortment of jelly possible. You sit down, and get excited that you are in a true diner, then as you get your toast you look in the jelly basket to only find grape jelly. No strawberry, no marmalade— just grape to be seen. At this moment you usually are immediately taken back to when your mother gave you grape cough syrup as a child, and are horrified that your sad white toast will only be accompanied by what you hope is real butter.
 
 ## Two Jellies
 

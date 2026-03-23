@@ -1,0 +1,31 @@
+// Entry point — each partial manages its own dependencies via @use.
+// Order matters: globals before design.
+
+// Themes — must come first to define CSS custom properties
+@use '../_sass/global/themes';
+
+// Global
+@use '../_sass/global/normalize';
+@use '../_sass/global/syntax';
+@use '../_sass/global/syntax_overrides';
+@use '../_sass/global/type';
+@use '../_sass/global/fonts';
+@use '../_sass/global/icons';
+@use '../_sass/global/forms';
+
+// Design
+@use '../_sass/design/header';
+@use '../_sass/design/home';
+@use '../_sass/design/main';
+@use '../_sass/design/about';
+@use '../_sass/design/contact';
+@use '../_sass/design/post';
+@use '../_sass/design/latest_writing';
+@use '../_sass/design/talk';
+@use '../_sass/design/category';
+@use '../_sass/design/recipie-card';
+@use '../_sass/design/pagination';
+@use '../_sass/design/footer';
+
+// Print
+@use '../_sass/print';

@@ -1,0 +1,5 @@
+// Config entry point — forward everything so consumers can @use 'config' as *
+@forward 'variables/colors';
+@forward 'variables/fonts';
+@forward 'functions';
+@forward 'mixins';
