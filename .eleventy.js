@@ -81,7 +81,6 @@ module.exports = function(eleventyConfig) {
   // Passthrough copies
   eleventyConfig.addPassthroughCopy('img');
   eleventyConfig.addPassthroughCopy('fonts');
-  eleventyConfig.addPassthroughCopy('CNAME');
 
   // Layout aliases — lets existing front matter (layout: post) keep working
   eleventyConfig.addLayoutAlias('default', 'default.njk');
