@@ -2,7 +2,6 @@
 layout: post
 title:  "A New Beginning with AI"
 date:   2026-03-22 12:00:00
-draft: true
 categories:
   - policy
   - law

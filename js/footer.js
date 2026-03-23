@@ -10,11 +10,21 @@ document.fonts.ready.then(function() {
 });
 
 /**
+ * Pull the initial settings from localStorage.
+ */
+(function () {
+  var stored = localStorage.getItem('theme');
+  var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+
+/**
  * Theme toggle — light / dark mode.
  * The initial theme is set inline in <head> (see head.njk) to prevent FOUC.
  * This file provides the toggle function and system preference listener.
  */
 (function () {
+
   var STORAGE_KEY = 'theme';
 
   function applyTheme(theme) {

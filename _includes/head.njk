@@ -20,10 +20,3 @@
   <meta name="twitter:image" content="{{ site.url }}{{ ogImage }}">
 {% endif %}
 <link rel="stylesheet" href="/css/style.css">
-<script>
-  (function () {
-    var stored = localStorage.getItem('theme');
-    var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', theme);
-  })();
-</script>
