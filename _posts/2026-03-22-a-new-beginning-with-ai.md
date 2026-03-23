@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A New Beginning with AI"
-date:   2026-03-21 12:00:00
+date:   2026-03-22 12:00:00
 draft: true
 categories:
   - policy
@@ -21,3 +21,5 @@ You will also see that the site has has a small facelift, including updating the
 As the code base was quite old, and the only person who would be working on it is me, I used this as an opportunity to use Claude Code to see what it can do to help move forward the technology stack.  It has been an incredibly powerful tool at my side during this transition, and I can certainly see the appeal as a developer to help build new features.  I found it was most helpful when there were repeated, custom edits I needed to make (say, on all of the blog posts from the past).  However, I also saw how it would more often provide responses that would create unnecessary code to re-create standard features&mdash;all so I did not have to change prior methods of doing work.  It also gave me flat out wrong answers on occasion, which a quick review of the Eleventy docs provided a clear response to.
 
 Which leads to where my current thinking believes this blog will be disucussing going forward:  the practical and legal considerations of AI in our everyday workflow.  I will also write a post about the use of AI in updating this site, and what lessons I pulled from that experience.
+
+I am excited to see where this blog moves forward to.  I am also excited to hear from folks to see where they would like it to go.  As I am purely on a static site, you will need to find me on any of the various applications out there on my contact page.  But most of all I am excited to explore what the law, development, and technology as a whole looks like as time presses onward.
