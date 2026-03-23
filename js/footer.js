@@ -9,14 +9,7 @@ document.fonts.ready.then(function() {
   document.documentElement.classList.add('fonts-unavailable');
 });
 
-/**
- * Pull the initial settings from localStorage.
- */
-(function () {
-  var stored = localStorage.getItem('theme');
-  var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', theme);
-})();
+
 
 /**
  * Theme toggle — light / dark mode.
@@ -39,7 +32,7 @@ document.fonts.ready.then(function() {
   });
 
   // Mobile nav toggle.
-  window.toggleMenu = function () {
+  document.getElementById("toggle-menu").onclick = function () {
     var nav = document.getElementById('nav');
     var btn = document.querySelector('.menu-toggle');
     var isOpen = nav.classList.toggle('nav-open');
@@ -48,7 +41,7 @@ document.fonts.ready.then(function() {
   };
 
   // Called by the toggle button.
-  window.toggleTheme = function () {
+  document.getElementById("toggle-theme").onclick = function () {
     var current = document.documentElement.getAttribute('data-theme');
     var next = current === 'dark' ? 'light' : 'dark';
     applyTheme(next);
