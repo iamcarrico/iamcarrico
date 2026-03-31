@@ -2,6 +2,7 @@
 
 const fs = require("node:fs");
 const path = require('path');
+const crypto = require('crypto');
 const sass = require('sass');
 const { minify } = require('terser');
 const yaml = require('js-yaml');
@@ -29,9 +30,38 @@ module.exports = function(eleventyConfig) {
   // Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, IMAGE_OPTIONS);
 
-	eleventyConfig.on("eleventy.after", () => {
-		fs.cpSync(".cache/@11ty/img/", "_site/img/built/", { recursive: true });
-	});
+  eleventyConfig.on('eleventy.after', () => {
+    fs.cpSync('.cache/@11ty/img/', '_site/img/built/', { recursive: true });
+
+    // Collect SHA-256 hashes of all inline scripts across the built site
+    const hashes = new Set();
+    const htmlFiles = fs.readdirSync('_site', { recursive: true })
+      .filter(f => f.endsWith('.html'))
+      .map(f => path.join('_site', f));
+
+    for (const file of htmlFiles) {
+      const html = fs.readFileSync(file, 'utf-8');
+      for (const match of html.matchAll(/<script(?![^>]*\bsrc\b)[^>]*>([\s\S]*?)<\/script>/gi)) {
+        const content = match[1];
+        if (content.trim()) {
+          const hash = crypto.createHash('sha256').update(content, 'utf-8').digest('base64');
+          hashes.add(`'sha256-${hash}'`);
+        }
+      }
+    }
+
+    // Rewrite the CSP script-src in _site/_headers with the collected hashes
+    const headersPath = '_site/_headers';
+    if (fs.existsSync(headersPath)) {
+      let headers = fs.readFileSync(headersPath, 'utf-8');
+      const scriptSrc = hashes.size > 0 ? ` script-src ${[...hashes].join(' ')};` : '';
+      headers = headers.replace(
+        /Content-Security-Policy:.*$/m,
+        `Content-Security-Policy: default-src 'self';${scriptSrc}`
+      );
+      fs.writeFileSync(headersPath, headers);
+    }
+  });
 
   // Sass compilation — partials (starting with _) are skipped
   eleventyConfig.addTemplateFormats('scss');
@@ -106,6 +136,13 @@ module.exports = function(eleventyConfig) {
   });
 
   // Shortcodes
+  eleventyConfig.addAsyncShortcode('inlineScript', async function(src) {
+    const content = fs.readFileSync(src, 'utf-8');
+    if (!isProd) return `<script>${content}</script>`;
+    const result = await minify(content);
+    return `<script>${result.code}</script>`;
+  });
+
   eleventyConfig.addPairedShortcode('figure', function(caption, src, alt) {
     const captionHtml = caption.trim() ? `\n  <figcaption>${caption.trim()}</figcaption>` : '';
     return `<figure>\n  <img src="${src}" alt="${alt || ''}" sizes="(min-width: 48em) 748px, 100vw" loading="lazy" decoding="async">${captionHtml}\n</figure>`;
