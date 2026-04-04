@@ -54,10 +54,10 @@ module.exports = function(eleventyConfig) {
     const headersPath = '_site/_headers';
     if (fs.existsSync(headersPath)) {
       let headers = fs.readFileSync(headersPath, 'utf-8');
-      const scriptSrc = hashes.size > 0 ? ` script-src ${[...hashes].join(' ')};` : '';
+      const scriptSrc = hashes.size > 0 ? [...hashes].join(' ') : '';
       headers = headers.replace(
-        /Content-Security-Policy:.*$/m,
-        `Content-Security-Policy: default-src 'self';${scriptSrc}`
+        "[[inline-scripts]]",
+        scriptSrc
       );
       fs.writeFileSync(headersPath, headers);
     }
